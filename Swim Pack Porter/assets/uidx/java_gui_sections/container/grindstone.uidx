@@ -1,0 +1,44 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "grindstone_java_dx",
+
+  "grindstone_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/grindstone",
+    "$grindstone_uv|default": [ 0, 0 ],
+    "$grindstone_uv_size|default": [ 0, 0 ],
+    "uv": "$grindstone_uv",
+    "uv_size": "$grindstone_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Grindstone screen */
+
+  "dialog_bg_grindstone@grindstone_java_dx.grindstone_base": {
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($grindstone_resolution = '256x')",  "$grindstone_uv_size": [ 176, 166 ] },
+      { "requires": "($grindstone_resolution = '512x')",  "$grindstone_uv_size": [ 352, 332 ] },
+      { "requires": "($grindstone_resolution = '1024x')", "$grindstone_uv_size": [ 704, 664 ] },
+      { "requires": "($grindstone_resolution = '2048x')", "$grindstone_uv_size": [ 1408, 1328 ] },
+      { "requires": "($grindstone_resolution = '4096x')", "$grindstone_uv_size": [ 2816, 2656 ] },
+      { "requires": "($grindstone_resolution = '8192x')", "$grindstone_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /* Cross Out */
+
+  "cross_out_icon@grindstone_java_dx.grindstone_base": {
+    "size": [ 28, 21 ],
+    "variables": [
+      { "requires": "($grindstone_resolution = '256x')",  "$grindstone_uv": [ 176, 0 ],  "$grindstone_uv_size": [ 28, 21 ] },
+      { "requires": "($grindstone_resolution = '512x')",  "$grindstone_uv": [ 352, 0 ],  "$grindstone_uv_size": [ 56, 42 ] },
+      { "requires": "($grindstone_resolution = '1024x')", "$grindstone_uv": [ 704, 0 ],  "$grindstone_uv_size": [ 112, 84 ] },
+      { "requires": "($grindstone_resolution = '2048x')", "$grindstone_uv": [ 1408, 0 ], "$grindstone_uv_size": [ 224, 168 ] },
+      { "requires": "($grindstone_resolution = '4096x')", "$grindstone_uv": [ 2816, 0 ], "$grindstone_uv_size": [ 448, 336 ] },
+      { "requires": "($grindstone_resolution = '8192x')", "$grindstone_uv": [ 5632, 0 ], "$grindstone_uv_size": [ 896, 672 ] }
+    ]
+  }
+}

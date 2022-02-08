@@ -1,0 +1,9 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "barrel_java_dx",
+
+  /*////// Base //////*/
+
+  "dialog_bg_barrel@generic_54_java_dx.dialog_bg_chest_small": { "$chest_texture": "assets/uidx/textures/gui/container/barrel" }
+}

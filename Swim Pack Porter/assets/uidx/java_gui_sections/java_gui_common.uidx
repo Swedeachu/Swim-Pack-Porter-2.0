@@ -1,0 +1,765 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "java_gui_common",
+
+  /*//// UV and UV size image panel ////*/
+
+  "crisxolt_image_panel": {
+    "type": "panel",
+    "size": "$uv_size",
+    "$base_anchor": "top_left",
+    "$base_size": [ 256, 256 ],
+    "clips_children": true,
+    "$uv": [ 0, 0 ],
+    "$uv_size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "main_image": {
+          "type": "image",
+          "anchor_from": "$base_anchor",
+          "anchor_to": "$base_anchor",
+          "size": "$base_size",
+          "offset": "$uv",
+          "texture": "$texture"
+        }
+      }
+    ]
+  },
+
+  /*//// Screen BG ////*/
+
+  "screen_background": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/uidx/screen_background"
+  },
+
+  /*//// Panorama Overlay ////*/
+
+  "panorama_overlay_image": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "alpha": 0.0,
+    "texture": "assets/minecraft/textures/gui/title/background/panorama_overlay"
+  },
+
+  /*//// Edition ////*/
+
+  "edition_image": {
+    "type": "image",
+    "size": [ 128, 16 ],
+    "texture": "assets/minecraft/textures/gui/title/edition"
+  },
+
+  /*//// Cell Image and Overlays ////*/
+
+  "cell_image": {
+    "type": "panel",
+    "size": [ "100%", "100%" ]
+  },
+
+  "cell_image_output": {
+    "type": "panel",
+    "size": [ 26, 26 ]
+  },
+
+  /*//// Highlight ////*/
+
+  "highlight_slot": {
+    "type": "image",
+    "layer": 6,
+    "texture": "textures/uidx/highlight/highlight_slot",
+    "size": [ 16, 16 ]
+  },
+
+  "highlight_slot_red@java_gui_common.highlight_slot": {
+    "layer": 0,
+    "texture": "textures/uidx/highlight/highlight_slot_red"
+  },
+
+  "highlight_slot_output@java_gui_common.highlight_slot": {
+    "texture": "textures/uidx/highlight/highlight_slot_output",
+    "size": [ 24, 24 ]
+  },
+
+  "highlight_slot_output_red@java_gui_common.highlight_slot": {
+    "layer": 0,
+    "texture": "textures/uidx/highlight/highlight_slot_output_red",
+    "size": [ 24, 24 ]
+  },
+
+  "cell_red_slot": {
+    "type": "image",
+    "texture": "textures/uidx/highlight/cell_red_slot",
+    "size": [ 16, 16 ]
+  },
+
+  "cell_red_slot_output@java_gui_common.cell_red_slot": {
+    "texture": "textures/uidx/highlight/cell_red_slot_output",
+    "size": [ 24, 24 ]
+  },
+
+  "cell_red_slot_overlay": {
+    "type": "image",
+    "texture": "textures/uidx/highlight/cell_red_slot_overlay",
+    "size": [ 16, 16 ]
+  },
+
+  "cell_red_slot_output_overlay@java_gui_common.cell_red_slot": {
+    "texture": "textures/uidx/highlight/cell_red_slot_output_overlay",
+    "size": [ 24, 24 ]
+  },
+
+  "cell_furnace_slot": {
+    "type": "image",
+    "texture": "textures/uidx/highlight/cell_furnace_slot",
+    "size": [ 16, 16 ]
+  },
+
+  "cell_furnace_slot_output@java_gui_common.cell_furnace_slot": {
+    "texture": "textures/uidx/highlight/cell_furnace_slot_output",
+    "size": [ 24, 24 ]
+  },
+
+  /*//// Inventory ////*/
+
+  "player_bg": {
+    "type": "panel",
+    "layer": 3,
+    "size": [ "100%-2px", "100%-2px" ]
+  },
+
+  "player_preview_border": {
+    "type": "panel",
+    "layer": 2,
+    "size": [ "100%", "100%" ]
+  },
+
+  /*//// Butons Icons ////*/
+
+  "feedback_icon": {
+    "type": "image",
+    "color": "$text_color",
+    "texture": "textures/uidx/feedback_icon",
+    "size": [
+      20,
+      20
+    ]
+  },
+  
+  "skin_icon": {
+    "type": "image",
+    "color": "$text_color",
+    "texture": "textures/uidx/skin_icon",
+    "size": [
+      20,
+      20
+    ]
+  },
+
+  "camera_icon": {
+    "type": "image",
+    "color": "$text_color",
+    "texture": "textures/uidx/camera_icon",
+    "size": [
+      20,
+      20
+    ]
+  },
+
+  /*//// Options Background ////*/
+  
+  "options_background@common.dirt_background": {
+    "texture": "assets/minecraft/textures/gui/options_background",
+    "color": [ 0.25, 0.25, 0.25, 1.0 ],
+    "$bg_tiled_scale|default": [ 0, 0 ],
+    "tiled_scale": "$bg_tiled_scale",
+    "variables": [
+      { "requires": "($options_background_resolution = '16x')", "$bg_tiled_scale": [ 2, 2 ] },
+      { "requires": "($options_background_resolution = '32x')", "$bg_tiled_scale": [ 1, 1 ] },
+      { "requires": "($options_background_resolution = '64x')", "$bg_tiled_scale": [ 0.5, 0.5 ] },
+      { "requires": "($options_background_resolution = '128x')", "$bg_tiled_scale": [ 0.25, 0.25 ] },
+      { "requires": "($options_background_resolution = '256x')", "$bg_tiled_scale": [ 0.125, 0.125 ] },
+      { "requires": "($options_background_resolution = '512x')", "$bg_tiled_scale": [ 0.0625, 0.0625 ] }
+    ]
+  },
+
+  "options_background_middle@java_gui_common.options_background": {
+    "color": [ 0.125, 0.125, 0.125, 1.0 ]
+  },
+
+  "credits_background@java_gui_common.options_background": {
+    "variables": [
+      { "requires": "($credits_background_resolution = '16x')", "$bg_tiled_scale": [ 4, 4 ] },
+      { "requires": "($credits_background_resolution = '32x')", "$bg_tiled_scale": [ 2, 2 ] },
+      { "requires": "($credits_background_resolution = '64x')", "$bg_tiled_scale": [ 1, 1 ] },
+      { "requires": "($credits_background_resolution = '128x')", "$bg_tiled_scale": [ 0.5, 0.5 ] },
+      { "requires": "($credits_background_resolution = '256x')", "$bg_tiled_scale": [ 0.25, 0.25 ] },
+      { "requires": "($credits_background_resolution = '512x')", "$bg_tiled_scale": [ 0.125, 0.125 ] }
+    ]
+  },
+
+  "block_background@java_gui_common.options_background": {
+    "color": [ 1.0, 1.0, 1.0, 1.0 ],
+    "variables": [
+      { "requires": "($block_background_resolution = '16x')", "$bg_tiled_scale": [ 2, 2 ] },
+      { "requires": "($block_background_resolution = '32x')", "$bg_tiled_scale": [ 1, 1 ] },
+      { "requires": "($block_background_resolution = '64x')", "$bg_tiled_scale": [ 0.5, 0.5 ] },
+      { "requires": "($block_background_resolution = '128x')", "$bg_tiled_scale": [ 0.25, 0.25 ] },
+      { "requires": "($block_background_resolution = '256x')", "$bg_tiled_scale": [ 0.125, 0.125 ] },
+      { "requires": "($block_background_resolution = '512x')", "$bg_tiled_scale": [ 0.0625, 0.0625 ] }
+    ]
+  },
+
+  /*//// Text Input ////*/
+  
+  "text_input_java": {
+    "type": "image",
+    "texture": "textures/uidx/menus/text_input_java",
+    "size": [ "100%", "100%" ]
+  },
+
+  "text_input_java_hover": {
+    "type": "image",
+    "texture": "textures/uidx/menus/text_input_java_hover",
+    "size": [ "100%", "100%" ]
+  },
+
+  "text_input_java_locked": {
+    "type": "image",
+    "texture": "textures/uidx/menus/text_input_java_locked",
+    "size": [ "100%", "100%" ]
+  },
+
+  "java_menu_select_grid": {
+    "type": "image",
+    "texture": "textures/uidx/menus/java_menu_select_grid",
+    "size": [ 32, 32 ]
+  },
+
+  /*//// Checkbox ////*/
+
+  "checkbox_unchecked_default": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/checkbox",
+    "size": [ 20, 20 ],
+    "$checkbox_uv|default": [ 0, 0 ],
+    "$checkbox_uv_size|default": [ 0, 0 ],
+    "uv": "$checkbox_uv",
+    "uv_size": "$checkbox_uv_size",
+    "variables": [
+      { "requires": "($checkbox_resolution = '64x')",   "$checkbox_uv_size": [ 20, 20 ] },
+      { "requires": "($checkbox_resolution = '128x')",  "$checkbox_uv_size": [ 40, 40 ] },
+      { "requires": "($checkbox_resolution = '256x')",  "$checkbox_uv_size": [ 80, 80 ] },
+      { "requires": "($checkbox_resolution = '512x')",  "$checkbox_uv_size": [ 160, 160 ] },
+      { "requires": "($checkbox_resolution = '1024x')", "$checkbox_uv_size": [ 320, 320 ] },
+      { "requires": "($checkbox_resolution = '2048x')", "$checkbox_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "checkbox_unchecked_hover@java_gui_common.checkbox_unchecked_default": {
+    "variables": [
+      { "requires": "($checkbox_resolution = '64x')",  "$checkbox_uv": [ 20, 0 ],  "$checkbox_uv_size": [ 20, 20 ] },
+      { "requires": "($checkbox_resolution = '128x')", "$checkbox_uv": [ 40, 0 ],  "$checkbox_uv_size": [ 40, 40 ] },
+      { "requires": "($checkbox_resolution = '256x')", "$checkbox_uv": [ 80, 0 ],  "$checkbox_uv_size": [ 80, 80 ] },
+      { "requires": "($checkbox_resolution = '512x')", "$checkbox_uv": [ 160, 0 ], "$checkbox_uv_size": [ 160, 160 ] },
+      { "requires": "($checkbox_resolution = '1024x')","$checkbox_uv": [ 320, 0 ], "$checkbox_uv_size": [ 320, 320 ] },
+      { "requires": "($checkbox_resolution = '2048x')","$checkbox_uv": [ 640, 0 ], "$checkbox_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "checkbox_checked_default@java_gui_common.checkbox_unchecked_default": {
+    "variables": [
+      { "requires": "($checkbox_resolution = '64x')",  "$checkbox_uv": [ 0, 20 ],  "$checkbox_uv_size": [ 20, 20 ] },
+      { "requires": "($checkbox_resolution = '128x')", "$checkbox_uv": [ 0, 40 ],  "$checkbox_uv_size": [ 40, 40 ] },
+      { "requires": "($checkbox_resolution = '256x')", "$checkbox_uv": [ 0, 80 ],  "$checkbox_uv_size": [ 80, 80 ] },
+      { "requires": "($checkbox_resolution = '512x')", "$checkbox_uv": [ 0, 160 ], "$checkbox_uv_size": [ 160, 160 ] },
+      { "requires": "($checkbox_resolution = '1024x')","$checkbox_uv": [ 0, 320 ], "$checkbox_uv_size": [ 320, 320 ] },
+      { "requires": "($checkbox_resolution = '2048x')","$checkbox_uv": [ 0, 640 ], "$checkbox_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "checkbox_checked_hover@java_gui_common.checkbox_unchecked_default": {
+    "variables": [
+      { "requires": "($checkbox_resolution = '64x')",  "$checkbox_uv": [ 20, 20 ],   "$checkbox_uv_size": [ 20, 20 ] },
+      { "requires": "($checkbox_resolution = '128x')", "$checkbox_uv": [ 40, 40 ],   "$checkbox_uv_size": [ 40, 40 ] },
+      { "requires": "($checkbox_resolution = '256x')", "$checkbox_uv": [ 80, 80 ],   "$checkbox_uv_size": [ 80, 80 ] },
+      { "requires": "($checkbox_resolution = '512x')", "$checkbox_uv": [ 160, 160 ], "$checkbox_uv_size": [ 160, 160 ] },
+      { "requires": "($checkbox_resolution = '1024x')","$checkbox_uv": [ 320, 320 ], "$checkbox_uv_size": [ 320, 320 ] },
+      { "requires": "($checkbox_resolution = '2048x')","$checkbox_uv": [ 640, 640 ], "$checkbox_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  /*//// UIDX Buttons ////*/
+  
+  "uidx_buttons_base": {
+    "type": "image",
+    "texture": "assets/uidx/textures/gui/uidx_all_buttons",
+    "size": [ 20, 20 ],
+    "$uidx_buttons_uv|default": [ 0, 0 ],
+    "$uidx_buttons_uv_size|default": [ 0, 0 ],
+    "uv": "$uidx_buttons_uv",
+    "uv_size": "$uidx_buttons_uv_size"
+  },
+
+  "play_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')",  "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "play_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 0, 20 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 0, 40 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 0, 80 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 0, 160 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 0, 320 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 0, 640 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "edit_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 20, 0 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 40, 0 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 80, 0 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 160, 0 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 320, 0 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 640, 0 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "edit_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 20, 20 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 40, 40 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 80, 80 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 160, 160 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 320, 320 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 640, 640 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "feedback_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 40, 0 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 80, 0 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 160, 0 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 320, 0 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 640, 0 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 1280, 0 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "feedback_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 40, 20 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 80, 40 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 160, 80 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 320, 160 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 640, 320 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 1280, 640 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "take_screenshot_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 60, 0 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 120, 0 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 240, 0 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 480, 0 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 960, 0 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 1920, 0 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "take_screenshot_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 60, 20 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 120, 40 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 240, 80 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 480, 160 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 960, 320 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 1920, 640 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "feed_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 80, 0 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 160, 0 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 320, 0 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 640, 0 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 1280, 0 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 2560, 0 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "feed_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 80, 20 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 160, 40 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 320, 80 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 640, 160 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 1280, 320 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 2560, 640 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "store_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 100, 0 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 200, 0 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 400, 0 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 800, 0 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 1600, 0 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 3200, 0 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "store_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 100, 20 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 200, 40 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 400, 80 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 800, 160 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 1600, 320 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 3200, 640 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "subscription_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 120, 0 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 240, 0 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 480, 0 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 960, 0 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 1920, 0 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 3840, 0 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "subscription_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 120, 20 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 240, 40 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 480, 80 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 960, 160 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 1920, 320 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 3840, 640 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "broadcast_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 140, 0 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 280, 0 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 560, 0 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 1120, 0 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 2240, 0 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 4480, 0 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "broadcast_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 140, 20 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 280, 40 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 560, 80 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 1120, 160 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 2240, 320 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 4480, 640 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "help_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 160, 0 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 320, 0 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 640, 0 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 1280, 0 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 2560, 0 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 5120, 0 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "help_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 160, 20 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 320, 40 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 640, 80 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 1280, 160 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 2560, 320 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 5120, 640 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "more_options_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 0, 60 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 0, 120 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 0, 240 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 0, 480 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 0, 960 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 0, 1920 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "more_options_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 0, 80 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 0, 160 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 0, 320 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 0, 640 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 0, 1280 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 0, 2560 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "realms_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 20, 60 ], "$uidx_buttons_uv_size":   [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 40, 120 ], "$uidx_buttons_uv_size":  [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 80, 240 ], "$uidx_buttons_uv_size":  [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 160, 480 ], "$uidx_buttons_uv_size":  [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 320, 960 ], "$uidx_buttons_uv_size":  [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 640, 1920 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "realms_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 20, 80 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 40, 160 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 80, 320 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 160, 640 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 320, 1280 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 640, 2560 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "1st_person_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 180, 0 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 360, 0 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 720, 0 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 1440, 0 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 2880, 0 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 5760, 0 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "1st_person_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 180, 20 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 360, 40 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 720, 80 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 1440, 160 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 2880, 320 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 5760, 640 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "3rd_person_back_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 200, 0 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 400, 0 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 800, 0 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 1600, 0 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 3200, 0 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 6400, 0 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "3rd_person_back_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 200, 20 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 400, 40 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 800, 80 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 1600, 160 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 3200, 320 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 6400, 640 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "3rd_person_front_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 220, 0 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 440, 0 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 880, 0 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 1760, 0 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 3520, 0 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 7040, 0 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "3rd_person_front_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 220, 20 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 440, 40 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 880, 80 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 1760, 160 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 3520, 320 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 7040, 640 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "world_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 60, 60 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 120, 120 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 240, 240 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 480, 480 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 960, 960 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 1920, 1920 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "world_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 60, 80 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 120, 160 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 240, 320 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 480, 640 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 960, 1280 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 1920, 2560 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "server_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 80, 60 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 160, 120 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 320, 240 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 640, 480 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 1280, 960 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 2560, 1920 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "server_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 80, 80 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 160, 160 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 320, 320 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 640, 640 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 1280, 1280 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 2560, 2560 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  /*//// Fate Client Assets ////*/
+
+  "fate_client_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 40, 60 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 80, 120 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 160, 240 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 320, 480 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 640, 960 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 1280, 1920 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "fate_client_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 40, 80 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 80, 160 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 160, 320 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 320, 640 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 640, 1280 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 1280, 2560 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  /*//// Resource Packs Settings ////*/
+
+  "resource_info_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 0, 208 ], "$uidx_buttons_uv_size": [ 16, 16 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 0, 416 ], "$uidx_buttons_uv_size": [ 32, 32 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 0, 832 ], "$uidx_buttons_uv_size": [ 64, 64 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 0, 1664 ], "$uidx_buttons_uv_size": [ 128, 128 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 0, 3328 ], "$uidx_buttons_uv_size": [ 256, 256 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 0, 6656 ], "$uidx_buttons_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  "resource_info_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 0, 224 ], "$uidx_buttons_uv_size": [ 16, 16 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 0, 448 ], "$uidx_buttons_uv_size": [ 32, 32 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 0, 896 ], "$uidx_buttons_uv_size": [ 64, 64 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 0, 1792 ], "$uidx_buttons_uv_size": [ 128, 128 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 0, 3584 ], "$uidx_buttons_uv_size": [ 256, 256 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 0, 7168 ], "$uidx_buttons_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  "resource_config_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv":  [ 32, 208 ], "$uidx_buttons_uv_size": [ 16, 16 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv":  [ 64, 416 ], "$uidx_buttons_uv_size": [ 32, 32 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 128, 832 ], "$uidx_buttons_uv_size": [ 64, 64 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 256, 1664 ], "$uidx_buttons_uv_size": [ 128, 128 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 512, 3328 ], "$uidx_buttons_uv_size": [ 256, 256 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 1024, 6656 ], "$uidx_buttons_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  "resource_config_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = '256x')", "$uidx_buttons_uv": [ 32, 224 ], "$uidx_buttons_uv_size": [ 16, 16 ] },
+      { "requires": "($uidx_buttons_resolution = '512x')", "$uidx_buttons_uv": [ 64, 448 ], "$uidx_buttons_uv_size": [ 32, 32 ] },
+      { "requires": "($uidx_buttons_resolution = '1024x')", "$uidx_buttons_uv": [ 128, 896 ], "$uidx_buttons_uv_size": [ 64, 64 ] },
+      { "requires": "($uidx_buttons_resolution = '2048x')", "$uidx_buttons_uv": [ 256, 1792 ], "$uidx_buttons_uv_size": [ 128, 128 ] },
+      { "requires": "($uidx_buttons_resolution = '4096x')", "$uidx_buttons_uv": [ 512, 3584 ], "$uidx_buttons_uv_size": [ 256, 256 ] },
+      { "requires": "($uidx_buttons_resolution = '8192x')", "$uidx_buttons_uv": [ 1024,7168 ], "$uidx_buttons_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  /*//// Icons ////*/
+  
+  "arrow_down_icon": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 12, 12 ],
+    "offset": [ 0, 1 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/arrow_down"
+  },
+
+  "arrow_left_icon": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 12, 12 ],
+    "offset": [ 0, 0 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/arrow_left"
+  },
+
+  "arrow_right_icon": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 12, 12 ],
+    "offset": [ 0, 0 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/arrow_right"
+  },
+
+  "reset_icon": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 12, 12 ],
+    "offset": [ 0, 0 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/reset"
+  }
+}

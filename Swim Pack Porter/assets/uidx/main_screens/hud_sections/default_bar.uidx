@@ -1,0 +1,92 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "CrisXolt_default_bar_dx",
+
+  "bar_control_base": {
+    "type": "panel",
+    "$default_name|default": "Ender Dragon",
+    "$next|default": "002",
+    "controls": [
+      { 
+        "binding_control@$next": {
+          "bindings": [
+            {
+              "binding_name": "(not (#bossName = $default_name))",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "001@CrisXolt_default_bar_dx.bar_control_base": {
+    "bindings": [
+      {
+        "binding_name": "(not (#bossName = 'Ender Dragon'))",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_name"
+      }
+    ]
+  },
+
+  "002@CrisXolt_default_bar_dx.bar_control_base": { "$next": "003", "$default_name": "Enderdrache" },
+  "003@CrisXolt_default_bar_dx.bar_control_base": { "$next": "004", "$default_name": "Dragón de Ender" },
+  "004@CrisXolt_default_bar_dx.bar_control_base": { "$next": "005", "$default_name": "Dragon de l'Ender" },
+  "005@CrisXolt_default_bar_dx.bar_control_base": { "$next": "006", "$default_name": "Dragon Ender" },
+  "006@CrisXolt_default_bar_dx.bar_control_base": { "$next": "007", "$default_name": "Enderdrago" },
+  "007@CrisXolt_default_bar_dx.bar_control_base": { "$next": "008", "$default_name": "エンダー ドラゴン" },
+  "008@CrisXolt_default_bar_dx.bar_control_base": { "$next": "009", "$default_name": "엔더 드래곤" },
+  "009@CrisXolt_default_bar_dx.bar_control_base": { "$next": "010", "$default_name": "Dragão Ender" },
+  "010@CrisXolt_default_bar_dx.bar_control_base": { "$next": "011", "$default_name": "Dragão de Ender" },
+  "011@CrisXolt_default_bar_dx.bar_control_base": { "$next": "012", "$default_name": "Дракон Края" },
+  "012@CrisXolt_default_bar_dx.bar_control_base": { "$next": "013", "$default_name": "末影龙" },
+  "013@CrisXolt_default_bar_dx.bar_control_base": { "$next": "014", "$default_name": "終界龍" },
+  "014@CrisXolt_default_bar_dx.bar_control_base": { "$next": "015", "$default_name": "Enderdraak" },
+  "015@CrisXolt_default_bar_dx.bar_control_base": { "$next": "016", "$default_name": "Пагубен дракон" },
+  "016@CrisXolt_default_bar_dx.bar_control_base": { "$next": "017", "$default_name": "Drak z enderu" },
+  "017@CrisXolt_default_bar_dx.bar_control_base": { "$next": "018", "$default_name": "Ender-drage" },
+  "018@CrisXolt_default_bar_dx.bar_control_base": { "$next": "019", "$default_name": "Δράκος Τελειωτής" },
+  "019@CrisXolt_default_bar_dx.bar_control_base": { "$next": "020", "$default_name": "Äärilisko" },
+  "020@CrisXolt_default_bar_dx.bar_control_base": { "$next": "021", "$default_name": "Végzetsárkány" },
+  "021@CrisXolt_default_bar_dx.bar_control_base": { "$next": "022", "$default_name": "Naga Ender" },
+  "022@CrisXolt_default_bar_dx.bar_control_base": { "$next": "023", "$default_name": "Enderdrage" },
+  "023@CrisXolt_default_bar_dx.bar_control_base": { "$next": "024", "$default_name": "Smok Kresu" },
+  "024@CrisXolt_default_bar_dx.bar_control_base": { "$next": "025", "$default_name": "Drak z konca sveta" },
+  "025@CrisXolt_default_bar_dx.bar_control_base": { "$next": "026", "$default_name": "Enderdrake" },
+  "026@CrisXolt_default_bar_dx.bar_control_base": { "$next": "027", "$default_name": "Ender Ejderhası" },
+  "027@CrisXolt_default_bar_dx.bar_control_base": { "$next": "028", "$default_name": "Дракон Ендеру" },
+  
+  "028@CrisXolt_default_bar_dx.bar_control_base": { "$next": "029", "$default_name": "Wither" },
+  "029@CrisXolt_default_bar_dx.bar_control_base": { "$next": "030", "$default_name": "ウィザー" },
+  "030@CrisXolt_default_bar_dx.bar_control_base": { "$next": "031", "$default_name": "위더" },
+  "031@CrisXolt_default_bar_dx.bar_control_base": { "$next": "032", "$default_name": "Иссушитель" },
+  "032@CrisXolt_default_bar_dx.bar_control_base": { "$next": "033", "$default_name": "凋灵" },
+  "033@CrisXolt_default_bar_dx.bar_control_base": { "$next": "034", "$default_name": "凋靈怪" },
+  "034@CrisXolt_default_bar_dx.bar_control_base": { "$next": "035", "$default_name": "Чезнещия" },
+  "035@CrisXolt_default_bar_dx.bar_control_base": { "$next": "036", "$default_name": "Pakostnice" },
+  "036@CrisXolt_default_bar_dx.bar_control_base": { "$next": "037", "$default_name": "Μαρασμός" },
+  "037@CrisXolt_default_bar_dx.bar_control_base": { "$next": "038", "$default_name": "Näivettäjä" },
+  "038@CrisXolt_default_bar_dx.bar_control_base": { "$next": "039", "$default_name": "Sorvasztó" },
+  "039@CrisXolt_default_bar_dx.bar_control_base": { "$next": "040", "$default_name": "Візер" },
+
+  "040@CrisXolt_default_bar_dx.bar_control_base": { "$next": "041", "$default_name": "Raid" },
+  
+  "041@CrisXolt_default_bar_dx.bar_control_base": { "$next": "042", "$default_name": "Raid - Mobs remaining: 2" },
+
+  "042@CrisXolt_default_bar_dx.bar_control_base": { "$next": "043", "$default_name": "Raid - Mobs remaining: 1" },
+  
+  "043@CrisXolt_default_bar_dx.bar_control_base": { "$next": "044", "$default_name": "Raid - Mobs remaining: 0" },
+
+  "044": {
+    "type": "panel",
+    "controls": [
+      { "bar_name@CrisXolt_bars_dx.bar_name": { } },
+      { "default_bar_control@$default_bar_panel_control": { } }
+    ]
+  }
+}

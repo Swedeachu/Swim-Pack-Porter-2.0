@@ -1,0 +1,166 @@
+{
+  /* Vanilla DX: New Java UI Tweaks */
+
+  /* (c) CrisXolt. Don't use any code without authorization! */
+
+  ////*/ Main menu button /*////
+  "$main_menu_button_default_color": [ 0.87, 0.87, 0.87 ],
+  "$main_menu_button_hover_color": [ 1.0, 1.0, 1.0 ], /* Before [ 1.0, 1.0, 0.62 ] */
+  "$main_menu_button_preesed_color": [ 1.0, 1.0, 1.0 ], /* Before [ 1.0, 1.0, 0.62 ] */
+  "$main_menu_button_locked_color": [ 0.62, 0.62, 0.62 ],  
+  
+  ////*/ HUD /*////
+  "$experience_outline_text_color": [ 0.0, 0.0, 0.0 ],
+  "$chat_size": [ "40%", 180 ],
+  "$ignore_scoreboard_scores": false,
+  "$scoreboard_text_shadow": false,
+  "$player_score_color": [ 1.0, 0.333, 0.333, 1.0 ],
+
+  //////// Anvil ////////
+  //For java text colors.
+  "$anvil_cost_fail_text_color": [ 1.0, 0.375, 0.375 ],
+
+  //////// Enchanting Table ////////
+  //For java text colors, default, hover and locked.
+  "$enchanting_runes_default_color": [ 0.4, 0.36, 0.3 ],
+  "$enchanting_runes_hover_color": [ 1.0, 1.0, 0.5 ],
+  "$enchanting_runes_locked_color": [ 0.2, 0.18, 0.14 ],
+  "$enchanting_cost_locked_color": [ 0.25, 0.5, 0.06 ],
+
+  //////// Sign ////////
+  "$sign_edit_text_color": [ 1, 1, 1 ],
+
+  //////// Misc ////////
+  "$classic_progress_bar_color": [ 0.5, 1.0, 0.5, 1.0 ],
+    
+  //////// Hover Text ////////
+  "$hover_text_shadow": false,
+
+  //////// Container ////////
+  
+  "$vdx_inventory_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_container_title_text_color": [ 0.3, 0.3, 0.3 ],
+
+  "$custom_durability_bar": false,
+
+  ////*/ Java Gui sections /*////
+
+  //Modify Java UI Resolutions for your texture!
+
+  //For menu BG.
+  //Valid values is: 16x, 32x, 64x, 128x, 256x and 512x.
+
+  /* options_background */
+  "$options_background_resolution": "16x",
+  /* credits_background */
+  "$credits_background_resolution": "16x",
+  /* blocks_background */
+  "$block_background_resolution": "16x",
+
+  //For Creative inventory UI.
+  //Scroll Viewport BG.
+  "$creative_scroll_viewport_bg": true,
+  "$creative_scroll_viewport_bg_color": [ 0.5, 0.5, 0.5 ],
+
+  //For 64x base size textures.
+
+  /* checkbox */
+  //Valid values is: 64x, 128x, 256x, 512x, 1024x and 2048x.
+  "$checkbox_resolution": "64x",
+
+  //For inventory containers.
+  //Valid values is: 256x, 512x, 1024x, 2048x, 4096x and 8192x.
+
+  /* anvil */
+  "$anvil_resolution": "256x",
+  /* beacon */
+  "$beacon_resolution": "256x",
+  /* bars */
+  "$bars_resolution": "256x",
+  /* blast_furnace */
+  "$blast_furnace_resolution": "256x",
+  /* book */
+  "$book_resolution": "256x",
+  /* brewing_stand */
+  "$brewing_stand_resolution": "256x",
+  /* cartography_table */
+  "$cartography_table_resolution": "256x",
+  /* cartography_table (New) */
+  "$cartography_table_new_resolution": "256x",
+  /* crafting_table */
+  "$crafting_table_resolution": "256x",
+  /* creative_inventory */
+  "$creative_tab_items_resolution": "256x",
+  "$creative_tab_search_resolution": "256x",
+  "$creative_tab_inv_resolution": "256x",
+  "$creative_tabs_resolution": "256x",
+  /* dispenser */
+  "$dispenser_resolution": "256x",
+  /* enchanting_table */
+  "$enchanting_table_resolution": "256x",
+  /* furnace */
+  "$furnace_resolution": "256x",
+  /* generic_54 */
+  "$generic_54_resolution": "256x",
+  /* grindstone */
+  "$grindstone_resolution": "256x",
+  /* hopper */
+  "$hopper_resolution": "256x",
+  /* horse */
+  "$horse_resolution": "256x",
+  /* icons */
+  "$icons_resolution": "256x",
+  /* inventory */
+  "$inventory_resolution": "256x",
+  /* loom */
+  "$loom_resolution": "256x",
+  /* recipe_book */
+  "$recipe_book_resolution": "256x",
+  /* recipe_button */
+  "$recipe_button_resolution": "256x",
+  /* recipe_book (New) */
+  "$recipe_item_search_resolution": "256x",
+  "$recipe_item_search_no_filter_resolution": "256x",
+  "$recipe_items_resolution": "256x",
+  "$creative_item_search_resolution": "256x",
+  "$creative_items_resolution": "256x",
+  "$recipe_widgets_resolution": "256x",
+  /* resource_packs */
+  "$resource_packs_resolution": "256x",
+  /* shulker_box */
+  "$shulker_box_resolution": "256x",
+  /* smithing */
+  "$smithing_resolution": "256x",
+  /* smoker */
+  "$smoker_resolution": "256x",
+  /* stonecutter */
+  "$stonecutter_resolution": "256x",
+  /* title_minecraft */
+  "$title_minecraft_resolution": "256x",
+  /* villager */
+  "$villager_resolution": "256x",
+  /* villager2 */
+  "$villager2_resolution": "256x",
+  /* widgets */
+  "$widgets_resolution": "256x",
+  /* uidx_all_buttons */
+  "$uidx_buttons_resolution": "256x",
+  /* world_selection */
+  "$world_selection_resolution": "256x",
+
+  //For realms textures.
+  //Valid values is: 1x, 2x, 4x, 8x, 16x and 32x.
+  "$cross_player_icon_resolution": "1x",
+  "$plus_icon_resolution": "1x",
+  "$user_icon_resolution": "1x",
+  "$op_icon_resolution": "1x",
+  "$restore_icon_resolution": "1x",
+  "$questionmark_resolution": "1x",
+  "$cross_icon_resolution": "1x",
+  "$configure_icon_resolution": "1x",
+  "$leave_icon_resolution": "1x",
+  "$invitation_resolution": "1x",
+  "$invitation_number_resolution": "1x",
+  "$accept_icon_resolution": "1x",
+  "reject_icon_resolution": "1x"
+}

@@ -1,0 +1,396 @@
+{
+  "namespace": "mob_effect_dx",
+
+  "mob_effect_grid_item": {
+    "type": "panel",
+    "size": [ "100%", 32 ],
+    "controls": [
+      {
+        "effect_panel": {
+          "type": "panel",
+          "size": [ 120, 32 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            { "bg@inventory_java_dx.mob_effect_bg": { "layer": 1 } },
+            { 
+              "name@mob_effect.effect_name": {
+                "offset": [ 28, 5 ],
+                "layer": 3
+              }
+            },
+            { 
+              "timer@mob_effect.effect_timer": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 28, 15 ],
+                "layer": 3
+              }
+            },
+            { 
+              "icon_panel": {
+                "type": "panel",
+                "size": [ 18, 18 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 6, 7 ],
+                "layer": 4,
+                "controls": [
+                  {
+                    "absorption_icon@mob_effect_java_dx.absorption_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/absorption_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "bad_omen_icon@mob_effect_java_dx.bad_omen_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/bad_omen_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "blindness_icon@mob_effect_java_dx.blindness_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/blindness_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "conduit_power_icon@mob_effect_java_dx.conduit_power_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/conduit_power_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "fire_resistance_icon@mob_effect_java_dx.fire_resistance_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/fire_resistance_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "haste_icon@mob_effect_java_dx.haste_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/haste_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "health_boost_icon@mob_effect_java_dx.health_boost_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/health_boost_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "hero_of_the_village_icon@mob_effect_java_dx.hero_of_the_village_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/village_hero_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "hunger_icon@mob_effect_java_dx.hunger_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/hunger_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "invisibility_icon@mob_effect_java_dx.invisibility_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/invisibility_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "jump_boost_icon@mob_effect_java_dx.jump_boost_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/jump_boost_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "levitation_icon@mob_effect_java_dx.levitation_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/levitation_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "mining_fatigue_icon@mob_effect_java_dx.mining_fatigue_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/mining_fatigue_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "nausea_icon@mob_effect_java_dx.nausea_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/nausea_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "night_vision_icon@mob_effect_java_dx.night_vision_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/night_vision_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "poison_icon@mob_effect_java_dx.poison_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/poison_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "regeneration_icon@mob_effect_java_dx.regeneration_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/regeneration_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "resistance_icon@mob_effect_java_dx.resistance_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/resistance_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "slow_falling_icon@mob_effect_java_dx.slow_falling_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/slow_falling_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "slowness_icon@mob_effect_java_dx.slowness_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/slowness_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "speed_icon@mob_effect_java_dx.speed_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/speed_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "strength_icon@mob_effect_java_dx.strength_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/strength_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "water_breathing_icon@mob_effect_java_dx.water_breathing_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/water_breathing_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "weakness_icon@mob_effect_java_dx.weakness_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/weakness_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "wither_icon@mob_effect_java_dx.wither_icon": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/wither_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "mob_effect_grid_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "mob_effect_grid@mob_effect.mob_effect_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ "100%", "default" ],
+          "offset": [ 0, 0 ],
+          "grid_item_template": "mob_effect_dx.mob_effect_grid_item"
+        }
+      }
+    ]
+  },
+
+  "main_mob_effect_scroll_panel": {
+    "type": "panel",
+    "size": [ 180, 160 ],
+    "controls": [
+      { "bg@chat_dx.chat_bg": { } },
+      {
+        "scrolling_panel@common_scroll_dx.scrolling_panel": {
+          "layer": 10,
+          "size": [ "100%", "100%" ],
+          "$scroll_size": [ 4, "100%" ],
+          "$scrolling_pane_size": [ "100%", "100%" ],
+          "$scroll_view_port_size": [ "100%", "100%" ],
+          "$scroll_view_port_size_touch": [ "100%", "100%" ],
+          "$scrolling_pane_offset": [ 0, 0 ],
+          "$scroll_box_image_control": "chat_dx.scroll_box",
+          "$scrolling_content": "mob_effect_dx.mob_effect_grid_panel",
+          "$jump_to_bottom_on_update": true,
+          "$always_handle_scrolling": true
+        }
+      }
+    ]
+  },
+
+  "main_screen": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "top_buttons@chat_dx.top_buttons": { } },
+      { "main_mob_effect_scroll_panel@mob_effect_dx.main_mob_effect_scroll_panel": { } },
+      { "screen_background@pause_dx.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
+    ]
+  }
+}

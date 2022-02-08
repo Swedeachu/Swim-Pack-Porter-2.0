@@ -1,0 +1,202 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "loom_java_dx",
+
+  "loom_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/loom",
+    "$loom_uv|default": [ 0, 0 ],
+    "$loom_uv_size|default": [ 0, 0 ],
+    "uv": "$loom_uv",
+    "uv_size": "$loom_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Loom screen */
+
+  "dialog_bg_loom@loom_java_dx.loom_base": {
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($loom_resolution = '256x')", "$loom_uv_size": [ 176, 166 ] },
+      { "requires": "($loom_resolution = '512x')", "$loom_uv_size": [ 352, 332 ] },
+      { "requires": "($loom_resolution = '1024x')", "$loom_uv_size": [ 704, 664 ] },
+      { "requires": "($loom_resolution = '2048x')", "$loom_uv_size": [ 1408, 1328 ] },
+      { "requires": "($loom_resolution = '4096x')", "$loom_uv_size": [ 2816, 2656 ] },
+      { "requires": "($loom_resolution = '8192x')", "$loom_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /* Banner image */
+
+  "banner_empty@loom_java_dx.loom_base": {
+    "size": [ 16, 16 ],
+    "variables": [
+      { "requires": "($loom_resolution = '256x')", "$loom_uv": [ 176, 0 ], "$loom_uv_size": [ 16, 16 ] },
+      { "requires": "($loom_resolution = '512x')", "$loom_uv": [ 352, 0 ], "$loom_uv_size": [ 32, 32 ] },
+      { "requires": "($loom_resolution = '1024x')", "$loom_uv": [ 704, 0 ], "$loom_uv_size": [ 64, 64 ] },
+      { "requires": "($loom_resolution = '2048x')", "$loom_uv": [ 1408, 0 ], "$loom_uv_size": [ 128, 128 ] },
+      { "requires": "($loom_resolution = '4096x')", "$loom_uv": [ 2816, 0 ], "$loom_uv_size": [ 256, 256 ] },
+      { "requires": "($loom_resolution = '8192x')", "$loom_uv": [ 5632, 0 ], "$loom_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  /* Dye image */
+
+  "dye_empty@loom_java_dx.banner_empty": {
+    "variables": [
+      { "requires": "($loom_resolution = '256x')", "$loom_uv": [ 192, 0 ], "$loom_uv_size": [ 16, 16 ] },
+      { "requires": "($loom_resolution = '512x')", "$loom_uv": [ 384, 0 ], "$loom_uv_size": [ 32, 32 ] },
+      { "requires": "($loom_resolution = '1024x')", "$loom_uv": [ 768, 0 ], "$loom_uv_size": [ 64, 64 ] },
+      { "requires": "($loom_resolution = '2048x')", "$loom_uv": [ 1536, 0 ], "$loom_uv_size": [ 128, 128 ] },
+      { "requires": "($loom_resolution = '4096x')", "$loom_uv": [ 3072, 0 ], "$loom_uv_size": [ 256, 256 ] },
+      { "requires": "($loom_resolution = '8192x')", "$loom_uv": [ 6144, 0 ], "$loom_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  /* Pattern image */
+
+  "pattern_item_empty@loom_java_dx.banner_empty": {
+    "variables": [
+      { "requires": "($loom_resolution = '256x')", "$loom_uv": [ 208, 0 ], "$loom_uv_size": [ 16, 16 ] },
+      { "requires": "($loom_resolution = '512x')", "$loom_uv": [ 416, 0 ], "$loom_uv_size": [ 32, 32 ] },
+      { "requires": "($loom_resolution = '1024x')", "$loom_uv": [ 832, 0 ], "$loom_uv_size": [ 64, 64 ] },
+      { "requires": "($loom_resolution = '2048x')", "$loom_uv": [ 1664, 0 ], "$loom_uv_size": [ 128, 128 ] },
+      { "requires": "($loom_resolution = '4096x')", "$loom_uv": [ 3328, 0 ], "$loom_uv_size": [ 256, 256 ] },
+      { "requires": "($loom_resolution = '8192x')", "$loom_uv": [ 6656, 0 ], "$loom_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  /* Buttons */
+
+  "active_pattern@loom_java_dx.loom_base": {
+    "size": [ 14, 14 ],
+    "variables": [
+      { "requires": "($loom_resolution = '256x')", "$loom_uv": [ 0,  166 ], "$loom_uv_size": [ 14, 14 ] },
+      { "requires": "($loom_resolution = '512x')", "$loom_uv": [ 0,  332 ], "$loom_uv_size": [ 28, 28 ] },
+      { "requires": "($loom_resolution = '1024x')", "$loom_uv": [ 0, 664 ], "$loom_uv_size": [ 56, 56 ] },
+      { "requires": "($loom_resolution = '2048x')", "$loom_uv": [ 0, 1328 ], "$loom_uv_size": [ 112, 112 ] },
+      { "requires": "($loom_resolution = '4096x')", "$loom_uv": [ 0, 2656 ], "$loom_uv_size": [ 224, 224 ] },
+      { "requires": "($loom_resolution = '8192x')", "$loom_uv": [ 0, 5312 ], "$loom_uv_size": [ 448, 448 ] }
+    ]
+  },
+  
+  "dark_pattern@loom_java_dx.active_pattern": {
+    "variables": [
+      { "requires": "($loom_resolution = '256x')", "$loom_uv": [ 0, 180 ], "$loom_uv_size": [ 14, 14 ] },
+      { "requires": "($loom_resolution = '512x')", "$loom_uv": [ 0, 360 ], "$loom_uv_size": [ 28, 28 ] },
+      { "requires": "($loom_resolution = '1024x')", "$loom_uv": [ 0, 720 ], "$loom_uv_size": [ 56, 56 ] },
+      { "requires": "($loom_resolution = '2048x')", "$loom_uv": [ 0, 1440 ], "$loom_uv_size": [ 112, 112 ] },
+      { "requires": "($loom_resolution = '4096x')", "$loom_uv": [ 0, 2880 ], "$loom_uv_size": [ 224, 224 ] },
+      { "requires": "($loom_resolution = '8192x')", "$loom_uv": [ 0, 5760 ], "$loom_uv_size": [ 448, 448 ] }
+    ]
+  },
+
+  "active_pattern_hover@loom_java_dx.active_pattern": {
+    "variables": [
+      { "requires": "($loom_resolution = '256x')", "$loom_uv": [ 0, 194 ], "$loom_uv_size": [ 14, 14 ] },
+      { "requires": "($loom_resolution = '512x')", "$loom_uv": [ 0, 388 ], "$loom_uv_size": [ 28, 28 ] },
+      { "requires": "($loom_resolution = '1024x')", "$loom_uv": [ 0, 776 ], "$loom_uv_size": [ 56, 56 ] },
+      { "requires": "($loom_resolution = '2048x')", "$loom_uv": [ 0, 1552 ], "$loom_uv_size": [ 112, 112 ] },
+      { "requires": "($loom_resolution = '4096x')", "$loom_uv": [ 0, 3104 ], "$loom_uv_size": [ 224, 224 ] },
+      { "requires": "($loom_resolution = '8192x')", "$loom_uv": [ 0, 6208 ], "$loom_uv_size": [ 448, 448 ] }
+    ]
+  },
+  
+  /*//// Scroll Box ////*/
+  
+  "scroll_upper@loom_java_dx.loom_base": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 12, 6 ],
+    "variables": [
+      { "requires": "($loom_resolution = '256x')", "$loom_uv": [ 232, 0 ], "$loom_uv_size": [ 12, 6 ] },
+      { "requires": "($loom_resolution = '512x')", "$loom_uv": [ 464, 0 ], "$loom_uv_size": [ 24, 12 ] },
+      { "requires": "($loom_resolution = '1024x')", "$loom_uv": [ 928, 0 ], "$loom_uv_size": [ 48, 24 ] },
+      { "requires": "($loom_resolution = '2048x')", "$loom_uv": [ 1856, 0 ], "$loom_uv_size": [ 96, 48 ] },
+      { "requires": "($loom_resolution = '4096x')", "$loom_uv": [ 3712, 0 ], "$loom_uv_size": [ 192, 96 ] },
+      { "requires": "($loom_resolution = '8192x')", "$loom_uv": [ 7424, 0 ], "$loom_uv_size": [ 384, 192 ] }
+    ]
+  },
+  
+  "scroll_middle@loom_java_dx.loom_base": {
+    "size": [ 12, 2 ],
+    "variables": [
+      { "requires": "($loom_resolution = '256x')", "$loom_uv": [ 232, 6 ], "$loom_uv_size": [ 12, 2 ] },
+      { "requires": "($loom_resolution = '512x')", "$loom_uv": [ 464, 12 ], "$loom_uv_size": [ 24, 4 ] },
+      { "requires": "($loom_resolution = '1024x')", "$loom_uv": [ 928, 24 ], "$loom_uv_size": [ 48, 8 ] },
+      { "requires": "($loom_resolution = '2048x')", "$loom_uv": [ 1856, 48 ], "$loom_uv_size": [ 96, 16 ] },
+      { "requires": "($loom_resolution = '4096x')", "$loom_uv": [ 3712, 96 ], "$loom_uv_size": [ 192, 32 ] },
+      { "requires": "($loom_resolution = '8192x')", "$loom_uv": [ 7424, 192 ], "$loom_uv_size": [ 384, 64 ] }
+    ]
+  },
+  
+  "scroll_bottom@loom_java_dx.loom_base": {
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ 12, 7 ],
+    "variables": [
+      { "requires": "($loom_resolution = '256x')", "$loom_uv": [ 232, 8 ], "$loom_uv_size": [ 12, 7 ] },
+      { "requires": "($loom_resolution = '512x')", "$loom_uv": [ 464, 16 ], "$loom_uv_size": [ 24, 14 ] },
+      { "requires": "($loom_resolution = '1024x')", "$loom_uv": [ 928, 32 ], "$loom_uv_size": [ 48, 28 ] },
+      { "requires": "($loom_resolution = '2048x')", "$loom_uv": [ 1856, 64 ], "$loom_uv_size": [ 96, 56 ] },
+      { "requires": "($loom_resolution = '4096x')", "$loom_uv": [ 3712, 128 ], "$loom_uv_size": [ 192, 112 ] },
+      { "requires": "($loom_resolution = '8192x')", "$loom_uv": [ 7424, 256 ], "$loom_uv_size": [ 384, 224 ] }
+    ]
+  },
+  
+  "locked_scroll_box@loom_java_dx.loom_base": {
+    "size": [ 12, 15 ],
+    "variables": [
+      { "requires": "($loom_resolution = '256x')", "$loom_uv": [ 244, 0 ], "$loom_uv_size": [ 12, 15 ] },
+      { "requires": "($loom_resolution = '512x')", "$loom_uv": [ 488, 0 ], "$loom_uv_size": [ 24, 30 ] },
+      { "requires": "($loom_resolution = '1024x')", "$loom_uv": [ 976, 0 ], "$loom_uv_size": [ 48, 60 ] },
+      { "requires": "($loom_resolution = '2048x')", "$loom_uv": [ 1952, 0 ], "$loom_uv_size": [ 96, 120 ] },
+      { "requires": "($loom_resolution = '4096x')", "$loom_uv": [ 3904, 0 ], "$loom_uv_size": [ 192, 240 ] },
+      { "requires": "($loom_resolution = '8192x')", "$loom_uv": [ 7808, 0 ], "$loom_uv_size": [ 384, 480 ] }
+    ]
+  },
+
+  "scroll_middle_stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 6 ],
+    "size": [ 12, "100%-11px" ],
+    "clips_children": true,
+    "controls": [
+      { "00@loom_java_dx.scroll_middle": { } },
+      { "01@loom_java_dx.scroll_middle": { } },
+      { "02@loom_java_dx.scroll_middle": { } },
+      { "03@loom_java_dx.scroll_middle": { } },
+      { "04@loom_java_dx.scroll_middle": { } },
+      { "05@loom_java_dx.scroll_middle": { } },
+      { "06@loom_java_dx.scroll_middle": { } },
+      { "07@loom_java_dx.scroll_middle": { } },
+      { "08@loom_java_dx.scroll_middle": { } },
+      { "09@loom_java_dx.scroll_middle": { } },
+      { "10@loom_java_dx.scroll_middle": { } },
+      { "11@loom_java_dx.scroll_middle": { } },
+      { "12@loom_java_dx.scroll_middle": { } },
+      { "13@loom_java_dx.scroll_middle": { } },
+      { "14@loom_java_dx.scroll_middle": { } },
+      { "15@loom_java_dx.scroll_middle": { } },
+      { "16@loom_java_dx.scroll_middle": { } },
+      { "17@loom_java_dx.scroll_middle": { } },
+      { "18@loom_java_dx.scroll_middle": { } },
+      { "19@loom_java_dx.scroll_middle": { } },
+      { "20@loom_java_dx.scroll_middle": { } }
+    ]
+  },
+
+  "scroll_box": {
+    "type": "panel",
+    "size": [ 12, "100%" ],
+    "controls": [
+      { "scroll_upper@loom_java_dx.scroll_upper": { } },
+      { "scroll_middle_stack_panel@loom_java_dx.scroll_middle_stack_panel": { } },
+      { "scroll_scroll_bottom@loom_java_dx.scroll_bottom": { } }
+    ]
+  }
+}

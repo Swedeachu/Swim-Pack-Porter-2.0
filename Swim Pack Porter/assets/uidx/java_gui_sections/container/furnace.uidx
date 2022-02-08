@@ -1,0 +1,120 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "furnace_java_dx",
+
+  "furnace_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/furnace",
+    "$furnace_uv|default": [ 0, 0 ],
+    "$furnace_uv_size|default": [ 0, 0 ],
+    "uv": "$furnace_uv",
+    "uv_size": "$furnace_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Furnace screen */
+
+  "dialog_bg_furnace@furnace_java_dx.furnace_base": {
+    "variables": [
+      {
+        "requires": "($furnace_resolution = '256x')",
+        "$furnace_uv_size": [ 176, 166 ] },
+      {
+        "requires": "($furnace_resolution = '512x')",
+        "$furnace_uv_size": [ 352, 332 ]
+      },
+      {
+        "requires": "($furnace_resolution = '1024x')",
+        "$furnace_uv_size": [ 704, 664 ]
+      },
+      {
+        "requires": "($furnace_resolution = '2048x')",
+        "$furnace_uv_size": [ 1408, 1328 ]
+      },
+      {
+        "requires": "($furnace_resolution = '4096x')",
+        "$furnace_uv_size": [ 2816, 2656 ]
+      },
+      {
+        "requires": "($furnace_resolution = '8192x')",
+        "$furnace_uv_size": [ 5632, 5312 ]
+      }
+    ]
+  },
+
+  /* Arrow full image */
+
+  "arrow_full@furnace_java_dx.furnace_base": {
+    "variables": [
+      {
+        "requires": "($furnace_resolution = '256x')",
+        "$furnace_uv": [ 176, 14 ],
+        "$furnace_uv_size": [ 24, 17 ]
+      },
+      {
+        "requires": "($furnace_resolution = '512x')",
+        "$furnace_uv": [ 352, 28 ],
+        "$furnace_uv_size": [ 48, 34 ]
+      },
+      {
+        "requires": "($furnace_resolution = '1024x')",
+        "$furnace_uv": [ 704, 56 ],
+        "$furnace_uv_size": [ 96, 68 ]
+      },
+      {
+        "requires": "($furnace_resolution = '2048x')",
+        "$furnace_uv": [ 1408, 112 ],
+        "$furnace_uv_size": [ 192, 136 ]
+      },
+      {
+        "requires": "($furnace_resolution = '4096x')",
+        "$furnace_uv": [ 2816, 224 ],
+        "$furnace_uv_size": [ 384, 272 ]
+      },
+      {
+        "requires": "($furnace_resolution = '8192x')",
+        "$furnace_uv": [ 5632, 448 ],
+        "$furnace_uv_size": [ 768, 544 ]
+      }
+    ]
+  },
+
+  /* Flame full image */
+
+  "flame_full@furnace_java_dx.furnace_base": {
+    "variables": [
+      {
+        "requires": "($furnace_resolution = '256x')",
+        "$furnace_uv": [ 176, 0 ],
+        "$furnace_uv_size": [ 14, 14 ]
+      },
+      {
+        "requires": "($furnace_resolution = '512x')",
+        "$furnace_uv": [ 352, 0 ],
+        "$furnace_uv_size": [ 28, 28 ]
+      },
+      {
+        "requires": "($furnace_resolution = '1024x')",
+        "$furnace_uv": [ 704, 0 ],
+        "$furnace_uv_size": [ 56, 56 ]
+      },
+      {
+        "requires": "($furnace_resolution = '2048x')",
+        "$furnace_uv": [ 1408, 0 ],
+        "$furnace_uv_size": [ 112, 112 ]
+      },
+      {
+        "requires": "($furnace_resolution = '4096x')",
+        "$furnace_uv": [ 2816, 0 ],
+        "$furnace_uv_size": [ 224, 224 ]
+      },
+      {
+        "requires": "($furnace_resolution = '8192x')",
+        "$furnace_uv": [ 5632, 8 ],
+        "$furnace_uv_size": [ 448, 448 ]
+      }
+    ]
+  }
+}

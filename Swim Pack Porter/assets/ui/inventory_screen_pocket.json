@@ -1,0 +1,7 @@
+{
+  "crafting_arrow_down": {
+    "controls": [
+      { "crafting_arrow_button@inventory_dx.crafting_arrow_button": {} }
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "generic_54_java_dx",
+
+  "generic_54_base": {
+    "type": "image",
+    "$generic_54_uv|default": [ 0, 0 ],
+    "$generic_54_uv_size|default": [ 0, 0 ],
+    "uv": "$generic_54_uv",
+    "uv_size": "$generic_54_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  "dialog_bg_chest_small": {
+    "type": "stack_panel",
+    "size": [ 176, 167 ],
+    "$chest_texture": "assets/uidx/textures/gui/container/small_chest",
+    "controls": [
+      {
+        "top@generic_54_java_dx.generic_54_base": {
+          "texture": "$chest_texture",
+          "size": [ 176, 71 ],
+          "variables": [
+            { "requires": "($generic_54_resolution = '256x')",  "$generic_54_uv_size": [ 176, 71 ] },
+            { "requires": "($generic_54_resolution = '512x')",  "$generic_54_uv_size": [ 352, 142 ] },
+            { "requires": "($generic_54_resolution = '1024x')", "$generic_54_uv_size": [ 704, 284 ] },
+            { "requires": "($generic_54_resolution = '2048x')", "$generic_54_uv_size": [ 1408, 568 ] },
+            { "requires": "($generic_54_resolution = '4096x')", "$generic_54_uv_size": [ 2816, 1136 ] },
+            { "requires": "($generic_54_resolution = '8192x')", "$generic_54_uv_size": [ 5632, 2272 ] }
+          ]
+        }
+      },
+      { 
+        "bottom@generic_54_java_dx.generic_54_base": {
+          "texture": "$chest_texture",
+          "size": [ 176, 96 ],
+          "variables": [
+            { "requires": "($generic_54_resolution = '256x')",  "$generic_54_uv": [ 0, 126 ],  "$generic_54_uv_size": [ 176, 96 ] },
+            { "requires": "($generic_54_resolution = '512x')",  "$generic_54_uv": [ 0, 252 ],  "$generic_54_uv_size": [ 352, 192 ] },
+            { "requires": "($generic_54_resolution = '1024x')", "$generic_54_uv": [ 0, 504 ],  "$generic_54_uv_size": [ 704, 384 ] },
+            { "requires": "($generic_54_resolution = '2048x')", "$generic_54_uv": [ 0, 1008 ], "$generic_54_uv_size": [ 1408, 768 ] },
+            { "requires": "($generic_54_resolution = '4096x')", "$generic_54_uv": [ 0, 2016 ], "$generic_54_uv_size": [ 2816, 1536 ] },
+            { "requires": "($generic_54_resolution = '8192x')", "$generic_54_uv": [ 0, 4032 ], "$generic_54_uv_size": [ 5632, 3072 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "dialog_bg_chest_large@generic_54_java_dx.generic_54_base": {
+    "texture": "assets/minecraft/textures/gui/container/generic_54",
+    "size": [ 176, 222 ],
+    "variables": [
+      { "requires": "($generic_54_resolution = '256x')",  "$generic_54_uv_size": [ 176, 222 ] },
+      { "requires": "($generic_54_resolution = '512x')",  "$generic_54_uv_size": [ 352, 444 ] },
+      { "requires": "($generic_54_resolution = '1024x')", "$generic_54_uv_size": [ 704, 888 ] },
+      { "requires": "($generic_54_resolution = '2048x')", "$generic_54_uv_size": [ 1408, 1776 ] },
+      { "requires": "($generic_54_resolution = '4096x')", "$generic_54_uv_size": [ 2816, 3552 ] },
+      { "requires": "($generic_54_resolution = '8192x')", "$generic_54_uv_size": [ 5632, 7104 ] }
+    ]
+  },
+
+  /*////// For GeyserMC //////*/
+
+  "dialog_bg_chest_1_row": {
+    "type": "stack_panel",
+    "size": [ 176, 131 ],
+    "$chest_texture": "assets/minecraft/textures/gui/container/generic_54",
+    "controls": [
+      {
+        "top@generic_54_java_dx.generic_54_base": {
+          "texture": "$chest_texture",
+          "size": [ 176, 31 ],
+          "variables": [
+            { "requires": "($generic_54_resolution = '256x')",  "$generic_54_uv_size": [ 176, 31 ] },
+            { "requires": "($generic_54_resolution = '512x')",  "$generic_54_uv_size": [ 352, 62 ] },
+            { "requires": "($generic_54_resolution = '1024x')", "$generic_54_uv_size": [ 704, 124 ] },
+            { "requires": "($generic_54_resolution = '2048x')", "$generic_54_uv_size": [ 1408, 248 ] },
+            { "requires": "($generic_54_resolution = '4096x')", "$generic_54_uv_size": [ 2816, 496 ] },
+            { "requires": "($generic_54_resolution = '8192x')", "$generic_54_uv_size": [ 5632, 992 ] }
+          ]
+        }
+      },
+      { 
+        "bottom@generic_54_java_dx.generic_54_base": {
+          "texture": "$chest_texture",
+          "size": [ 176, 96 ],
+          "variables": [
+            { "requires": "($generic_54_resolution = '256x')",  "$generic_54_uv": [ 0, 126 ],  "$generic_54_uv_size": [ 176, 96 ] },
+            { "requires": "($generic_54_resolution = '512x')",  "$generic_54_uv": [ 0, 252 ],  "$generic_54_uv_size": [ 352, 192 ] },
+            { "requires": "($generic_54_resolution = '1024x')", "$generic_54_uv": [ 0, 504 ],  "$generic_54_uv_size": [ 704, 384 ] },
+            { "requires": "($generic_54_resolution = '2048x')", "$generic_54_uv": [ 0, 1008 ], "$generic_54_uv_size": [ 1408, 768 ] },
+            { "requires": "($generic_54_resolution = '4096x')", "$generic_54_uv": [ 0, 2016 ], "$generic_54_uv_size": [ 2816, 1536 ] },
+            { "requires": "($generic_54_resolution = '8192x')", "$generic_54_uv": [ 0, 4032 ], "$generic_54_uv_size": [ 5632, 3072 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "dialog_bg_chest_2_rows": {
+    "type": "stack_panel",
+    "size": [ 176, 149 ],
+    "$chest_texture": "assets/minecraft/textures/gui/container/generic_54",
+    "controls": [
+      {
+        "top@generic_54_java_dx.generic_54_base": {
+          "texture": "$chest_texture",
+          "size": [ 176, 53 ],
+          "variables": [
+            { "requires": "($generic_54_resolution = '256x')",  "$generic_54_uv_size": [ 176, 53 ] },
+            { "requires": "($generic_54_resolution = '512x')",  "$generic_54_uv_size": [ 352, 106 ] },
+            { "requires": "($generic_54_resolution = '1024x')", "$generic_54_uv_size": [ 704, 212 ] },
+            { "requires": "($generic_54_resolution = '2048x')", "$generic_54_uv_size": [ 1408, 424 ] },
+            { "requires": "($generic_54_resolution = '4096x')", "$generic_54_uv_size": [ 2816, 848 ] },
+            { "requires": "($generic_54_resolution = '8192x')", "$generic_54_uv_size": [ 5632, 1696 ] }
+          ]
+        }
+      },
+      { 
+        "bottom@generic_54_java_dx.generic_54_base": {
+          "texture": "$chest_texture",
+          "size": [ 176, 96 ],
+          "variables": [
+            { "requires": "($generic_54_resolution = '256x')",  "$generic_54_uv": [ 0, 126 ],  "$generic_54_uv_size": [ 176, 96 ] },
+            { "requires": "($generic_54_resolution = '512x')",  "$generic_54_uv": [ 0, 252 ],  "$generic_54_uv_size": [ 352, 192 ] },
+            { "requires": "($generic_54_resolution = '1024x')", "$generic_54_uv": [ 0, 504 ],  "$generic_54_uv_size": [ 704, 384 ] },
+            { "requires": "($generic_54_resolution = '2048x')", "$generic_54_uv": [ 0, 1008 ], "$generic_54_uv_size": [ 1408, 768 ] },
+            { "requires": "($generic_54_resolution = '4096x')", "$generic_54_uv": [ 0, 2016 ], "$generic_54_uv_size": [ 2816, 1536 ] },
+            { "requires": "($generic_54_resolution = '8192x')", "$generic_54_uv": [ 0, 4032 ], "$generic_54_uv_size": [ 5632, 3072 ] }
+          ]
+        }
+      }
+    ]
+  }
+}

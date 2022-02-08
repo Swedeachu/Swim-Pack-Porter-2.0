@@ -1,0 +1,7 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "dropper_java_dx",
+
+  "dialog_bg_dropper@dispenser_java_dx.dialog_bg_dispenser": { "texture": "assets/uidx/textures/gui/container/dropper" }
+}

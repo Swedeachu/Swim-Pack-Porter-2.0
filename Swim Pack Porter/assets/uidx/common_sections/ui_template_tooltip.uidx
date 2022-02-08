@@ -1,0 +1,198 @@
+{
+  "namespace": "common_tooltip_dx",
+
+  "gamepad_helper": {
+    "type": "stack_panel",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "orientation": "horizontal",
+    "size": [ "100%c", 16 ],
+    "$icon_texture": "",
+    "$desc_panel_content|default": "common.empty_panel",
+    "controls": [
+      {
+        "icon": {
+          "type": "panel",
+          "size": [ 16, 16 ],
+          "controls": [
+            { 
+              "$icon_image_ref": {
+                "size": [ 26, 26 ],
+                "offset": [ 0, 0 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "separator_0": {
+          "type": "panel",
+          "size": [ 2, 16 ]
+        }
+      },
+      {
+        "description_panel": {
+          "type": "panel",
+          "size": [ "100%cm", 16 ],
+          "controls": [
+            {
+              "tooltip_label": {
+                "type": "label",
+                "color": "$gamepad_helper_icon_description_text_color",
+                "size": [ "default", 10 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [ 0, -3 ],
+                "shadow": true,
+                "text": "$icon_description_bind",
+                "$icon_description_bind|default": "#gamepad_helper_icon_description",
+                "$icon_description_bind_type|default": "global",
+                "$icon_description_bind_condition|default": "always_when_visible",
+                "$gamepad_helper_icon_description_text_color|default": "$gamepad_description_text_color",
+                "$gamepad_helper_icon_description_shadow|default": true,
+                "bindings": [
+                  {
+                    "binding_name": "$icon_description_bind",
+                    "binding_type": "$icon_description_bind_type",
+                    "binding_condition": "$icon_description_bind_condition"
+                  }
+                ],
+                "controls": [
+                  { "content@$desc_panel_content": { } }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "separator_1": {
+          "type": "panel",
+          "size": [ 11, 16 ]
+        }
+      }
+    ]
+  },
+
+  /* Gamepad Helpers */
+
+  "container_gamepad_helpers": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ "100%", 16 ],
+    "controls": [
+      {
+        "gamepad_helper_a@common_tooltip_dx.gamepad_helper_a": {
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "none"
+            }
+          ]
+        }
+      },
+      { 
+        "gamepad_helper_b@common_tooltip_dx.gamepad_helper_b": {
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "none"
+            }
+          ]
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ "fill", 16 ]
+        }
+      },
+      { 
+        "gamepad_helper_x@common_tooltip_dx.gamepad_helper_x": {
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "none"
+            }
+          ]
+        }
+      },
+      { 
+        "gamepad_helper_y@common_tooltip_dx.gamepad_helper_y": {
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "none"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Buttons ////*/
+
+  "gamepad_helper_a@common_tooltip_dx.gamepad_helper": {
+    "$icon_texture": "#controller_face_down_icon",
+    "$icon_description_bind": "#button_a_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_b@common_tooltip_dx.gamepad_helper": {
+    "$icon_texture": "#controller_face_right_icon",
+    "$icon_description_bind": "#button_b_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_x@common_tooltip_dx.gamepad_helper": {
+    "$icon_texture": "#controller_face_left_icon",
+    "$icon_description_bind": "#button_x_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_y@common_tooltip_dx.gamepad_helper": {
+    "$icon_texture": "#controller_face_up_icon",
+    "$icon_description_bind": "#button_y_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_thumbstick_right@common_tooltip_dx.gamepad_helper": {
+    "$icon_texture": "#controller_right_stick_icon",
+    "$icon_description_bind": "#button_thumbstick_right_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_thumbstick_left@common_tooltip_dx.gamepad_helper": {
+    "$icon_texture": "#controller_left_stick_icon",
+    "$icon_description_bind": "#button_thumbstick_left_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  /*//// Gamepad Helper Select ////*/
+
+  "gamepad_helper_select@common_tooltip_dx.gamepad_helper": {
+    "$icon_image_ref": "icon@common_tooltip_dx.select_button_panel"
+  },
+
+  "select_button_panel": {
+    "type": "panel",
+    "size": [ 26, 26 ],
+    "controls": [
+      { 
+        "xbox_one_select@common.gamepad_icon_button": {
+          "texture": "textures/ui/xbox_select_button"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "horse_java_dx",
+
+  "horse_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/horse",
+    "$horse_uv|default": [ 0, 0 ],
+    "$horse_uv_size|default": [ 0, 0 ],
+    "uv": "$horse_uv",
+    "uv_size": "$horse_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Horse screen */
+
+  "dialog_bg_horse@horse_java_dx.horse_base": {
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($horse_resolution = '256x')",  "$horse_uv_size": [ 176, 166 ] },
+      { "requires": "($horse_resolution = '512x')",  "$horse_uv_size": [ 352, 332 ] },
+      { "requires": "($horse_resolution = '1024x')", "$horse_uv_size": [ 704, 664 ] },
+      { "requires": "($horse_resolution = '2048x')", "$horse_uv_size": [ 1408, 1328 ] },
+      { "requires": "($horse_resolution = '4096x')", "$horse_uv_size": [ 2816, 2656 ] },
+      { "requires": "($horse_resolution = '8192x')", "$horse_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /* Armor, Saddle and Carpet slot */
+
+  "armor_cell_image@horse_java_dx.horse_base": {
+    "size": [ 18, 18 ],
+    "variables": [
+      { "requires": "($horse_resolution = '256x')",  "$horse_uv": [ 0, 220 ],  "$horse_uv_size": [ 18, 18 ] },
+      { "requires": "($horse_resolution = '512x')",  "$horse_uv": [ 0, 440 ],  "$horse_uv_size": [ 36, 36 ] },
+      { "requires": "($horse_resolution = '1024x')", "$horse_uv": [ 0, 880 ],  "$horse_uv_size": [ 72, 72 ] },
+      { "requires": "($horse_resolution = '2048x')", "$horse_uv": [ 0, 1760 ], "$horse_uv_size": [ 144, 144 ] },
+      { "requires": "($horse_resolution = '4096x')", "$horse_uv": [ 0, 3520 ], "$horse_uv_size": [ 288, 288 ] },
+      { "requires": "($horse_resolution = '8192x')", "$horse_uv": [ 0, 7040 ], "$horse_uv_size": [ 576, 576 ] }
+    ]
+  },
+
+  "saddle_cell_image@horse_java_dx.armor_cell_image": {
+    "variables": [
+      { "requires": "($horse_resolution = '256x')",  "$horse_uv": [ 18, 220 ],   "$horse_uv_size": [ 18, 18 ] },
+      { "requires": "($horse_resolution = '512x')",  "$horse_uv": [ 36, 440 ],   "$horse_uv_size": [ 36, 36 ] },
+      { "requires": "($horse_resolution = '1024x')", "$horse_uv": [ 72, 880 ],   "$horse_uv_size": [ 72, 72 ] },
+      { "requires": "($horse_resolution = '2048x')", "$horse_uv": [ 144, 1760 ], "$horse_uv_size": [ 144, 144 ] },
+      { "requires": "($horse_resolution = '4096x')", "$horse_uv": [ 288, 3520 ], "$horse_uv_size": [ 288, 288 ] },
+      { "requires": "($horse_resolution = '8192x')", "$horse_uv": [ 576, 7040 ], "$horse_uv_size": [ 576, 576 ] }
+    ]
+  },
+
+  "carpet_cell_image@horse_java_dx.armor_cell_image": {
+    "variables": [
+      { "requires": "($horse_resolution = '256x')",  "$horse_uv": [ 36, 220 ],    "$horse_uv_size": [ 18, 18 ] },
+      { "requires": "($horse_resolution = '512x')",  "$horse_uv": [ 72, 440 ],    "$horse_uv_size": [ 36, 36 ] },
+      { "requires": "($horse_resolution = '1024x')", "$horse_uv": [ 144, 880 ],   "$horse_uv_size": [ 72, 72 ] },
+      { "requires": "($horse_resolution = '2048x')", "$horse_uv": [ 288, 1760 ],  "$horse_uv_size": [ 144, 144 ] },
+      { "requires": "($horse_resolution = '4096x')", "$horse_uv": [ 576, 3520 ],  "$horse_uv_size": [ 288, 288 ] },
+      { "requires": "($horse_resolution = '8192x')", "$horse_uv": [ 1152, 7040 ], "$horse_uv_size": [ 576, 576 ] }
+    ]
+  },
+
+  /* Inventory grid */
+
+  "chest_cell_image@horse_java_dx.horse_base": {
+    "size": [ 90, 54 ],
+    "variables": [
+      { "requires": "($horse_resolution = '256x')",  "$horse_uv": [ 0, 166 ],  "$horse_uv_size": [ 90, 54 ] },
+      { "requires": "($horse_resolution = '512x')",  "$horse_uv": [ 0, 332 ],  "$horse_uv_size": [ 180, 108 ] },
+      { "requires": "($horse_resolution = '1024x')", "$horse_uv": [ 0, 664 ],  "$horse_uv_size": [ 360, 216 ] },
+      { "requires": "($horse_resolution = '2048x')", "$horse_uv": [ 0, 1328 ], "$horse_uv_size": [ 720, 432 ] },
+      { "requires": "($horse_resolution = '4096x')", "$horse_uv": [ 0, 2656 ], "$horse_uv_size": [ 1440, 864 ] },
+      { "requires": "($horse_resolution = '8192x')", "$horse_uv": [ 0, 5312 ], "$horse_uv_size": [ 2880, 1728 ] }
+    ]
+  }
+}

@@ -1,0 +1,123 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "grindstone_dx",
+
+  "grindstone_panel_top_half": {
+    "type": "panel",
+    "layer": 4,
+    "$background_images": "java_gui_common.cell_image",
+    "$highlight_control": "common_dx.highlight_slot_panel",
+    "controls": [
+      {
+        "title_label@grindstone.title_label": {
+          "color": "$vdx_container_title_text_color",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 8, 5 ]
+        }
+      },
+      {
+        "input_item_slot@grindstone.grindstone_item_slot": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 48, 18 ],
+          "$item_collection_name": "grindstone_input_items",
+          "$focus_id_binding_type": "none",
+          "$focus_id": "grindstone_input",
+          "$focus_override_down_binding_type": "none",
+          "$focus_override_down": "grindstone_additional",
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "grindstone_result"
+        }
+      },
+      {
+        "additional_item_slot@grindstone.grindstone_item_slot": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 48, 39 ],
+          "$item_collection_name": "grindstone_additional_items",
+          "$focus_id_binding_type": "none",
+          "$focus_id": "grindstone_additional",
+          "$focus_override_up_binding_type": "none",
+          "$focus_override_up": "grindstone_input",
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "grindstone_result"
+        }
+      },
+      {
+        "cross_out_icon@grindstone_java_dx.cross_out_icon": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 92, 31 ],
+          "size": [ 28, 21 ],
+          "bindings": [
+            {
+              "binding_name": "#cross_out_icon",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "result_item_slot@grindstone.grindstone_item_slot": {
+          "offset": [ -30, 33 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$item_collection_name": "grindstone_result_items",
+          "$button_ref": "grindstone.grindstone_output_slot_button",
+          "$focus_id_binding_type": "none",
+          "$focus_id": "grindstone_result",
+          "$focus_override_left_binding_type": "none",
+          "$focus_override_left": "grindstone_additional"
+        }
+      }
+    ]
+  },
+  
+  "grindstone_panel@common_dx.root_panel": {
+    "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
+      { "dialog_bg_grindstone@grindstone_java_dx.dialog_bg_grindstone": { "layer": 1 } },
+      { "grindstone_panel_top_half@grindstone_dx.grindstone_panel_top_half": { } },
+      {
+        "inventory_panel_bottom_half@common_dx.inventory_panel_bottom_half": {
+          "layer": 2,
+          "$with_label": true
+        }
+      }
+    ]
+  },
+
+  /*//// Main ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "$slot_selected_texture": "",
+    "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
+    "controls": [
+      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+      { "grindstone_panel@grindstone_dx.grindstone_panel": { } }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
+      { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@grindstone_dx.main_screen_content": { } },
+      { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
+    ]
+  }
+}

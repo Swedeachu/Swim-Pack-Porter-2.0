@@ -1,0 +1,562 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "crisxolt_pages_panels",
+  
+  /*//// Panels base ////*/
+
+  "recipe_book_tab_pages": {
+    "type": "panel",
+    "controls": [
+      { "page_1@crisxolt_tab_pages.page_1": { } },
+      { "page_2@crisxolt_pages_panels.page_2": { } }
+    ]
+  },
+
+  "page_2": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_2_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_2@crisxolt_tab_pages.page_2": { } },
+      { "page_3@crisxolt_pages_panels.page_3": { } }
+    ]
+  },
+
+  "page_3": {
+    "type": "panel",
+    "$is_nature_pages|default": false,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_3_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_3@crisxolt_tab_pages.page_3": { "$ignore_next_button": "$is_nature_pages" } },
+      { "page_4@crisxolt_pages_panels.page_4": { "ignored": "$is_nature_pages" } }
+    ]
+  },
+
+  "page_4": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_4_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_4@crisxolt_tab_pages.page_4": { } },
+      { "page_5@crisxolt_pages_panels.page_5": { } }
+    ]
+  },
+
+  "page_5": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_5_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_5@crisxolt_tab_pages.page_5": { } },
+      { "page_6@crisxolt_pages_panels.page_6": { } }
+    ]
+  },
+
+  "page_6": {
+    "type": "panel",
+    "$is_equipment_pages|default": false,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_6_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_6@crisxolt_tab_pages.page_6": { "$ignore_next_button": "$is_equipment_pages" } },
+      { "page_7@crisxolt_pages_panels.page_7": { "ignored": "$is_equipment_pages" } }
+    ]
+  },
+
+  "page_7": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_7_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_7@crisxolt_tab_pages.page_7": { } },
+      { "page_8@crisxolt_pages_panels.page_8": { } }
+    ]
+  },
+
+  "page_8": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_8_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_8@crisxolt_tab_pages.page_8": { } },
+      { "page_9@crisxolt_pages_panels.page_9": { } }
+    ]
+  },
+
+  "page_9": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_9_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_9@crisxolt_tab_pages.page_9": { } },
+      { "page_10@crisxolt_pages_panels.page_10": { } }
+    ]
+  },
+
+  "page_10": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_10_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_10@crisxolt_tab_pages.page_10": { } },
+      { "page_11@crisxolt_pages_panels.page_11": { } }
+    ]
+  },
+
+  "page_11": {
+    "type": "panel",
+    "$is_items_pages|default": false,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_11_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_11@crisxolt_tab_pages.page_11": { "$ignore_next_button": "$is_items_pages" } },
+      { "page_12@crisxolt_pages_panels.page_12": { "ignored": "$is_items_pages" } }
+    ]
+  },
+
+  "page_12": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_12_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_12@crisxolt_tab_pages.page_12": { } },
+      { "page_13@crisxolt_pages_panels.page_13": { } }
+    ]
+  },
+
+  "page_13": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_13_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_13@crisxolt_tab_pages.page_13": { } },
+      { "page_14@crisxolt_pages_panels.page_14": { } }
+    ]
+  },
+
+  "page_14": {
+    "type": "panel",
+    "$is_construct_pages|default": false,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_14_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_14@crisxolt_tab_pages.page_14": { "$ignore_next_button": "$is_construct_pages" } },
+      { "page_15@crisxolt_pages_panels.page_15": { "ignored": "$is_construct_pages" } }
+    ]
+  },
+
+  "page_15": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_15_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_15@crisxolt_tab_pages.page_15": { } },
+      { "page_16@crisxolt_pages_panels.page_16": { } }
+    ]
+  },
+
+  "page_16": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_16_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_16@crisxolt_tab_pages.page_16": { } },
+      { "page_17@crisxolt_pages_panels.page_17": { } }
+    ]
+  },
+
+  "page_17": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_17_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_17@crisxolt_tab_pages.page_17": { } },
+      { "page_18@crisxolt_pages_panels.page_18": { } }
+    ]
+  },
+
+  "page_18": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_18_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_18@crisxolt_tab_pages.page_18": { } },
+      { "page_19@crisxolt_pages_panels.page_19": { } }
+    ]
+  },
+
+  "page_19": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_19_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_19@crisxolt_tab_pages.page_19": { } },
+      { "page_20@crisxolt_pages_panels.page_20": { } }
+    ]
+  },
+
+  "page_20": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_20_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_20@crisxolt_tab_pages.page_20": { } },
+      { "page_21@crisxolt_pages_panels.page_21": { } }
+    ]
+  },
+
+  "page_21": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_21_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_21@crisxolt_tab_pages.page_21": { } },
+      { "page_22@crisxolt_pages_panels.page_22": { } }
+    ]
+  },
+
+  "page_22": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_22_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_22@crisxolt_tab_pages.page_22": { } },
+      { "page_23@crisxolt_pages_panels.page_23": { } }
+    ]
+  },
+
+  "page_23": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_23_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_23@crisxolt_tab_pages.page_23": { } },
+      { "page_24@crisxolt_pages_panels.page_24": { } }
+    ]
+  },
+
+  "page_24": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_24_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_24@crisxolt_tab_pages.page_24": { } },
+      { "page_25@crisxolt_pages_panels.page_25": { } }
+    ]
+  },
+
+  "page_25": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_25_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_25@crisxolt_tab_pages.page_25": { } },
+      { "page_26@crisxolt_pages_panels.page_26": { } }
+    ]
+  },
+
+  "page_26": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_26_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_26@crisxolt_tab_pages.page_26": { } },
+      { "page_27@crisxolt_pages_panels.page_27": { } }
+    ]
+  },
+
+  "page_27": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_27_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_27@crisxolt_tab_pages.page_27": { } },
+      { "page_28@crisxolt_pages_panels.page_28": { } }
+    ]
+  },
+
+  "page_28": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_28_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_28@crisxolt_tab_pages.page_28": { } },
+      { "page_29@crisxolt_pages_panels.page_29": { } }
+    ]
+  },
+
+  "page_29": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_29_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_29@crisxolt_tab_pages.page_29": { } },
+      { "page_30@crisxolt_pages_panels.page_30": { } }
+    ]
+  },
+
+  "page_30": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_30_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_30@crisxolt_tab_pages.page_30": { } },
+      { "page_31@crisxolt_pages_panels.page_31": { } }
+    ]
+  },
+
+  "page_31": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_31_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_31@crisxolt_tab_pages.page_31": { } },
+      { "page_32@crisxolt_pages_panels.page_32": { } }
+    ]
+  },
+
+  "page_32": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_32_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_32@crisxolt_tab_pages.page_32": { } },
+      { "page_33@crisxolt_pages_panels.page_33": { } }
+    ]
+  },
+
+  "page_33": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_33_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_33@crisxolt_tab_pages.page_33": { "$ignore_next_button": true } },
+      { "page_34@crisxolt_pages_panels.page_34": { "ignored": true } }
+    ]
+  },
+
+  "page_34": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_34_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_34@crisxolt_tab_pages.page_34": { } },
+      { "page_35@crisxolt_pages_panels.page_35": { } }
+    ]
+  },
+
+  "page_35": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_35_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_35@crisxolt_tab_pages.page_35": { "$ignore_next_button": true } }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "mob_effect_java_dx",
+
+  "mob_effect_base": {
+    "type": "image",
+    "size": [ 18, 18 ]
+  },
+
+  "absorption_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/absorption"
+  },
+
+  "bad_omen_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/bad_omen"
+  },
+
+  "blindness_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/blindness"
+  },
+
+  "conduit_power_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/conduit_power"
+  },
+
+  "fire_resistance_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/fire_resistance"
+  },
+
+  "haste_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/haste"
+  },
+
+  "health_boost_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/health_boost"
+  },
+
+  "hero_of_the_village_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/hero_of_the_village"
+  },
+
+  "hunger_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/hunger"
+  },
+
+  "invisibility_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/invisibility"
+  },
+  
+  "jump_boost_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/jump_boost"
+  },
+  
+  "levitation_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/levitation"
+  },
+  
+  "mining_fatigue_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/mining_fatigue"
+  },
+  
+  "nausea_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/nausea"
+  },
+  
+  "night_vision_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/night_vision"
+  },
+  
+  "poison_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/poison"
+  },
+  
+  "regeneration_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/regeneration"
+  },
+  
+  "resistance_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/resistance"
+  },
+  
+  "slow_falling_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/slow_falling"
+  },
+  
+  "slowness_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/slowness"
+  },
+
+  "speed_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/speed"
+  },
+  
+  "strength_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/strength"
+  },
+  
+  "water_breathing_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/water_breathing"
+  },
+  
+  "weakness_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/weakness"
+  },
+  
+  "wither_icon@mob_effect_java_dx.mob_effect_base": {
+    "texture": "assets/minecraft/textures/mob_effect/wither"
+  }
+}

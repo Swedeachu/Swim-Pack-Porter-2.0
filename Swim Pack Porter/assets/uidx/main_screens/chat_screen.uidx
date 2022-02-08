@@ -1,0 +1,557 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "chat_dx",
+
+  /*//// BG Base ////*/
+
+  "chat_bg": {
+    "type": "image",
+    "texture": "textures/uidx/global/white",
+    "color": [ 0.0, 0.0, 0.0 ],
+    "$bg_alpha|default": 0.5,
+    "alpha": "$bg_alpha",
+    "size": [ "100%", "100%" ]
+  },
+
+  /*//// Autocomplete Panel ////*/
+
+  "auto_complete_panel": {
+    "type": "panel",
+    "size": [ "100%-4px", "100%-4px" ],
+    "offset": [ 2, -16 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "controls": [
+      {
+        "auto_complete_grid": {
+          "type": "grid",
+          "grid_item_template": "chat_dx.auto_complete_panel_contents_with_item",
+          "grid_fill_direction": "vertical",
+          "collection_name": "auto_complete",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [ "100%", "100%" ],
+          "bindings": [
+            {
+              "binding_name": "#get_grid_size",
+              "binding_type": "collection",
+              "binding_collection_name": "auto_complete"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "auto_complete_panel_contents_with_item": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", 9 ],
+    "controls": [
+      {
+        "auto_complete_item_renderer@common.item_renderer": {
+          "size": [ 8, 8 ],
+          "offset": [ 2, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#auto_complete_item",
+              "binding_type": "collection",
+              "binding_name_override": "#item_id_aux",
+              "binding_collection_name": "auto_complete"
+            }
+          ]
+        }
+      },
+      {
+        "text": {
+          "type": "label",
+          "color": "$chat_text_color",
+          "offset": [ 2, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "#text",
+          "shadow": true,
+          "localize": false,
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "#auto_complete_text",
+              "binding_name_override": "#text",
+              "binding_collection_name": "auto_complete"
+            }
+          ],
+          "controls": [
+            {
+              "background@chat_dx.chat_bg": {
+                "$bg_alpha": 1,
+                "layer": -1,
+                "offset": [ 0, 0 ],
+                "size": [ "100%", "100%" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Message Panel ////*/
+
+  "scroll_box": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/uidx/global/white",
+    "color": [ 0.8, 0.8, 1 ],
+    "alpha": 0.5
+  },
+
+  "message_panel": {
+    "type": "panel",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": "$chat_size",
+    "offset": [ 0, -41 ],
+    "controls": [
+      {
+        "chat_messages_bg": {
+          "type": "image",
+          "texture": "textures/uidx/chat/chat_messages_bg",
+          "size": [ "100%", "100%" ],
+          "layer": 1
+        }
+      },
+      {
+        "scrolling_panel@common_scroll_dx.scrolling_panel": {
+          "layer": 10,
+          "size": [ "100%", "100%" ],
+          "$scroll_size": [ 1, "100%" ],
+          "$scrolling_pane_size": [ "100%", "100%" ],
+          "$scrolling_pane_offset": [ 0, 0 ],
+          "$bar_side": "scroll_left",
+          "$scroll_box_image_control": "chat_dx.scroll_box",
+          "$scrolling_content": "chat_dx.messages_stack_panel",
+          "$jump_to_bottom_on_update": true,
+          "$always_handle_scrolling": true
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#chat_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "messages_stack_panel@chat.messages_stack_panel": {
+    "factory": {
+      "name": "messages_factory",
+      "max_children_size": 100,
+      "control_ids": {
+        "chat_screen_messages": "chat_screen_messages@chat_dx.message_tts_wrapper"
+      }
+    }
+  },
+
+  "messages_text@chat.messages_text": {
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "color": "$chat_text_color",
+          "localize": false,
+          "size": [ "100%", "default" ],
+          "text": "#text",
+          "font_type": "$chat_font_type",
+          "font_scale_factor": "$chat_font_scale_factor",
+          "shadow": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "line_padding": -1,
+          "offset": [ 2, 0.5 ]
+        }
+      }
+    ]
+  },
+
+  "message_tts_wrapper@chat.message_tts_wrapper": {
+    "$tts_label_panel": "chat_dx.messages_text"
+  },
+
+  /*//// Buttons ////*/
+
+  "button_label": {
+    "type": "label",
+    "text": "$button_text",
+    "offset": "$text_offset",
+    "$button_text_binding_type|default": "none",
+    "shadow": true,
+    "color": "$text_color",
+    "max_size": [ "100% - 4px", "100% - 4px" ],
+    "bindings": [
+      {
+        "binding_type": "$button_text_binding_type",
+        "binding_name": "$button_text",
+        "binding_name_override": "$button_text"
+      }
+    ]
+  },
+  
+  "black_button_default@chat_dx.chat_bg": {
+    "$text_color": "$main_menu_button_default_color",
+    "$hover_visible": false,
+    "$text_offset|default": [ 0, 0 ],
+    "$button_text|default": "",
+    "$button_content|default": "chat_dx.button_label",
+    "controls": [
+      {
+        "button_content@$button_content": {
+          "layer": 4,
+          "anchor_from": "center",
+          "anchor_to": "center"
+        }
+      },
+      {
+        "border": {
+          "type": "image",
+          "visible": "$hover_visible",
+          "size": [ "100% +2px", "100% +2px" ],
+          "texture": "textures/ui/focus_border_white"
+        }
+      }
+    ]
+  },
+
+  "black_button_hover@chat_dx.black_button_default": {
+    "$text_color": "$main_menu_button_hover_color",
+    "$hover_visible": true
+  },
+  
+  "black_button_pressed@chat_dx.black_button_hover": {
+    "$text_color": "$main_menu_button_preesed_color"
+  },
+
+  "black_button_locked@chat_dx.black_button_default": {
+    "$text_color": "$main_menu_button_locked_color"
+  },
+
+  "black_button@common.button": {
+    "controls": [
+      { "default@chat_dx.black_button_default": {} },
+      { "hover@chat_dx.black_button_hover": {} },
+      { "pressed@chat_dx.black_button_default": {} }
+    ]
+  },
+
+  /*//// Chat Touch Buttons ////*/
+  
+  "chat_autocomplete_up_icon": {
+    "type": "image",
+    "size": [ 12, 12 ],
+    "texture": "textures/uidx/chat/chat_autocomplete_up_icon"
+  },
+
+  "chat_autocomplete_down_icon": {
+    "type": "image",
+    "size": [ 12, 12 ],
+    "texture": "textures/uidx/chat/chat_autocomplete_down_icon"
+  },
+  
+  "chat_previous_message_icon": {
+    "type": "image",
+    "size": [ 12, 12 ],
+    "texture": "textures/uidx/chat/chat_previous_message_icon"
+  },
+  
+  "chat_next_message_icon": {
+    "type": "image",
+    "size": [ 12, 12 ],
+    "texture": "textures/uidx/chat/chat_next_message_icon"
+  },
+
+  "chat_touch_buttons": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 12 ],
+    "ignored": "(not $touch)",
+    "controls": [
+      {
+        "chat_previous_message_button@chat_dx.black_button": {
+          "size": [ 18, "100%" ],
+          "$pressed_button_name": "button.chat_previous_message",
+          "$button_content": "chat_dx.chat_previous_message_icon"
+        }
+      },
+      { "separator_0@chat_dx.chat_bottom_separator": { } },
+      {
+        "chat_next_message_button@chat_dx.black_button": {
+          "size": [ 18, "100%" ],
+          "$pressed_button_name": "button.chat_next_message",
+          "$button_content": "chat_dx.chat_next_message_icon"
+        }
+      },
+      { "separator_1@chat_dx.chat_bottom_separator": { } },
+      {
+        "host_autocomplete": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%" ],
+          "bindings": [
+            {
+              "binding_name": "#cheats_on",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "chat_autocomplete_up_button@chat_dx.black_button": {
+                "size": [ 18, "100%" ],
+                "$pressed_button_name": "button.chat_autocomplete_back",
+                "$button_content": "chat_dx.chat_autocomplete_up_icon",
+                "bindings": [
+                  {
+                    "binding_name": "(not #chat_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "separator_2@chat_dx.chat_bottom_separator": {
+                "bindings": [
+                  {
+                    "binding_name": "(not #chat_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "chat_autocomplete_down_button@chat_dx.black_button": {
+                "size": [ 18, "100%" ],
+                "$pressed_button_name": "button.chat_autocomplete",
+                "$button_content": "chat_dx.chat_autocomplete_down_icon",
+                "bindings": [
+                  {
+                    "binding_name": "(not #chat_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "separator_3@chat_dx.chat_bottom_separator": {
+                "bindings": [
+                  {
+                    "binding_name": "(not #chat_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Top Buttons ////*/
+
+  "top_buttons": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 2 ],
+    "size": [ "100%-4px", 20 ],
+    "controls": [
+      {
+        "chat": {
+          "type": "panel",
+          "size": [ "fill", 20 ]
+        }
+      },
+      { 
+        "back_button@chat_dx.black_button": {
+          "$button_text": "gui.exit",
+          "$pressed_button_name": "button.menu_exit",
+          "focus_enabled": false,
+          "size": [ 80, 20 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Bottom Panel ////*/
+
+  "keyboard_image_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "keyboard_image": {
+          "type": "image",
+          "size": [ 12, 12 ],
+          "texture": "textures/uidx/chat/keyboard_icon",
+          "bindings": [
+            {
+              "binding_name": "(not #keyboard_being_used)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "arrow_down_icon@java_gui_common.arrow_down_icon": {
+          "bindings": [
+            {
+              "binding_name": "#keyboard_being_used",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "send_image": {
+    "type": "image",
+    "texture": "textures/uidx/chat/send_icon",
+    "size": [ 12, 12 ]
+  },
+  
+  "settings_image": {
+    "type": "image",
+    "size": [ 12, 12 ],
+    "texture": "textures/uidx/chat/chat_settings_icon"
+  },
+
+  "text_edit_hover@chat_dx.chat_bg": {
+    "controls": [
+      {
+        "border": {
+          "type": "image",
+          "size": [ "100% +2px", "100% +2px" ],
+          "texture": "textures/ui/focus_border_white"
+        }
+      }
+    ]
+  },
+  
+  "chat_bottom_separator": {
+    "type": "panel",
+    "size": [ 2, 2 ]
+  },
+
+  "bottom_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%-4px", 12 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -2 ],
+    "controls": [
+      { 
+        "keyboard_button@chat_dx.black_button": {
+          "ignored": "(not $touch)",
+          "size": [ 18, "100%" ],
+          "$button_content": "chat_dx.keyboard_image_panel",
+          "$pressed_button_name": "button.keyboard_toggle"
+        }
+      },
+      { "separator_keyboard@chat_dx.chat_bottom_separator": { "ignored": "(not $touch)" } },
+      { 
+        "host_main_button@chat_dx.black_button": {
+          "size": [ 18, "100%" ],
+          "$pressed_button_name": "button.host_toggle",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "$text_offset": [ 0, -1 ],
+          "$button_text": "/",
+          "bindings": [
+            {
+              "binding_name": "#cheats_on",
+              "binding_name_override": "#visible"
+            },
+            {
+              "binding_name": "#host_main_button_focus_override_up",
+              "binding_name_override": "#focus_change_up"
+            },
+            {
+              "binding_name": "#host_main_button_focus_override_down",
+              "binding_name_override": "#focus_change_down"
+            }
+          ]
+        }
+      },
+      { "separator_host@chat_dx.chat_bottom_separator": { "bindings": [ { "binding_name": "#cheats_on", "binding_name_override": "#visible" } ] } },
+      { 
+        "chat_settings_button@chat_dx.black_button": {
+          "$pressed_button_name": "button.open_chat_settings",
+          "$button_content": "chat_dx.settings_image",
+          "size": [ 18, "100%" ]
+        }
+      },
+      { "separator_settings@chat_dx.chat_bottom_separator": { } },
+      { "chat_touch_buttons@chat_dx.chat_touch_buttons": { } },
+      {
+        "text_box@chat.text_edit_box": {
+          "$text_edit_box_label_offset": [ 2, 0 ],
+          "size": [ "fill", 12 ],
+          "$text_background_default": "chat_dx.chat_bg",
+          "$text_background_hover": "chat_dx.text_edit_hover",
+          "controls": [
+            { "custom_panel@common_dx.custom_text_edit_panel": { } }
+          ]
+        }
+      },
+      { "separator_send@chat_dx.chat_bottom_separator": { "bindings": [ { "binding_name": "#send_button_visible", "binding_name_override": "#visible" } ] } },
+      { 
+        "send_button@chat_dx.black_button": {
+          "size": [ 36, "100%" ],
+          "$pressed_button_name": "button.send",
+          "$button_content": "chat_dx.send_image",
+          "bindings": [
+            {
+              "binding_name": "#send_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Main ////*/
+
+  "chat_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "top_buttons@chat_dx.top_buttons": { } },
+      { "bottom_panel@chat_dx.bottom_panel": { } },
+      { "message_panel@chat_dx.message_panel": { "ignored": "$touch" } },
+      { 
+        "message_panel_touch@chat_dx.message_panel": {
+          "ignored": "(not $touch)",
+          "offset": [ 0, 0 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      { "auto_complete_panel@chat_dx.auto_complete_panel": { } },
+      { "host_main_panel@host_options_dx.host_panel": { "layer": 20 } },
+      {
+        "popup_factory@chat_settings.popup_factory": {
+          "control_ids": {
+            "chat_setting_popup": "@chat_settings_dx.chat_settings_screen"
+          }
+        }
+      }
+    ]
+  }
+}

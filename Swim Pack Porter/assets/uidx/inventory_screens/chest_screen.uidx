@@ -1,0 +1,95 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "chest_dx",
+  
+  "small_chest_panel_top_half": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      {
+        "chest_label@chest.chest_label": {
+          "color": "$vdx_container_title_text_color",
+          "offset": [ 8, 5 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "small_chest_grid@chest.small_chest_grid": {
+          "offset": [ 7, 17 ]
+        }
+      }
+    ]
+  },
+  
+  "large_chest_panel_top_half": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      {
+        "chest_label@chest.chest_label": {
+          "color": "$vdx_container_title_text_color",
+          "offset": [ 8, 5 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "large_chest_grid@chest.large_chest_grid": {
+          "offset": [ 7, 17 ]
+        }
+      }
+    ]
+  },
+
+  "chest_panel@common_dx.root_panel": {
+    "size": "$chest_panel_size",
+    "$background_images": "java_gui_common.cell_image",
+    "$highlight_control": "common_dx.highlight_slot_panel",
+    "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
+      { "dialog_bg_chest@$chest_dialog_bg": { "layer": 1 } },
+      { "chest_panel_top_half@$chest_panel_top_half": { } },
+      {
+        "inventory_panel_bottom_half@common_dx.inventory_panel_bottom_half": {
+          "size": [ 162, 87 ],
+          "layer": 2,
+          "$with_label": true
+        }
+      }
+    ]
+  },
+
+  /*//// Main ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "$slot_selected_texture": "",
+    "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
+    "controls": [
+      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+      { "chest_panel@chest_dx.chest_panel": { } }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
+      { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@chest_dx.main_screen_content": { } },
+      { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
+    ]
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "inventory_screen_base": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_inventory_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_up",
+        "to_button_id": "button.menu_up",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_down",
+        "to_button_id": "button.menu_down",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "to_button_id": "button.menu_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "to_button_id": "button.menu_right",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.cursor_drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.cursor_drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.cursor_drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.clear_hotbar_or_drop",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.cursor_drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_clear",
+        "to_button_id": "button.menu_clear",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.left_panel_tab_decrement",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.left_panel_tab_increment",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_alternate_tab_left",
+        "to_button_id": "button.layout_increment",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_alternate_tab_right",
+        "to_button_id": "button.layout_decrement",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select_left",
+        "to_button_id": "button.shift_pane_focus",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select_right",
+        "to_button_id": "button.clear_selected_recipe",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+  "crafting_screen": {
+    "$screen_content": "crafting_dx.center_screen",
+    "$screen_bg_content": "crafting_dx.full_screen"
+  },
+
+  "inventory_screen": {
+    "$screen_content": "inventory_dx.center_screen",
+    "$screen_bg_content": "inventory_dx.full_screen"
+  },
+  
+  "no_coalesce_container_slot_button": {
+    "$is_output|default": false,
+    "modifications": [
+      {
+        "array_name": "button_mappings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "ignored": "($is_output or not $touch)",
+            "from_button_id": "button.menu_select",
+            "to_button_id": "$button_auto_place",
+            "mapping_type": "double_pressed"
+          },
+          {
+            "ignored": "($is_output or not $touch)",
+            "from_button_id": "button.menu_ok",
+            "to_button_id": "$button_auto_place",
+            "mapping_type": "double_pressed"
+          }
+        ]
+      }
+    ]
+  },
+  "output_no_coalesce_container_slot_button": {
+    "$is_output": true
+  }
+}

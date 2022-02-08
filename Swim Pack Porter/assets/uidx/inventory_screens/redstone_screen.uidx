@@ -1,0 +1,101 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "redstone_dx",
+
+  "dispenser_panel_top_half": {
+    "type": "panel",
+    "layer": 5,
+    "controls": [
+      { 
+        "dispenser_label@redstone.item_dropper_label": {
+          "color": "$vdx_container_title_text_color",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 5 ]
+        }
+      },
+      { 
+        "redstone_input_grid@redstone.redstone_input_grid": {
+          "$grid_dimensions": [ 3, 3 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 61, 16 ]
+        }
+      }
+    ]
+  },
+
+  "hopper_panel_top_half": {
+    "type": "panel",
+    "layer": 5,
+    "controls": [
+      { 
+        "hopper_label@redstone.item_dropper_label": {
+          "color": "$vdx_container_title_text_color",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 8, 5 ]
+        }
+      },
+      { 
+        "redstone_input_grid@redstone.redstone_input_grid": {
+          "$grid_dimensions": [ 5, 1 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 43, 19 ]
+        }
+      }
+    ]
+  },
+  
+  "redstone_panel@common_dx.root_panel": {
+    "$background_images": "java_gui_common.cell_image",
+    "$highlight_control": "common_dx.highlight_slot_panel",
+    "$screen_dimensions|default": [ 176, 166 ],
+    "size": "$screen_dimensions",
+    "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
+      { "redstone_dialog_bg@$redstone_dialog_bg": { "layer": 1 } },
+      { "redstone_panel_top_half@$redstone_panel_top_half": { } },
+      {
+        "inventory_panel_bottom_half@common_dx.inventory_panel_bottom_half": {
+          "layer": 2,
+          "$with_label": true
+        }
+      }
+    ]
+  },
+
+  /*//// Main ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "$slot_selected_texture": "",
+    "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
+    "controls": [
+      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+      { "redstone_panel@redstone_dx.redstone_panel": { } }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
+      { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@redstone_dx.main_screen_content": { } },
+      { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
+    ]
+  }
+}

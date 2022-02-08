@@ -1,0 +1,624 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "creative_inv_java_dx",
+
+  /*//// Tab Inventory ////*/
+
+  "dialog_bg_tab_inventory": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/creative_inventory/tab_inventory",
+    "size": [ 195, 136 ],
+    "$creative_tab_inv_uv|default": [ 0, 0 ],
+    "$creative_tab_inv_uv_size|default": [ 0, 0 ],
+    "uv": "$creative_tab_inv_uv",
+    "uv_size": "$creative_tab_inv_uv_size",
+    "variables": [
+      { "requires": "($creative_tab_inv_resolution = '256x')", "$creative_tab_inv_uv_size": [ 195, 136 ] },
+      { "requires": "($creative_tab_inv_resolution = '512x')", "$creative_tab_inv_uv_size": [ 390, 272 ] },
+      { "requires": "($creative_tab_inv_resolution = '1024x')", "$creative_tab_inv_uv_size": [ 780, 544 ] },
+      { "requires": "($creative_tab_inv_resolution = '2048x')", "$creative_tab_inv_uv_size": [ 1560, 1088 ] },
+      { "requires": "($creative_tab_inv_resolution = '4096x')", "$creative_tab_inv_uv_size": [ 3120, 2176 ] },
+      { "requires": "($creative_tab_inv_resolution = '8192x')", "$creative_tab_inv_uv_size": [ 6240, 4352 ] }
+    ]
+  },
+  
+  /*//// Tab Item ////*/
+
+  "dialog_bg_tab_header": {
+    "type": "image",
+    "texture": "$creative_tab_texture",
+    "size": [ 186, 18 ],
+    "$creative_tab_uv|default": [ 0, 0 ],
+    "$creative_tab_uv_size|default": [ 0, 0 ],
+    "uv": "$creative_tab_uv",
+    "uv_size": "$creative_tab_uv_size",
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$creative_tab_uv": [ 9, 0 ], "$creative_tab_uv_size": [ 186, 18 ] },
+      { "requires": "($bars_resolution = '512x')", "$creative_tab_uv": [ 18, 0 ], "$creative_tab_uv_size": [ 372, 36 ] },
+      { "requires": "($bars_resolution = '1024x')", "$creative_tab_uv": [ 36, 0 ], "$creative_tab_uv_size": [ 744, 72 ] },
+      { "requires": "($bars_resolution = '2048x')", "$creative_tab_uv": [ 72, 0 ], "$creative_tab_uv_size": [ 1488, 144 ] },
+      { "requires": "($bars_resolution = '4096x')", "$creative_tab_uv": [ 144, 0 ], "$creative_tab_uv_size": [ 2976, 288 ] },
+      { "requires": "($bars_resolution = '8192x')", "$creative_tab_uv": [ 288, 0 ], "$creative_tab_uv_size": [ 5952, 576 ] }
+    ]
+  },
+
+  "dialog_bg_tab_left@creative_inv_java_dx.dialog_bg_tab_header": {
+    "size": [ 9, 136 ],
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$creative_tab_uv_size": [ 9, 136 ] },
+      { "requires": "($bars_resolution = '512x')", "$creative_tab_uv_size": [ 18, 272 ] },
+      { "requires": "($bars_resolution = '1024x')", "$creative_tab_uv_size": [ 36, 544 ] },
+      { "requires": "($bars_resolution = '2048x')", "$creative_tab_uv_size": [ 72, 1088 ] },
+      { "requires": "($bars_resolution = '4096x')", "$creative_tab_uv_size": [ 144, 2176 ] },
+      { "requires": "($bars_resolution = '8192x')", "$creative_tab_uv_size": [ 288, 4352 ] }
+    ]
+  },
+
+  "dialog_bg_tab_scroll@creative_inv_java_dx.dialog_bg_tab_header": {
+    "size": [ 26, 118 ],
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$creative_tab_uv": [ 169, 18 ], "$creative_tab_uv_size": [ 26, 118 ] },
+      { "requires": "($bars_resolution = '512x')", "$creative_tab_uv": [ 338, 36 ], "$creative_tab_uv_size": [ 52, 236 ] },
+      { "requires": "($bars_resolution = '1024x')", "$creative_tab_uv": [ 676, 72 ], "$creative_tab_uv_size": [ 104, 472 ] },
+      { "requires": "($bars_resolution = '2048x')", "$creative_tab_uv": [ 1352, 144 ], "$creative_tab_uv_size": [ 208, 944 ] },
+      { "requires": "($bars_resolution = '4096x')", "$creative_tab_uv": [ 2704, 288 ], "$creative_tab_uv_size": [ 416, 1888 ] },
+      { "requires": "($bars_resolution = '8192x')", "$creative_tab_uv": [ 5408, 576 ], "$creative_tab_uv_size": [ 832, 3776 ] }
+    ]
+  },
+
+  "dialog_bg_tab_hotbar@creative_inv_java_dx.dialog_bg_tab_header": {
+    "size": [ 160, 30 ],
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$creative_tab_uv": [ 9, 106 ], "$creative_tab_uv_size": [ 160, 30 ] },
+      { "requires": "($bars_resolution = '512x')", "$creative_tab_uv": [ 18, 212 ], "$creative_tab_uv_size": [ 320, 60 ] },
+      { "requires": "($bars_resolution = '1024x')", "$creative_tab_uv": [ 36, 424 ], "$creative_tab_uv_size": [ 640, 120 ] },
+      { "requires": "($bars_resolution = '2048x')", "$creative_tab_uv": [ 72, 848 ], "$creative_tab_uv_size": [ 1280, 240 ] },
+      { "requires": "($bars_resolution = '4096x')", "$creative_tab_uv": [ 144, 1696 ], "$creative_tab_uv_size": [ 1560, 480 ] },
+      { "requires": "($bars_resolution = '8192x')", "$creative_tab_uv": [ 288, 3392 ], "$creative_tab_uv_size": [ 5120, 960 ] }
+    ]
+  },
+
+  "dialog_bg_panel": {
+    "type": "panel",
+    "size": [ 195, 136 ],
+    "controls": [
+      {
+        "dialog_bg_tab_header@creative_inv_java_dx.dialog_bg_tab_header": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+        }
+      },
+      {
+        "dialog_bg_tab_scroll@creative_inv_java_dx.dialog_bg_tab_scroll": {
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right"
+        }
+      },
+      {
+        "dialog_bg_tab_hotbar@creative_inv_java_dx.dialog_bg_tab_hotbar": {
+          "offset": [ 9, 0 ],
+          "anchor_from": "bottom_left",
+          "anchor_to":  "bottom_left"
+        }
+      },
+      {
+        "dialog_bg_tab_left@creative_inv_java_dx.dialog_bg_tab_left": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      }
+    ]
+  },
+
+  "dialog_bg_tab_items@creative_inv_java_dx.dialog_bg_panel": {
+    "$bars_resolution": "$creative_tab_items_resolution",
+    "$creative_tab_texture": "assets/minecraft/textures/gui/container/creative_inventory/tab_items"
+  },
+
+  "dialog_bg_tab_item_search@creative_inv_java_dx.dialog_bg_panel": {
+    "$bars_resolution": "$creative_tab_search_resolution",
+    "$creative_tab_texture": "assets/minecraft/textures/gui/container/creative_inventory/tab_item_search"
+  },
+  
+  /*//// Grid ////*/
+
+  "top_grid_texture@creative_inv_java_dx.dialog_bg_tab_header": {
+    "size": [ 160, 1 ],
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$creative_tab_uv": [ 9, 17 ], "$creative_tab_uv_size": [ 160, 1 ] },
+      { "requires": "($bars_resolution = '512x')", "$creative_tab_uv": [ 18, 34 ], "$creative_tab_uv_size": [ 320, 2 ] },
+      { "requires": "($bars_resolution = '1024x')", "$creative_tab_uv": [ 36, 68 ], "$creative_tab_uv_size": [ 640, 4 ] },
+      { "requires": "($bars_resolution = '2048x')", "$creative_tab_uv": [ 72, 136 ], "$creative_tab_uv_size": [ 1280, 8 ] },
+      { "requires": "($bars_resolution = '4096x')", "$creative_tab_uv": [ 144, 272 ], "$creative_tab_uv_size": [ 1560, 16 ] },
+      { "requires": "($bars_resolution = '8192x')", "$creative_tab_uv": [ 288, 544 ], "$creative_tab_uv_size": [ 5120, 32 ] }
+    ]
+  },
+
+  "middle_grid_texture@creative_inv_java_dx.dialog_bg_tab_header": {
+    "size": [ 160, 88 ],
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$creative_tab_uv": [ 9, 18 ], "$creative_tab_uv_size": [ 160, 88 ] },
+      { "requires": "($bars_resolution = '512x')", "$creative_tab_uv": [ 18, 36 ], "$creative_tab_uv_size": [ 320, 176 ] },
+      { "requires": "($bars_resolution = '1024x')", "$creative_tab_uv": [ 36, 72 ], "$creative_tab_uv_size": [ 640, 352 ] },
+      { "requires": "($bars_resolution = '2048x')", "$creative_tab_uv": [ 72, 144 ], "$creative_tab_uv_size": [ 1280, 704 ] },
+      { "requires": "($bars_resolution = '4096x')", "$creative_tab_uv": [ 144, 288 ], "$creative_tab_uv_size": [ 1560, 1408 ] },
+      { "requires": "($bars_resolution = '8192x')", "$creative_tab_uv": [ 288, 576 ], "$creative_tab_uv_size": [ 5120, 2816 ] }
+    ]
+  },
+
+  "bottom_grid_texture@creative_inv_java_dx.dialog_bg_tab_header": {
+    "size": [ 160, 1 ],
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$creative_tab_uv": [ 9, 106 ], "$creative_tab_uv_size": [ 160, 1 ] },
+      { "requires": "($bars_resolution = '512x')", "$creative_tab_uv": [ 18, 212 ], "$creative_tab_uv_size": [ 320, 2 ] },
+      { "requires": "($bars_resolution = '1024x')", "$creative_tab_uv": [ 36, 424 ], "$creative_tab_uv_size": [ 640, 4 ] },
+      { "requires": "($bars_resolution = '2048x')", "$creative_tab_uv": [ 72, 848 ], "$creative_tab_uv_size": [ 1280, 8 ] },
+      { "requires": "($bars_resolution = '4096x')", "$creative_tab_uv": [ 144, 1696 ], "$creative_tab_uv_size": [ 1560, 16 ] },
+      { "requires": "($bars_resolution = '8192x')", "$creative_tab_uv": [ 288, 3392 ], "$creative_tab_uv_size": [ 5120, 32 ] }
+    ]
+  },
+
+  "tab_item_grid_texture": {
+    "type": "stack_panel",
+    "size": [ 162, "100%c" ],
+    "controls": [
+      { "top@creative_inv_java_dx.top_grid_texture": { } },
+      { "middle@creative_inv_java_dx.middle_grid_texture": { } },
+      { "bottom@creative_inv_java_dx.bottom_grid_texture": { } }
+    ]
+  },
+
+  "grid_stack_panel_10": {
+    "type": "stack_panel",
+    "size": [ 162, "100%c" ],
+    "controls": [
+      { "00@creative_inv_java_dx.tab_item_grid_texture": { } },
+      { "01@creative_inv_java_dx.tab_item_grid_texture": { } },
+      { "02@creative_inv_java_dx.tab_item_grid_texture": { } },
+      { "03@creative_inv_java_dx.tab_item_grid_texture": { } },
+      { "04@creative_inv_java_dx.tab_item_grid_texture": { } },
+      { "05@creative_inv_java_dx.tab_item_grid_texture": { } },
+      { "06@creative_inv_java_dx.tab_item_grid_texture": { } },
+      { "07@creative_inv_java_dx.tab_item_grid_texture": { } },
+      { "08@creative_inv_java_dx.tab_item_grid_texture": { } },
+      { "09@creative_inv_java_dx.tab_item_grid_texture": { } }
+    ]
+  },
+
+  "tab_items_grid": {
+    "type": "stack_panel",
+    "size": [ 162, "100%c" ],
+    "$bars_resolution": "$creative_tab_items_resolution",
+    "$creative_tab_texture": "assets/minecraft/textures/gui/container/creative_inventory/tab_items",
+    "controls": [
+      { "00@creative_inv_java_dx.grid_stack_panel_10": { } },
+      { "01@creative_inv_java_dx.grid_stack_panel_10": { } },
+      { "02@creative_inv_java_dx.grid_stack_panel_10": { } }
+    ]
+  },
+
+  "tab_item_search_grid@creative_inv_java_dx.tab_items_grid": {
+    "$bars_resolution": "$creative_tab_search_resolution",
+    "$creative_tab_texture": "assets/minecraft/textures/gui/container/creative_inventory/tab_item_search"
+  },
+  
+  /*//// Tabs ////*/
+  
+  /* Construction Tab */
+
+  "building_tab_front": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/creative_inventory/tabs",
+    "size": [ 28, 32 ],
+    "$creative_tabs_uv|default": [ 0, 0 ],
+    "$creative_tabs_uv_size|default": [ 0, 0 ],
+    "uv": "$creative_tabs_uv",
+    "uv_size": "$creative_tabs_uv_size",
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 0, 32 ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 0, 64 ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 0, 128 ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 0, 256 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 0, 512 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 0, 1024 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  "building_tab_back@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+  
+  /* Decoration Tab */
+
+  "decoration_tab_front@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 28, 32 ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 56, 64 ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 112, 128 ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 224, 256 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 448, 512 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 896, 1024 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  "decoration_tab_back@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 28, 0 ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 56, 0 ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 112, 0 ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 224, 0 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 448, 0 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 896, 0 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+  
+  /* Redstone Tab */
+  
+  "redstone_tab_front@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 56, 32 ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 112, 64 ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 224, 128 ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 448, 256 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 896, 512 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 1792, 1024 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  "redstone_tab_back@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 56, 0 ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 112, 0 ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 224, 0 ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 448, 0 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 896, 0 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 1792, 0 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+  
+  /* Transportation Tab */
+
+  "transportation_tab_front@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 84, 32 ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 168, 64 ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 336, 128 ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 672, 256 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 1344, 512 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 2688, 1024 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  "transportation_tab_back@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 84, 0 ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 168, 0 ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 336, 0 ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 672, 0 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 1344, 0 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 2688, 0 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+  
+  /* Miscellaneous Tab */
+
+  "miscellaneous_tab_front@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 112, 32 ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 224, 64 ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 448, 128 ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 896, 256 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 1792, 512 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 3584, 1024 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  "miscellaneous_tab_back@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 112, 0 ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 224, 0 ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 448, 0 ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 896, 0 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 1792, 0 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 3584, 0 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  /* Search Tab */
+
+  "search_tab_front@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 140, 32 ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 280, 64 ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 560, 128 ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 1120, 256 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 2240, 512 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 4480, 1024 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  "search_tab_back@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 140, 0 ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 280, 0 ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 560, 0 ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 1120, 0 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 2240, 0 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 4480, 0 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+  
+  /* Foodstuffs Tab */
+
+  "foodstuffs_tab_front@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 0, 96   ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 0, 392  ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 0, 784  ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 0, 1568 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 0, 3136 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 0, 6272 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  "foodstuffs_tab_back@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 0, 64   ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 0, 128  ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 0, 256  ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 0, 512  ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 0, 1024 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 0, 2048 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+  
+  /* Tools Tab */
+
+  "tools_tab_front@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 28 , 96   ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 56 , 392  ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 112, 784  ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 224, 1568 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 448, 3136 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 896, 6272 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  "tools_tab_back@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 28 , 64   ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 56 , 128  ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 112, 256  ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 224, 512  ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 448, 1024 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 896, 2048 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+  
+  /* Combat Tab */
+  
+  "combat_tab_front@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 56  , 96   ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 112 , 392  ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 224 , 784  ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 448 , 1568 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 896 , 3136 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 1792, 6272 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  "combat_tab_back@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 56  , 64   ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 112 , 128  ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 224 , 256  ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 448 , 512  ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 896 , 1024 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 1792, 2048 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+  
+  /* Brewing Tab */
+
+  "brewing_tab_front@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 84  , 96   ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 168 , 392  ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 336 , 784  ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 672 , 1568 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 1344, 3136 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 2688, 6272 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  "brewing_tab_back@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 84  , 64   ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 168 , 128  ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 336 , 256  ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 672 , 512  ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 1344, 1024 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 2688, 2048 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+  
+  /* Materials Tab */
+
+  "materials_tab_front@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 112 , 96   ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 224 , 392  ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 448 , 784  ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 896 , 1568 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 1792, 3136 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 3584, 6272 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  "materials_tab_back@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 112 , 64   ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 224 , 128  ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 448 , 256  ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 896 , 512  ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 1792, 1024 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 3584, 2048 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+  
+  /* Survival Inv Tab */
+
+  "survival_inv_tab_front@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 140 , 96   ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 280 , 392  ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 560 , 784  ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 1120, 1568 ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 2240, 3136 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 4480, 6272 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+
+  "survival_inv_tab_back@creative_inv_java_dx.building_tab_front": {
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 140 , 64   ], "$creative_tabs_uv_size": [ 28, 32 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 280 , 128  ], "$creative_tabs_uv_size": [ 56, 64 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 560 , 256  ], "$creative_tabs_uv_size": [ 112, 128 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 1120, 512  ], "$creative_tabs_uv_size": [ 224, 256 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 2240, 1024 ], "$creative_tabs_uv_size": [ 448, 512 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 4480, 2048 ], "$creative_tabs_uv_size": [ 896, 1024 ] }
+    ]
+  },
+  
+  /*//// Scroll Box ////*/
+  
+  "scroll_upper@creative_inv_java_dx.building_tab_front": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 12, 6 ],
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 232, 0 ], "$creative_tabs_uv_size": [ 12, 6 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 464, 0 ], "$creative_tabs_uv_size": [ 24, 12 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 928, 0 ], "$creative_tabs_uv_size": [ 48, 24 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 1856, 0 ], "$creative_tabs_uv_size": [ 96, 48 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 3712, 0 ], "$creative_tabs_uv_size": [ 192, 96 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 7424, 0 ], "$creative_tabs_uv_size": [ 384, 192 ] }
+    ]
+  },
+  
+  "scroll_middle@creative_inv_java_dx.building_tab_front": {
+    "size": [ 12, 2 ],
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 232, 6 ], "$creative_tabs_uv_size": [ 12, 2 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 464, 12 ], "$creative_tabs_uv_size": [ 24, 4 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 928, 24 ], "$creative_tabs_uv_size": [ 48, 8 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 1856, 48 ], "$creative_tabs_uv_size": [ 96, 16 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 3712, 96 ], "$creative_tabs_uv_size": [ 192, 32 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 7424, 192 ], "$creative_tabs_uv_size": [ 384, 64 ] }
+    ]
+  },
+  
+  "scroll_bottom@creative_inv_java_dx.building_tab_front": {
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ 12, 7 ],
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')", "$creative_tabs_uv": [ 232, 8 ], "$creative_tabs_uv_size": [ 12, 7 ] },
+      { "requires": "($creative_tabs_resolution = '512x')", "$creative_tabs_uv": [ 464, 16 ], "$creative_tabs_uv_size": [ 24, 14 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 928, 32 ], "$creative_tabs_uv_size": [ 48, 28 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 1856, 64 ], "$creative_tabs_uv_size": [ 96, 56 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 3712, 128 ], "$creative_tabs_uv_size": [ 192, 112 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 7424, 256 ], "$creative_tabs_uv_size": [ 384, 224 ] }
+    ]
+  },
+
+  "scroll_middle_stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 6 ],
+    "size": [ 12, "100%-11px" ],
+    "clips_children": true,
+    "$scroll_middle_bindings": [
+      {
+        "binding_name": "(not #is_left_tab_search)",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      { "00@creative_inv_java_dx.scroll_middle": { } },
+      { "01@creative_inv_java_dx.scroll_middle": { } },
+      { "02@creative_inv_java_dx.scroll_middle": { } },
+      { "03@creative_inv_java_dx.scroll_middle": { } },
+      { "04@creative_inv_java_dx.scroll_middle": { } },
+      { "05@creative_inv_java_dx.scroll_middle": { } },
+      { "06@creative_inv_java_dx.scroll_middle": { } },
+      { "07@creative_inv_java_dx.scroll_middle": { } },
+      { "08@creative_inv_java_dx.scroll_middle": { } },
+      { "09@creative_inv_java_dx.scroll_middle": { } },
+      { "10@creative_inv_java_dx.scroll_middle": { } },
+      { "11@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "12@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "13@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "14@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "15@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "16@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "17@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "18@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "19@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "20@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "21@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "22@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "23@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "24@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "25@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "26@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "27@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "28@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "29@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "30@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "31@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "32@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "33@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "34@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "35@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "36@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "37@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "38@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "39@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "40@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } }
+    ]
+  },
+
+  "scroll_box": {
+    "type": "panel",
+    "size": [ 12, "100%" ],
+    "controls": [
+      { "scroll_upper@creative_inv_java_dx.scroll_upper": { } },
+      { "scroll_middle_stack_panel@creative_inv_java_dx.scroll_middle_stack_panel": { } },
+      { "scroll_scroll_bottom@creative_inv_java_dx.scroll_bottom": { } }
+    ]
+  },
+  
+  "scroll_box_locked@creative_inv_java_dx.building_tab_front": {
+    "size": [ 12, 15 ],
+    "variables": [
+      { "requires": "($creative_tabs_resolution = '256x')",  "$creative_tabs_uv": [ 244, 0 ], "$creative_tabs_uv_size": [ 12, 15 ] },
+      { "requires": "($creative_tabs_resolution = '512x')",  "$creative_tabs_uv": [ 488, 0 ], "$creative_tabs_uv_size": [ 24, 30 ] },
+      { "requires": "($creative_tabs_resolution = '1024x')", "$creative_tabs_uv": [ 976, 0 ], "$creative_tabs_uv_size": [ 48, 60 ] },
+      { "requires": "($creative_tabs_resolution = '2048x')", "$creative_tabs_uv": [ 1952, 0 ], "$creative_tabs_uv_size": [ 96, 120 ] },
+      { "requires": "($creative_tabs_resolution = '4096x')", "$creative_tabs_uv": [ 3904, 0 ], "$creative_tabs_uv_size": [ 192, 240 ] },
+      { "requires": "($creative_tabs_resolution = '8192x')", "$creative_tabs_uv": [ 7808, 0 ], "$creative_tabs_uv_size": [ 384, 480 ] }
+    ]
+  }
+}

@@ -1,0 +1,341 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "icons_java_dx",
+
+  "icons_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/icons",
+    "size": [ "100%", "100%" ],
+    "$icons_uv|default": [ 0, 0 ],
+    "$icons_uv_size|default": [ 0, 0 ],
+    "uv": "$icons_uv",
+    "uv_size": "$icons_uv_size"
+  },
+
+  /*//// XP Bar ////*/
+  
+  "experience_bar_empty@icons_java_dx.icons_base": {
+    "variables": [
+      {
+        "requires": "($icons_resolution = '256x')",
+        "$icons_uv": [ 0, 64 ],
+        "$icons_uv_size": [ 182, 5 ]
+      },
+      {
+        "requires": "($icons_resolution = '512x')",
+        "$icons_uv": [ 0, 128 ],
+        "$icons_uv_size": [ 364, 10 ]
+      },
+      {
+        "requires": "($icons_resolution = '1024x')",
+        "$icons_uv": [ 0, 256 ],
+        "$icons_uv_size": [ 728, 20 ]
+      },
+      {
+        "requires": "($icons_resolution = '2048x')",
+        "$icons_uv": [ 0, 512 ],
+        "$icons_uv_size": [ 1456, 40 ]
+      },
+      {
+        "requires": "($icons_resolution = '4096x')",
+        "$icons_uv": [ 0, 1024 ],
+        "$icons_uv_size": [ 2912, 80 ]
+      },
+      {
+        "requires": "($icons_resolution = '8192x')",
+        "$icons_uv": [ 0, 2048 ],
+        "$icons_uv_size": [ 5824, 160 ]
+      }
+    ]
+  },
+
+  "experience_bar_full@icons_java_dx.icons_base": {
+    "variables": [
+      {
+        "requires": "($icons_resolution = '256x')",
+        "$icons_uv": [ 0, 69 ],
+        "$icons_uv_size": [ 182, 5 ]
+      },
+      {
+        "requires": "($icons_resolution = '512x')",
+        "$icons_uv": [ 0, 138 ],
+        "$icons_uv_size": [ 364, 10 ]
+      },
+      {
+        "requires": "($icons_resolution = '1024x')",
+        "$icons_uv": [ 0, 276 ],
+        "$icons_uv_size": [ 728, 20 ]
+      },
+      {
+        "requires": "($icons_resolution = '2048x')",
+        "$icons_uv": [ 0, 522 ],
+        "$icons_uv_size": [ 1456, 40 ]
+      },
+      {
+        "requires": "($icons_resolution = '4096x')",
+        "$icons_uv": [ 0, 1104 ],
+        "$icons_uv_size": [ 2912, 80 ]
+      },
+      {
+        "requires": "($icons_resolution = '8192x')",
+        "$icons_uv": [ 0, 2208 ],
+        "$icons_uv_size": [ 5824, 160 ]
+      }
+    ]
+  },
+
+  "experience_bar_nub": {
+    "type": "image",
+    "size": [ 182, 90 ]
+  },
+
+  /*//// Boss Bar ////*/
+  
+  "boss_bar_empty@icons_java_dx.icons_base": {
+    "variables": [
+      {
+        "requires": "($icons_resolution = '256x')",
+        "$icons_uv": [ 0, 74 ],
+        "$icons_uv_size": [ 182, 5 ]
+      },
+      {
+        "requires": "($icons_resolution = '512x')",
+        "$icons_uv": [ 0, 148 ],
+        "$icons_uv_size": [ 364, 10 ]
+      },
+      {
+        "requires": "($icons_resolution = '1024x')",
+        "$icons_uv": [ 0, 296 ],
+        "$icons_uv_size": [ 728, 20 ]
+      },
+      {
+        "requires": "($icons_resolution = '2048x')",
+        "$icons_uv": [ 0, 592 ],
+        "$icons_uv_size": [ 1456, 40 ]
+      },
+      {
+        "requires": "($icons_resolution = '4096x')",
+        "$icons_uv": [ 0, 1184 ],
+        "$icons_uv_size": [ 2912, 80 ]
+      },
+      {
+        "requires": "($icons_resolution = '8192x')",
+        "$icons_uv": [ 0, 2368 ],
+        "$icons_uv_size": [ 5824, 160 ]
+      }
+    ]
+  },
+
+  "boss_bar_full@icons_java_dx.icons_base": {
+    "variables": [
+      {
+        "requires": "($icons_resolution = '256x')",
+        "$icons_uv": [ 0, 79 ],
+        "$icons_uv_size": [ 182, 5 ]
+      },
+      {
+        "requires": "($icons_resolution = '512x')",
+        "$icons_uv": [ 0, 158 ],
+        "$icons_uv_size": [ 364, 10 ]
+      },
+      {
+        "requires": "($icons_resolution = '1024x')",
+        "$icons_uv": [ 0, 316 ],
+        "$icons_uv_size": [ 728, 20 ]
+      },
+      {
+        "requires": "($icons_resolution = '2048x')",
+        "$icons_uv": [ 0, 632 ],
+        "$icons_uv_size": [ 1456, 40 ]
+      },
+      {
+        "requires": "($icons_resolution = '4096x')",
+        "$icons_uv": [ 0, 1264 ],
+        "$icons_uv_size": [ 2912, 80 ]
+      },
+      {
+        "requires": "($icons_resolution = '8192x')",
+        "$icons_uv": [ 0, 2528 ],
+        "$icons_uv_size": [ 5824, 160 ]
+      }
+    ]
+  },
+
+  /*//// Ping Rate Icons ////*/
+
+  "ping_loading_icon@icons_java_dx.icons_base": {
+    "variables": [
+      {
+        "requires": "($icons_resolution = '256x')",
+        "$icons_uv": [ 10, 176 ],
+        "$icons_uv_size": [ 10, 40 ]
+      },
+      {
+        "requires": "($icons_resolution = '512x')",
+        "$icons_uv": [ 20, 352 ],
+        "$icons_uv_size": [ 20, 80 ]
+      },
+      {
+        "requires": "($icons_resolution = '1024x')",
+        "$icons_uv": [ 40, 704 ],
+        "$icons_uv_size": [ 40, 160 ]
+      },
+      {
+        "requires": "($icons_resolution = '2048x')",
+        "$icons_uv": [ 80, 1408 ],
+        "$icons_uv_size": [ 80, 320 ]
+      },
+      {
+        "requires": "($icons_resolution = '4096x')",
+        "$icons_uv": [ 160, 2816 ],
+        "$icons_uv_size": [ 160, 640 ]
+      },
+      {
+        "requires": "($icons_resolution = '8192x')",
+        "$icons_uv": [ 320, 5632 ],
+        "$icons_uv_size": [ 320, 1280 ]
+      }
+    ]
+  },
+
+  "ping_green_icon@icons_java_dx.icons_base": {
+    "variables": [
+      {
+        "requires": "($icons_resolution = '256x')",
+        "$icons_uv": [ 0, 176 ],
+        "$icons_uv_size": [ 10, 8 ]
+      },
+      {
+        "requires": "($icons_resolution = '512x')",
+        "$icons_uv": [ 0, 352 ],
+        "$icons_uv_size": [ 20, 16 ]
+      },
+      {
+        "requires": "($icons_resolution = '1024x')",
+        "$icons_uv": [ 0, 704 ],
+        "$icons_uv_size": [ 40, 32 ]
+      },
+      {
+        "requires": "($icons_resolution = '2048x')",
+        "$icons_uv": [ 0, 1408 ],
+        "$icons_uv_size": [ 80, 64 ]
+      },
+      {
+        "requires": "($icons_resolution = '4096x')",
+        "$icons_uv": [ 0, 2816 ],
+        "$icons_uv_size": [ 160, 128 ]
+      },
+      {
+        "requires": "($icons_resolution = '8192x')",
+        "$icons_uv": [ 0, 5632 ],
+        "$icons_uv_size": [ 320, 256 ]
+      }
+    ]
+  },
+
+  "ping_yellow_icon@icons_java_dx.icons_base": {
+    "variables": [
+      {
+        "requires": "($icons_resolution = '256x')",
+        "$icons_uv": [ 0, 192 ],
+        "$icons_uv_size": [ 10, 8 ]
+      },
+      {
+        "requires": "($icons_resolution = '512x')",
+        "$icons_uv": [ 0, 384 ],
+        "$icons_uv_size": [ 20, 16 ]
+      },
+      {
+        "requires": "($icons_resolution = '1024x')",
+        "$icons_uv": [ 0, 768 ],
+        "$icons_uv_size": [ 40, 32 ]
+      },
+      {
+        "requires": "($icons_resolution = '2048x')",
+        "$icons_uv": [ 0, 1536 ],
+        "$icons_uv_size": [ 80, 64 ]
+      },
+      {
+        "requires": "($icons_resolution = '4096x')",
+        "$icons_uv": [ 0, 3072 ],
+        "$icons_uv_size": [ 160, 128 ]
+      },
+      {
+        "requires": "($icons_resolution = '8192x')",
+        "$icons_uv": [ 0, 6144 ],
+        "$icons_uv_size": [ 320, 256 ]
+      }
+    ]
+  },
+
+  "ping_red_icon@icons_java_dx.icons_base": {
+    "variables": [
+      {
+        "requires": "($icons_resolution = '256x')",
+        "$icons_uv": [ 0, 208 ],
+        "$icons_uv_size": [ 10, 8 ]
+      },
+      {
+        "requires": "($icons_resolution = '512x')",
+        "$icons_uv": [ 0, 416 ],
+        "$icons_uv_size": [ 20, 16 ]
+      },
+      {
+        "requires": "($icons_resolution = '1024x')",
+        "$icons_uv": [ 0, 832 ],
+        "$icons_uv_size": [ 40, 32 ]
+      },
+      {
+        "requires": "($icons_resolution = '2048x')",
+        "$icons_uv": [ 0, 1664 ],
+        "$icons_uv_size": [ 80, 64 ]
+      },
+      {
+        "requires": "($icons_resolution = '4096x')",
+        "$icons_uv": [ 0, 3328 ],
+        "$icons_uv_size": [ 160, 128 ]
+      },
+      {
+        "requires": "($icons_resolution = '8192x')",
+        "$icons_uv": [ 0, 6656 ],
+        "$icons_uv_size": [ 320, 256 ]
+      }
+    ]
+  },
+
+  "ping_offline_icon@icons_java_dx.icons_base": {
+    "variables": [
+      {
+        "requires": "($icons_resolution = '256x')",
+        "$icons_uv": [ 0, 216 ],
+        "$icons_uv_size": [ 10, 8 ]
+      },
+      {
+        "requires": "($icons_resolution = '512x')",
+        "$icons_uv": [ 0, 432 ],
+        "$icons_uv_size": [ 20, 16 ]
+      },
+      {
+        "requires": "($icons_resolution = '1024x')",
+        "$icons_uv": [ 0, 864 ],
+        "$icons_uv_size": [ 40, 32 ]
+      },
+      {
+        "requires": "($icons_resolution = '2048x')",
+        "$icons_uv": [ 0, 1728 ],
+        "$icons_uv_size": [ 80, 64 ]
+      },
+      {
+        "requires": "($icons_resolution = '4096x')",
+        "$icons_uv": [ 0, 3456 ],
+        "$icons_uv_size": [ 160, 128 ]
+      },
+      {
+        "requires": "($icons_resolution = '8192x')",
+        "$icons_uv": [ 0, 6912 ],
+        "$icons_uv_size": [ 320, 256 ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "smithing_java_dx",
+
+  "smithing_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/smithing",
+    "$smithing_uv|default": [ 0, 0 ],
+    "$smithing_uv_size|default": [ 0, 0 ],
+    "uv": "$smithing_uv",
+    "uv_size": "$smithing_uv_size"
+  },
+  
+  /*////// Base //////*/
+
+  /* Smithing Table Screen */
+
+  "dialog_bg_smithing@smithing_java_dx.smithing_base": {
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($smithing_resolution = '256x')",  "$smithing_uv_size": [ 176, 166 ] },
+      { "requires": "($smithing_resolution = '512x')",  "$smithing_uv_size": [ 352, 332 ] },
+      { "requires": "($smithing_resolution = '1024x')", "$smithing_uv_size": [ 704, 664 ] },
+      { "requires": "($smithing_resolution = '2048x')", "$smithing_uv_size": [ 1408, 1328 ] },
+      { "requires": "($smithing_resolution = '4096x')", "$smithing_uv_size": [ 2816, 2656 ] },
+      { "requires": "($smithing_resolution = '8192x')", "$smithing_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /* Cross Out */
+
+  "cross_out_icon@smithing_java_dx.smithing_base": {
+    "size": [ 28, 21 ],
+    "variables": [
+      { "requires": "($smithing_resolution = '256x')",  "$smithing_uv": [ 176, 0 ],  "$smithing_uv_size": [ 28, 21 ] },
+      { "requires": "($smithing_resolution = '512x')",  "$smithing_uv": [ 352, 0 ],  "$smithing_uv_size": [ 56, 42 ] },
+      { "requires": "($smithing_resolution = '1024x')", "$smithing_uv": [ 704, 0 ],  "$smithing_uv_size": [ 112, 84 ] },
+      { "requires": "($smithing_resolution = '2048x')", "$smithing_uv": [ 1408, 0 ], "$smithing_uv_size": [ 224, 168 ] },
+      { "requires": "($smithing_resolution = '4096x')", "$smithing_uv": [ 2816, 0 ], "$smithing_uv_size": [ 448, 336 ] },
+      { "requires": "($smithing_resolution = '8192x')", "$smithing_uv": [ 5632, 0 ], "$smithing_uv_size": [ 896, 672 ] }
+    ]
+  }
+}

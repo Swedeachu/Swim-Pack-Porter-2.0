@@ -1,0 +1,358 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "chat_settings_dx",
+
+  /*//// Dropdown Toggles ////*/
+
+  "font_type_option": {
+    "type": "panel",
+    "size": [ 150, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_label": "chat.settings.font",
+    "$option_enabled_binding_name": "#chat_typeface_dropdown_enabled",
+    "controls": [
+      {
+        "mojangles@settings_common_dx.dropdown_radio_150": {
+          "$toggle_state_binding_name": "#typeface_radio_mojangles",
+          "$radio_label_text": "typeface.notoSans",
+          "$radio_label_font_type": "smooth",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#typeface_radio_notoSans",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "noto_sans@settings_common_dx.dropdown_radio_150": {
+          "$toggle_state_binding_name": "#typeface_radio_notoSans",
+          "$radio_label_text": "typeface.mojangles",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#typeface_radio_mojangles",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "color_option_base": {
+    "type": "panel",
+    "size": [ 150, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_enabled_binding_name": "('#' + $color_prefix + '_color_dropdown_enabled')",
+    "$custom_button_content": "chat_settings_dx.button_label_with_colors",
+    "controls": [
+      {
+        "white@settings_common_dx.dropdown_radio_150": {
+          "$toggle_state_binding_name": "('#' + $color_prefix + '_0'",
+          "$toggle_value_text": "color.gold",
+          "$value_color": "$6_color_format",
+          "bindings": [
+            {
+              "binding_name": "('#' + $color_prefix + '_6'",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "green@settings_common_dx.dropdown_radio_150": {
+          "$toggle_state_binding_name": "('#' + $color_prefix + '_1'",
+          "$toggle_value_text": "color.white",
+          "$value_color": "$f_color_format",
+          "bindings": [
+            {
+              "binding_name": "('#' + $color_prefix + '_0'",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "aqua@settings_common_dx.dropdown_radio_150": {
+          "$toggle_state_binding_name": "('#' + $color_prefix + '_2'",
+          "$toggle_value_text": "color.green",
+          "$value_color": "$a_color_format",
+          "bindings": [
+            {
+              "binding_name": "('#' + $color_prefix + '_1'",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "red@settings_common_dx.dropdown_radio_150": {
+          "$toggle_state_binding_name": "('#' + $color_prefix + '_3')",
+          "$toggle_value_text": "color.aqua",
+          "$value_color": "$b_color_format",
+          "bindings": [
+            {
+              "binding_name": "('#' + $color_prefix + '_2'",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "light_purple@settings_common_dx.dropdown_radio_150": {
+          "$toggle_state_binding_name": "('#' + $color_prefix + '_4'",
+          "$toggle_value_text": "color.red",
+          "$value_color": "$c_color_format",
+          "bindings": [
+            {
+              "binding_name": "('#' + $color_prefix + '_3'",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "yellow@settings_common_dx.dropdown_radio_150": {
+          "$toggle_state_binding_name": "('#' + $color_prefix + '_5'",
+          "$toggle_value_text": "color.light_purple",
+          "$value_color": "$d_color_format",
+          "bindings": [
+            {
+              "binding_name": "('#' + $color_prefix + '_4'",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "gold@settings_common_dx.dropdown_radio_150": {
+          "$toggle_state_binding_name": "('#' + $color_prefix + '_6'",
+          "$toggle_value_text": "color.yellow",
+          "$value_color": "$e_color_format",
+          "bindings": [
+            {
+              "binding_name": "('#' + $color_prefix + '_5'",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_label_with_colors@settings_common_dx.button_label_with_value": {
+    "controls": [
+      {
+        "button_label@common_buttons_dx.button_label": {
+          "ignored": "$only_value",
+          "text": "$option_label",
+          "color": "$option_label_text_color"
+        }
+      },
+      {
+        "separator@common_buttons_dx.button_label": {
+          "ignored": "$only_value",
+          "text": ": "
+        }
+      },
+      {
+        "value_label@common_buttons_dx.button_label": {
+          "color": "$value_color",
+          "text": "$toggle_value_text",
+          "bindings": [
+            {
+              "binding_name": "$toggle_value_text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*////// CHAT COLOR SECTIONS //////*/
+  
+  "colors_dropdown_base@settings_common_dx.option_dropdown_no_scroll": {
+    "$dropdown_area": "chat_settings_content_area",
+    "$dropdown_name": "($color_prefix + '_color_dropdown')",
+    "$option_enabled_binding_name": "('#' + $color_prefix + '_color_dropdown_enabled')",
+    "$options_dropdown_toggle_label_binding": "('#' + $color_prefix + '_color_dropdown_label')",
+    "$option_dropdown_size": [ "100%", 22 ],
+    "$options_dropdown_toggle_button_state_content": [ "100%", "100%" ],
+    "$options_dropdown_toggle_left_padding": [ 3, "100%" ],
+    "$options_dropdown_toggle_prelabel_content": "chat_settings.paintbrush",
+    "$options_dropdown_toggle_prelabel_content_size": [ "100%y", "100%" ],
+    "$options_dropdown_toggle_prelabel_content_padding": [ 3, "100%" ],
+    "$dropdown_content": "chat_settings.chat_color_dropdown_content",
+    "$no_radio_content": false,
+    "$radio_content_control": "chat_settings.colored_icon_panel",
+    "$icon_texture": "textures/ui/text_color_paintbrush",
+    "$icon_overlay_texture": "textures/ui/text_color_paintbrush_overlay",
+    "$icon_color_binding": "#font_color",
+    "$icon_color_binding_type": "collection",
+    "$icon_color_collection_name": "font_colors",
+    "$radio_label_text": "#font_color_label",
+    "$radio_label_color": "#font_color",
+    "$options_dropdown_toggle_label_shadow": true,
+    "$radio_label_bindings": [
+      {
+        "binding_name": "$radio_label_text",
+        "binding_collection_name": "$icon_color_collection_name",
+        "binding_type": "collection"
+      },
+      {
+        "binding_name": "$radio_label_color",
+        "binding_collection_name": "$icon_color_collection_name",
+        "binding_name_override": "#color",
+        "binding_type": "collection"
+      }
+    ]
+  },
+
+  /*////// PANELS //////*/
+  
+  "panel_content_top": {
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 40 ],
+    "size": [ 310, 68 ],
+    "controls": [
+      {
+        "mute_toggle@settings_common_dx.option_toggle_150": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 150, 20 ],
+          "$option_label": "chat.mute",
+          "$option_binding_name": "#hide_chat",
+          "$toggle_name": "hide_chat"
+        }
+      },
+      {
+        "chat_tts_toggle@settings_common_dx.option_toggle_150": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [ 150, 20 ],
+          "$option_label": "chat.settings.tts",
+          "$option_binding_name": "#toggle_tts",
+          "$toggle_name": "toggle_tts"
+        }
+      },
+      {
+        "font_type_option@chat_settings_dx.font_type_option": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 24 ]
+        }
+      },
+      {
+        "font_size_slider@settings_common_dx.option_slider_150": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ 0, 24 ],
+          "size": [ 150, 20 ],
+          "$option_label": "#chat_font_size_custom_label",
+          "$slider_name": "chat_font_size",
+          "$slider_value_binding_name": "#chat_font_size",
+          "$option_enabled_binding_name": "#chat_font_size_enabled",
+          "$slider_steps_binding_name": "#chat_font_size_steps",
+          "$slider_tts_text_value": "#chat_font_size_text_value",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label",
+              "binding_condition": "visible"
+            },
+            {
+              "binding_name": "$slider_tts_text_value"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#chat_typeface_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "once"
+            }
+          ]
+        }
+      },
+      {
+        "chat_color_option@chat_settings_dx.color_option_base": {
+          "$option_label": "chat.settings.chatColor",
+          "$color_prefix": "chat",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 48 ]
+        }
+      },
+      {
+        "mentions_color_option@chat_settings_dx.color_option_base": {
+          "$option_label": "chat.settings.mentionsColor",
+          "$color_prefix": "mentions",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ 0, 48 ]
+        }
+      }
+    ]
+  },
+
+  "panel_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "title_label": {
+          "type": "label",
+          "shadow": true,
+          "layer": 2,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 19 ],
+          "text": "chat.settings"
+        }
+      },
+      { "panel_content_top@chat_settings_dx.panel_content_top": { } },
+      {
+        "bottom_buttons_panel": {
+          "type": "panel",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -12 ],
+          "size": [ 310, 20 ],
+          "controls": [
+            {
+              "reset_button@common_buttons_dx.main_button_150": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$pressed_button_name": "button.reset_chat_settings",
+                "$button_text": "options.resetSettings"
+              }
+            },
+            {
+              "done_button@common_buttons_dx.main_button_150": {
+                "$button_text": "gui.done",
+                "$pressed_button_name": "button.close_chat_settings",
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "layer": 2
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "chat_settings_screen@popup_dialog.modal_input_panel": {
+    "$popup_dialog_escape_button_name": "button.close_chat_settings",
+    "controls": [
+      { "panel_content@chat_settings_dx.panel_content": {} },
+      { "screen_background@java_gui_common.screen_background": { "size": [ "150%", "150%" ], "layer": -10 } }
+    ]
+  }
+}

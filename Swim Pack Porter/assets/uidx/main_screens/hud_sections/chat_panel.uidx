@@ -1,0 +1,231 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "hud_chat_dx",
+
+  /*//// Chat Stack Panel ////*/
+
+  "chat_stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "pocket_padding_panel": {
+          "type": "panel",
+          "size": [ "100%", 30 ],
+          "bindings": [
+            {
+              "binding_name": "#hud_visible_not_centered",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "size": [ 0, 0 ],
+          "controls": [
+            {
+              "hud_player_rend_desktop": {
+                "type": "panel",
+                "offset": [ 6, 10 ],
+                "size": [ 17, 17 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  {
+                    "hud_player": {
+                      "type": "custom",
+                      "renderer": "hud_player_renderer",
+                      "layer": 1,
+                      "animation_reset_name": "screen_animation_reset",
+                      "anims": [
+                        "@common.screen_exit_size_animation_push",
+                        "@common.screen_exit_size_animation_pop",
+                        "@common.screen_entrance_size_animation_push",
+                        "@common.screen_entrance_size_animation_pop"
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "#paper_doll_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "paper_doll_padding": {
+          "type": "panel",
+          "size": [ "100%", 50 ],
+          "bindings": [
+            {
+              "binding_name": "#paper_doll_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "player_position": {
+          "type": "image",
+          "size": [ "100%c + 6px", "100%c + 2px" ],
+          "texture": "textures/uidx/global/white",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "alpha": 0.7,
+          "controls": [
+            {
+              "player_position_text": {
+                "type": "label",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 1,
+      
+                "enable_profanity_filter": false,
+                "color": "$chat_text_color",
+                "text": "#text",
+                "shadow": true,
+      
+                "bindings": [
+                  {
+                    "binding_name": "#player_position_text",
+                    "binding_name_override": "#text",
+                    "binding_condition": "always_when_visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#player_position_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "always",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "fill_padding": {
+          "type": "panel",
+          "size": [ 1, "fill" ],
+          "ignored": "$touch"
+        }
+      },
+      { "chat_panel@hud_chat_dx.chat_panel": {} },
+      {
+        "bottom_padding": {
+          "type": "panel",
+          "size": [ 1, 41 ],
+          "ignored": "$touch"
+        }
+      },
+      {
+        "bottom_fill_padding": {
+          "type": "panel",
+          "size": [ 1, "fill" ],
+          "ignored": "(not $touch)"
+        }
+      }
+    ]
+  },
+
+  /*//// Chat Panel ////*/
+
+  "chat_grid_item": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "chat_messages_background": {
+          "type": "image",
+          "texture": "textures/uidx/hud/chat_messages_bg",
+          "layer": 2,
+          "size": [ "100%", "100%c" ],
+          "anims": [
+            "@hud_chat_dx.anim_chat_bg_wait"
+          ],
+          "controls": [
+            {
+              "chat_text@hud.chat_label": {
+                "layer": 3,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "line_padding": -1,
+                "offset": [ 2, 0.5 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "anim_chat_bg_alpha": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "destroy_at_end": "chat_grid_item",
+    "duration": 1,
+    "from": 1.0,
+    "to": 0
+  },
+
+  "anim_chat_bg_wait": {
+    "anim_type": "wait",
+    "duration": "$chat_item_lifetime",
+    "next": "hud_chat_dx.anim_chat_bg_alpha"
+  },
+
+  "chat_panel": {
+    "type": "panel",
+    "layer": 75,
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": "$chat_size",
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "ignored": "$touch",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "factory": {
+            "name": "chat_item_factory",
+            "max_children_size": 20,
+            "control_ids": {
+              "chat_item": "chat_item@hud_chat_dx.chat_grid_item"
+            }
+          }
+        }
+      },
+      {
+        "stack_panel_touch": {
+          "type": "stack_panel",
+          "ignored": "(not $touch)",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "factory": {
+            "name": "chat_item_factory",
+            "max_children_size": 20,
+            "control_ids": {
+              "chat_item": "chat_item@hud_chat_dx.chat_grid_item"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

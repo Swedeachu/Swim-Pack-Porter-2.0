@@ -1,0 +1,60 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "common_screens_dx",
+
+  "center_screen": {
+    "type": "panel"
+  },
+
+  "full_screen": {
+    "type": "panel"
+  },
+
+  "container_center_screen": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": { } },
+      { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
+    ]
+  },
+
+  "container_full_screen": {
+    "type": "panel",
+    "$screen_content|default": "",
+    "controls": [
+      { "screen_content@$screen_content": { } },
+      { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
+    ]
+  },
+
+  "horizontal_safezone_screen": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", "100%" ],
+    "$panel_content|default": "",
+    "controls": [
+      {
+        "left_safezone": {
+          "type": "panel",
+          "size": "$left_horizontal_safezone_size"
+        }
+      },
+      { 
+        "middle_safezone": {
+          "type": "panel",
+          "size": [ "fill", "100%" ],
+          "controls": [
+            { "panel_content@$panel_content": { } }
+          ]
+        }
+      },
+      {
+        "right_safezone": {
+          "type": "panel",
+          "size": "$right_horizontal_safezone_size"
+        }
+      }
+    ]
+  }
+}

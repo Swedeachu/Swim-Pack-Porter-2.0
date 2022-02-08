@@ -1,0 +1,102 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "beacon_java_dx",
+
+  "beacon_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/beacon",
+    "$beacon_uv|default": [ 0, 0 ],
+    "$beacon_uv_size|default": [ 0, 0 ],
+    "uv": "$beacon_uv",
+    "uv_size": "$beacon_uv_size"
+  },
+  
+  /*////// Base //////*/
+  
+  /* Beacon screen */
+
+  "dialog_bg_beacon@beacon_java_dx.beacon_base": {
+    "size": [ 230, 219 ],
+    "variables": [
+      { "requires": "($beacon_resolution = '256x')",  "$beacon_uv_size": [ 230, 219 ] },
+      { "requires": "($beacon_resolution = '512x')",  "$beacon_uv_size": [ 460, 438 ] },
+      { "requires": "($beacon_resolution = '1024x')", "$beacon_uv_size": [ 920, 876 ] },
+      { "requires": "($beacon_resolution = '2048x')", "$beacon_uv_size": [ 1840, 1752 ] },
+      { "requires": "($beacon_resolution = '4096x')", "$beacon_uv_size": [ 3680, 3504 ] },
+      { "requires": "($beacon_resolution = '8192x')", "$beacon_uv_size": [ 7360, 7008 ] }
+    ]
+  },
+
+  /* Buttons */
+
+  "button_unchecked_default@beacon_java_dx.beacon_base": {
+    "size": [ 22, 22 ],
+    "variables": [
+      { "requires": "($beacon_resolution = '256x')",  "$beacon_uv": [ 0, 219 ],  "$beacon_uv_size": [ 22, 22 ] },
+      { "requires": "($beacon_resolution = '512x')",  "$beacon_uv": [ 0, 438 ],  "$beacon_uv_size": [ 44, 44 ] },
+      { "requires": "($beacon_resolution = '1024x')", "$beacon_uv": [ 0, 876 ],  "$beacon_uv_size": [ 88, 88 ] },
+      { "requires": "($beacon_resolution = '2048x')", "$beacon_uv": [ 0, 1752 ], "$beacon_uv_size": [ 176, 176 ] },
+      { "requires": "($beacon_resolution = '4096x')", "$beacon_uv": [ 0, 3504 ], "$beacon_uv_size": [ 352, 352 ] },
+      { "requires": "($beacon_resolution = '8192x')", "$beacon_uv": [ 0, 7008 ], "$beacon_uv_size": [ 704, 704 ] }
+    ]
+  },
+
+  "button_unchecked_hover@beacon_java_dx.button_unchecked_default": {
+    "variables": [
+      { "requires": "($beacon_resolution = '256x')",  "$beacon_uv": [ 66, 219 ],    "$beacon_uv_size": [ 22, 22 ] },
+      { "requires": "($beacon_resolution = '512x')",  "$beacon_uv": [ 132, 438 ],   "$beacon_uv_size": [ 44, 44 ] },
+      { "requires": "($beacon_resolution = '1024x')", "$beacon_uv": [ 264, 876 ],   "$beacon_uv_size": [ 88, 88 ] },
+      { "requires": "($beacon_resolution = '2048x')", "$beacon_uv": [ 528, 1752 ],  "$beacon_uv_size": [ 176, 176 ] },
+      { "requires": "($beacon_resolution = '4096x')", "$beacon_uv": [ 1056, 3504 ], "$beacon_uv_size": [ 352, 352 ] },
+      { "requires": "($beacon_resolution = '8192x')", "$beacon_uv": [ 2112, 7008 ], "$beacon_uv_size": [ 704, 704 ] }
+    ]
+  },
+
+  "button_checked@beacon_java_dx.button_unchecked_default": {
+    "variables": [
+      { "requires": "($beacon_resolution = '256x')",  "$beacon_uv": [ 22, 219 ],   "$beacon_uv_size": [ 22, 22 ] },
+      { "requires": "($beacon_resolution = '512x')",  "$beacon_uv": [ 44, 438 ],   "$beacon_uv_size": [ 44, 44 ] },
+      { "requires": "($beacon_resolution = '1024x')", "$beacon_uv": [ 88, 876 ],   "$beacon_uv_size": [ 88, 88 ] },
+      { "requires": "($beacon_resolution = '2048x')", "$beacon_uv": [ 176, 1752 ], "$beacon_uv_size": [ 176, 176 ] },
+      { "requires": "($beacon_resolution = '4096x')", "$beacon_uv": [ 352, 3504 ], "$beacon_uv_size": [ 352, 352 ] },
+      { "requires": "($beacon_resolution = '8192x')", "$beacon_uv": [ 704, 7008 ], "$beacon_uv_size": [ 704, 704 ] }
+    ]
+  },
+
+  "button_locked@beacon_java_dx.button_unchecked_default": {
+    "variables": [
+      { "requires": "($beacon_resolution = '256x')",  "$beacon_uv": [ 44, 219 ],    "$beacon_uv_size": [ 22, 22 ] },
+      { "requires": "($beacon_resolution = '512x')",  "$beacon_uv": [ 88, 438 ],    "$beacon_uv_size": [ 44, 44 ] },
+      { "requires": "($beacon_resolution = '1024x')", "$beacon_uv": [ 176, 876 ],   "$beacon_uv_size": [ 88, 88 ] },
+      { "requires": "($beacon_resolution = '2048x')", "$beacon_uv": [ 352, 1752 ],  "$beacon_uv_size": [ 176, 176 ] },
+      { "requires": "($beacon_resolution = '4096x')", "$beacon_uv": [ 704, 3504 ],  "$beacon_uv_size": [ 352, 352 ] },
+      { "requires": "($beacon_resolution = '8192x')", "$beacon_uv": [ 1408, 7008 ], "$beacon_uv_size": [ 704, 704 ] }
+    ]
+  },
+
+  /* Icons */
+
+  "confirm_icon@beacon_java_dx.beacon_base": {
+    "size": [ 21, 22 ],
+    "variables": [
+      { "requires": "($beacon_resolution = '256x')",  "$beacon_uv": [ 88, 219 ],    "$beacon_uv_size": [ 21, 22 ] },
+      { "requires": "($beacon_resolution = '512x')",  "$beacon_uv": [ 176, 438 ],   "$beacon_uv_size": [ 42, 44 ] },
+      { "requires": "($beacon_resolution = '1024x')", "$beacon_uv": [ 352, 876 ],   "$beacon_uv_size": [ 84, 88 ] },
+      { "requires": "($beacon_resolution = '2048x')", "$beacon_uv": [ 704, 1752 ],  "$beacon_uv_size": [ 168, 176 ] },
+      { "requires": "($beacon_resolution = '4096x')", "$beacon_uv": [ 1408, 3504 ], "$beacon_uv_size": [ 336, 352 ] },
+      { "requires": "($beacon_resolution = '8192x')", "$beacon_uv": [ 2816, 7008 ], "$beacon_uv_size": [ 672, 704 ] }
+    ]
+  },
+
+  "cancel_icon@beacon_java_dx.confirm_icon": {
+    "variables": [
+      { "requires": "($beacon_resolution = '256x')",  "$beacon_uv": [ 110, 219 ],   "$beacon_uv_size": [ 21, 22 ] },
+      { "requires": "($beacon_resolution = '512x')",  "$beacon_uv": [ 220, 438 ],   "$beacon_uv_size": [ 42, 44 ] },
+      { "requires": "($beacon_resolution = '1024x')", "$beacon_uv": [ 440, 876 ],   "$beacon_uv_size": [ 84, 88 ] },
+      { "requires": "($beacon_resolution = '2048x')", "$beacon_uv": [ 880, 1752 ],  "$beacon_uv_size": [ 168, 176 ] },
+      { "requires": "($beacon_resolution = '4096x')", "$beacon_uv": [ 1760, 3504 ], "$beacon_uv_size": [ 336, 352 ] },
+      { "requires": "($beacon_resolution = '8192x')", "$beacon_uv": [ 3520, 7008 ], "$beacon_uv_size": [ 672, 704 ] }
+    ]
+  }
+}

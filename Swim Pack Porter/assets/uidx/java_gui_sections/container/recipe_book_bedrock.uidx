@@ -1,0 +1,513 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "recipe_book_bedrock_dx",
+
+  "recipe_book_new_base": {
+    "type": "image",
+    "size": [ 142, 166 ],
+    "$recipe_book_new_uv|default": [ 0, 0 ],
+    "$recipe_book_new_uv_size|default": [ 0, 0 ],
+    "uv": "$recipe_book_new_uv",
+    "uv_size": "$recipe_book_new_uv_size"
+  },
+
+  /*//// Recipe Item Search ////*/
+
+  "recipe_item_search@recipe_book_bedrock_dx.recipe_book_new_base": {
+    "texture": "assets/uidx/textures/gui/container/recipe_book/recipe_item_search",
+    "variables": [
+      { "requires": "($recipe_item_search_resolution = '256x')",  "$recipe_book_new_uv_size": [ 142, 166  ] },
+      { "requires": "($recipe_item_search_resolution = '512x')",  "$recipe_book_new_uv_size": [ 284, 332  ] },
+      { "requires": "($recipe_item_search_resolution = '1024x')", "$recipe_book_new_uv_size": [ 568, 664  ] },
+      { "requires": "($recipe_item_search_resolution = '2048x')", "$recipe_book_new_uv_size": [ 1136, 1328 ] },
+      { "requires": "($recipe_item_search_resolution = '4096x')", "$recipe_book_new_uv_size": [ 2272, 2656 ] },
+      { "requires": "($recipe_item_search_resolution = '8192x')", "$recipe_book_new_uv_size": [ 4544, 5312 ] }
+    ]
+  },
+
+  /*//// Recipe Item Search no filter ////*/
+
+  "recipe_item_search_no_filter@recipe_book_bedrock_dx.recipe_book_new_base": {
+    "texture": "assets/uidx/textures/gui/container/recipe_book/recipe_item_search_no_filter",
+    "variables": [
+      { "requires": "($recipe_item_search_no_filter_resolution = '256x')",  "$recipe_book_new_uv_size": [ 142, 166  ] },
+      { "requires": "($recipe_item_search_no_filter_resolution = '512x')",  "$recipe_book_new_uv_size": [ 284, 332  ] },
+      { "requires": "($recipe_item_search_no_filter_resolution = '1024x')", "$recipe_book_new_uv_size": [ 568, 664  ] },
+      { "requires": "($recipe_item_search_no_filter_resolution = '2048x')", "$recipe_book_new_uv_size": [ 1136, 1328 ] },
+      { "requires": "($recipe_item_search_no_filter_resolution = '4096x')", "$recipe_book_new_uv_size": [ 2272, 2656 ] },
+      { "requires": "($recipe_item_search_no_filter_resolution = '8192x')", "$recipe_book_new_uv_size": [ 4544, 5312 ] }
+    ]
+  },
+
+  /*//// Recipe Items ////*/
+
+  "recipe_items@recipe_book_bedrock_dx.recipe_book_new_base": {
+    "texture": "assets/uidx/textures/gui/container/recipe_book/recipe_items",
+    "variables": [
+      { "requires": "($recipe_items_resolution = '256x')",  "$recipe_book_new_uv_size": [ 142, 166  ] },
+      { "requires": "($recipe_items_resolution = '512x')",  "$recipe_book_new_uv_size": [ 284, 332  ] },
+      { "requires": "($recipe_items_resolution = '1024x')", "$recipe_book_new_uv_size": [ 568, 664  ] },
+      { "requires": "($recipe_items_resolution = '2048x')", "$recipe_book_new_uv_size": [ 1136, 1328 ] },
+      { "requires": "($recipe_items_resolution = '4096x')", "$recipe_book_new_uv_size": [ 2272, 2656 ] },
+      { "requires": "($recipe_items_resolution = '8192x')", "$recipe_book_new_uv_size": [ 4544, 5312 ] }
+    ]
+  },
+
+  /*//// Creative Item Search ////*/
+
+  "creative_item_search@recipe_book_bedrock_dx.recipe_book_new_base": {
+    "size": [ 322, 188 ],
+    "texture": "assets/uidx/textures/gui/container/recipe_book/creative_item_search",
+    "variables": [
+      { "requires": "($creative_item_search_resolution = '256x')",  "$recipe_book_new_uv_size": [ 322, 188    ] },
+      { "requires": "($creative_item_search_resolution = '512x')",  "$recipe_book_new_uv_size": [ 644, 376    ] },
+      { "requires": "($creative_item_search_resolution = '1024x')", "$recipe_book_new_uv_size": [ 1288, 752   ] },
+      { "requires": "($creative_item_search_resolution = '2048x')", "$recipe_book_new_uv_size": [ 2576, 1504  ] },
+      { "requires": "($creative_item_search_resolution = '4096x')", "$recipe_book_new_uv_size": [ 5152, 3008  ] },
+      { "requires": "($creative_item_search_resolution = '8192x')", "$recipe_book_new_uv_size": [ 10304, 6016 ] }
+    ]
+  },
+
+  /*//// Creative Items ////*/
+
+  "creative_items@recipe_book_bedrock_dx.creative_item_search": {
+    "texture": "assets/uidx/textures/gui/container/recipe_book/creative_items",
+    "variables": [
+      { "requires": "($creative_items_resolution = '256x')",  "$recipe_book_new_uv_size": [ 322, 188    ] },
+      { "requires": "($creative_items_resolution = '512x')",  "$recipe_book_new_uv_size": [ 644, 376    ] },
+      { "requires": "($creative_items_resolution = '1024x')", "$recipe_book_new_uv_size": [ 1288, 752   ] },
+      { "requires": "($creative_items_resolution = '2048x')", "$recipe_book_new_uv_size": [ 2576, 1504  ] },
+      { "requires": "($creative_items_resolution = '4096x')", "$recipe_book_new_uv_size": [ 5152, 3008  ] },
+      { "requires": "($creative_items_resolution = '8192x')", "$recipe_book_new_uv_size": [ 10304, 6016 ] }
+    ]
+  },
+
+  /*//// Widgets ////*/
+
+  "widgets_base@recipe_book_bedrock_dx.recipe_book_new_base": {
+    "texture": "assets/uidx/textures/gui/container/recipe_book/widgets"
+  },
+
+  /*//// Construction Tab  ////*/
+
+  "construction_tab_back@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 26, 32 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv_size": [ 26, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv_size": [ 52, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv_size": [ 104, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv_size": [ 208, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv_size": [ 416, 512 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv_size": [ 832, 1024 ] }
+    ]
+  },
+  
+  "construction_tab_front@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 26, 32 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv": [ 0,	32 ], "$recipe_book_new_uv_size": [ 26, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv": [ 0,	64 ], "$recipe_book_new_uv_size": [ 52, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 0,	128 ], "$recipe_book_new_uv_size": [ 104, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 0,	256 ], "$recipe_book_new_uv_size": [ 208, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 0,	512 ], "$recipe_book_new_uv_size": [ 416, 512 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 0,	1024 ], "$recipe_book_new_uv_size": [ 832, 1024 ] }
+    ]
+  },
+
+  /*//// Equipment Tab  ////*/
+
+  "equipment_tab_back@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 26, 32 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv": [ 26, 0 ], "$recipe_book_new_uv_size": [ 26, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv": [ 52, 0 ], "$recipe_book_new_uv_size": [ 52, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 104, 0 ], "$recipe_book_new_uv_size": [ 104, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 208, 0 ], "$recipe_book_new_uv_size": [ 208, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 416, 0 ], "$recipe_book_new_uv_size": [ 416, 512 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 832, 0 ], "$recipe_book_new_uv_size": [ 832, 1024 ] }
+    ]
+  },
+  
+  "equipment_tab_front@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 26, 32 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv": [ 26, 32 ], "$recipe_book_new_uv_size": [ 26, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv": [ 52, 64 ], "$recipe_book_new_uv_size": [ 52, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 104, 128 ], "$recipe_book_new_uv_size": [ 104, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 208, 256 ], "$recipe_book_new_uv_size": [ 208, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 416, 512 ], "$recipe_book_new_uv_size": [ 416, 512 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 832, 1024 ], "$recipe_book_new_uv_size": [ 832, 1024 ] }
+    ]
+  },
+
+  /*//// Items Tab  ////*/
+
+  "items_tab_back@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 26, 32 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv": [ 52, 0 ], "$recipe_book_new_uv_size": [ 26, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv": [ 104, 0 ], "$recipe_book_new_uv_size": [ 52, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 208, 0 ], "$recipe_book_new_uv_size": [ 104, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 416, 0 ], "$recipe_book_new_uv_size": [ 208, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 832, 0 ], "$recipe_book_new_uv_size": [ 416, 512 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 1664, 0 ], "$recipe_book_new_uv_size": [ 832, 1024 ] }
+    ]
+  },
+  
+  "items_tab_front@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 26, 32 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv": [ 52, 32 ], "$recipe_book_new_uv_size": [ 26, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv": [ 104, 64 ], "$recipe_book_new_uv_size": [ 52, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 208, 128 ], "$recipe_book_new_uv_size": [ 104, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 416, 256 ], "$recipe_book_new_uv_size": [ 208, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 832, 512 ], "$recipe_book_new_uv_size": [ 416, 512 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 1664, 1024 ], "$recipe_book_new_uv_size": [ 832, 1024 ] }
+    ]
+  },
+
+  /*//// Nature Tab  ////*/
+
+  "nature_tab_back@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 26, 32 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv": [ 78, 0 ], "$recipe_book_new_uv_size": [ 26, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv": [ 156, 0 ], "$recipe_book_new_uv_size": [ 52, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 312, 0 ], "$recipe_book_new_uv_size": [ 104, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 624, 0 ], "$recipe_book_new_uv_size": [ 208, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 1248, 0 ], "$recipe_book_new_uv_size": [ 416, 512 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 2496, 0 ], "$recipe_book_new_uv_size": [ 832, 1024 ] }
+    ]
+  },
+  
+  "nature_tab_front@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 26, 32 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv": [ 78, 32 ], "$recipe_book_new_uv_size": [ 26, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv": [ 156, 64 ], "$recipe_book_new_uv_size": [ 52, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 312, 128 ], "$recipe_book_new_uv_size": [ 104, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 624, 256 ], "$recipe_book_new_uv_size": [ 208, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 1248, 512 ], "$recipe_book_new_uv_size": [ 416, 512 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 2496, 1024 ], "$recipe_book_new_uv_size": [ 832, 1024 ] }
+    ]
+  },
+
+  /*//// Search Tab  ////*/
+
+  "search_tab_back@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 26, 32 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv": [ 130, 0 ], "$recipe_book_new_uv_size": [ 26, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv": [ 260, 0 ], "$recipe_book_new_uv_size": [ 52, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 520, 0 ], "$recipe_book_new_uv_size": [ 104, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 1040, 0 ], "$recipe_book_new_uv_size": [ 208, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 2080, 0 ], "$recipe_book_new_uv_size": [ 416, 512 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 4160, 0 ], "$recipe_book_new_uv_size": [ 832, 1024 ] }
+    ]
+  },
+  
+  "search_tab_front@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 26, 32 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv": [ 130, 32 ], "$recipe_book_new_uv_size": [ 26, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv": [ 260, 64 ], "$recipe_book_new_uv_size": [ 52, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 520, 128 ], "$recipe_book_new_uv_size": [ 104, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 1040, 256 ], "$recipe_book_new_uv_size": [ 208, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 2080, 512 ], "$recipe_book_new_uv_size": [ 416, 512 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 4160, 1024 ], "$recipe_book_new_uv_size": [ 832, 1024 ] }
+    ]
+  },
+
+  /*//// Search Creative Tab  ////*/
+
+  "search_creative_tab_back@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 26, 32 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv": [ 104, 0 ], "$recipe_book_new_uv_size": [ 26, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv": [ 208, 0 ], "$recipe_book_new_uv_size": [ 52, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 416, 0 ], "$recipe_book_new_uv_size": [ 104, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 832, 0 ], "$recipe_book_new_uv_size": [ 208, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 1664, 0 ], "$recipe_book_new_uv_size": [ 416, 512 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 3328, 0 ], "$recipe_book_new_uv_size": [ 832, 1024 ] }
+    ]
+  },
+  
+  "search_creative_tab_front@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 26, 32 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv": [ 104, 32 ], "$recipe_book_new_uv_size": [ 26, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv": [ 208, 64 ], "$recipe_book_new_uv_size": [ 52, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 416, 128 ], "$recipe_book_new_uv_size": [ 104, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 832, 256 ], "$recipe_book_new_uv_size": [ 208, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 1664, 512 ], "$recipe_book_new_uv_size": [ 416, 512 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 3328, 1024 ], "$recipe_book_new_uv_size": [ 832, 1024 ] }
+    ]
+  },
+
+  /*//// Center Fold ////*/
+  
+  "center_fold_texture@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 18, 166 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')",  "$recipe_book_new_uv": [ 238, 15 ], "$recipe_book_new_uv_size": [ 18, 166 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')",  "$recipe_book_new_uv": [ 476, 30 ], "$recipe_book_new_uv_size": [ 36, 332 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 952, 60 ], "$recipe_book_new_uv_size": [ 72, 664 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 1904, 120 ], "$recipe_book_new_uv_size": [ 144, 1328 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 3808, 240 ], "$recipe_book_new_uv_size": [ 288, 2656 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 7616, 480 ], "$recipe_book_new_uv_size": [ 576, 5312 ] }
+    ]
+  },
+
+  /*//// Filter Toggle ////*/
+
+  "filter_off_button_default@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 27, 16 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv":  [ 0, 100 ], "$recipe_book_new_uv_size": [ 27, 16 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv":  [ 0, 200 ], "$recipe_book_new_uv_size": [ 54, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 0, 400 ], "$recipe_book_new_uv_size": [ 108, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 0, 800 ], "$recipe_book_new_uv_size": [ 216, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 0, 1600 ], "$recipe_book_new_uv_size": [ 432, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 0, 3200 ], "$recipe_book_new_uv_size": [ 864, 512 ] }
+    ]
+  },
+
+  "filter_off_button_hover@recipe_book_bedrock_dx.filter_off_button_default": {
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv":  [ 0, 116 ], "$recipe_book_new_uv_size": [ 27, 16 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv":  [ 0, 232 ], "$recipe_book_new_uv_size": [ 54, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 0, 464 ], "$recipe_book_new_uv_size": [ 108, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 0, 928 ], "$recipe_book_new_uv_size": [ 216, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 0, 1856 ], "$recipe_book_new_uv_size": [ 432, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 0, 3712 ], "$recipe_book_new_uv_size": [ 864, 512 ] }
+    ]
+  },
+
+  "filter_on_button_default@recipe_book_bedrock_dx.filter_off_button_default": {
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv":  [ 27, 100 ], "$recipe_book_new_uv_size": [ 27, 16 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv":  [ 54, 200 ], "$recipe_book_new_uv_size": [ 54, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 108, 400 ], "$recipe_book_new_uv_size": [ 108, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 216, 800 ], "$recipe_book_new_uv_size": [ 216, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 432, 1600 ], "$recipe_book_new_uv_size": [ 432, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 864, 3200 ], "$recipe_book_new_uv_size": [ 864, 512 ] }
+    ]
+  },
+
+  "filter_on_button_hover@recipe_book_bedrock_dx.filter_off_button_default": {
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv":  [ 27, 116 ], "$recipe_book_new_uv_size": [ 27, 16 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv":  [ 54, 232 ], "$recipe_book_new_uv_size": [ 54, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 108, 464 ], "$recipe_book_new_uv_size": [ 108, 64 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 216, 928 ], "$recipe_book_new_uv_size": [ 216, 128 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 432, 1856 ], "$recipe_book_new_uv_size": [ 432, 256 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 864, 3712 ], "$recipe_book_new_uv_size": [ 864, 512 ] }
+    ]
+  },
+
+  /*//// Grid ////*/
+
+  "recipe_grid_default@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 18, 18 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv":  [ 0, 64 ], "$recipe_book_new_uv_size": [ 18, 18 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv":  [ 0, 128 ], "$recipe_book_new_uv_size": [ 36, 36 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 0, 256 ], "$recipe_book_new_uv_size": [ 72, 72 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 0, 512 ], "$recipe_book_new_uv_size": [ 144, 144 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 0, 1024 ], "$recipe_book_new_uv_size": [ 288, 288 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 0, 2048 ], "$recipe_book_new_uv_size": [ 576, 576 ] }
+    ]
+  },
+
+  "recipe_grid_selected@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 18, 18 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv":  [ 18, 64 ], "$recipe_book_new_uv_size": [ 18, 18 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv":  [ 36, 128 ], "$recipe_book_new_uv_size": [ 36, 36 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 72, 256 ], "$recipe_book_new_uv_size": [ 72, 72 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 144, 512 ], "$recipe_book_new_uv_size": [ 144, 144 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 288, 1024 ], "$recipe_book_new_uv_size": [ 288, 288 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 576, 2048 ], "$recipe_book_new_uv_size": [ 576, 576 ] }
+    ]
+  },
+
+  "recipe_grid_red@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 18, 18 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv":  [ 36, 64 ], "$recipe_book_new_uv_size": [ 18, 18 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv":  [ 72, 128 ], "$recipe_book_new_uv_size": [ 36, 36 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 144, 256 ], "$recipe_book_new_uv_size": [ 72, 72 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 288, 512 ], "$recipe_book_new_uv_size": [ 144, 144 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 576, 1024 ], "$recipe_book_new_uv_size": [ 288, 288 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 1152, 2048 ], "$recipe_book_new_uv_size": [ 576, 576 ] }
+    ]
+  },
+
+  "creative_grid_default@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 18, 18 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv":  [ 0, 82 ], "$recipe_book_new_uv_size": [ 18, 18 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv":  [ 0, 164 ], "$recipe_book_new_uv_size": [ 36, 36 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 0, 328 ], "$recipe_book_new_uv_size": [ 72, 72 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 0, 656 ], "$recipe_book_new_uv_size": [ 144, 144 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 0, 1312 ], "$recipe_book_new_uv_size": [ 288, 288 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 0, 2624 ], "$recipe_book_new_uv_size": [ 576, 576 ] }
+    ]
+  },
+
+  "creative_grid_group_expanded@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 18, 18 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv":  [ 18, 82 ], "$recipe_book_new_uv_size": [ 18, 18 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv":  [ 36, 164 ], "$recipe_book_new_uv_size": [ 36, 36 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 72, 328 ], "$recipe_book_new_uv_size": [ 72, 72 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 144, 656 ], "$recipe_book_new_uv_size": [ 144, 144 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 288, 1312 ], "$recipe_book_new_uv_size": [ 288, 288 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 576, 2624 ], "$recipe_book_new_uv_size": [ 576, 576 ] }
+    ]
+  },
+
+  "creative_grid_group_collapsed@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 18, 18 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv":  [ 36, 82 ], "$recipe_book_new_uv_size": [ 18, 18 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv":  [ 72, 164 ], "$recipe_book_new_uv_size": [ 36, 36 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 144, 328 ], "$recipe_book_new_uv_size": [ 72, 72 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 288, 656 ], "$recipe_book_new_uv_size": [ 144, 144 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 576, 1312 ], "$recipe_book_new_uv_size": [ 288, 288 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 1152, 2624 ], "$recipe_book_new_uv_size": [ 576, 576 ] }
+    ]
+  },
+  
+  /*//// Scroll Box ////*/
+  
+  "scroll_upper@recipe_book_bedrock_dx.widgets_base": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 12, 6 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv": [ 232, 0 ], "$recipe_book_new_uv_size": [ 12, 6 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv": [ 464, 0 ], "$recipe_book_new_uv_size": [ 24, 12 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 928, 0 ], "$recipe_book_new_uv_size": [ 48, 24 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 1856, 0 ], "$recipe_book_new_uv_size": [ 96, 48 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 3712, 0 ], "$recipe_book_new_uv_size": [ 192, 96 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 7424, 0 ], "$recipe_book_new_uv_size": [ 384, 192 ] }
+    ]
+  },
+  
+  "scroll_middle@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 12, 2 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv": [ 232, 6 ], "$recipe_book_new_uv_size": [ 12, 2 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv": [ 464, 12 ], "$recipe_book_new_uv_size": [ 24, 4 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 928, 24 ], "$recipe_book_new_uv_size": [ 48, 8 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 1856, 48 ], "$recipe_book_new_uv_size": [ 96, 16 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 3712, 96 ], "$recipe_book_new_uv_size": [ 192, 32 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 7424, 192 ], "$recipe_book_new_uv_size": [ 384, 64 ] }
+    ]
+  },
+  
+  "scroll_bottom@recipe_book_bedrock_dx.widgets_base": {
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ 12, 7 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv": [ 232, 8 ], "$recipe_book_new_uv_size": [ 12, 7 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv": [ 464, 16 ], "$recipe_book_new_uv_size": [ 24, 14 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 928, 32 ], "$recipe_book_new_uv_size": [ 48, 28 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 1856, 64 ], "$recipe_book_new_uv_size": [ 96, 56 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 3712, 128 ], "$recipe_book_new_uv_size": [ 192, 112 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 7424, 256 ], "$recipe_book_new_uv_size": [ 384, 224 ] }
+    ]
+  },
+
+  "scroll_middle_stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 6 ],
+    "size": [ 12, "100%-11px" ],
+    "clips_children": true,
+    "controls": [
+      { "00@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "01@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "02@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "03@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "04@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "05@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "06@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "07@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "08@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "09@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "10@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "11@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "12@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "13@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "14@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "15@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "16@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "17@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "18@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "19@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "20@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "21@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "22@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "23@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "24@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "25@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "26@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "27@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "28@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "29@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "30@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "31@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "32@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "33@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "34@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "35@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "36@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "37@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "38@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "39@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "40@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "41@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "42@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "43@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "44@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "45@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "46@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "47@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "48@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "49@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "50@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "51@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "52@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "53@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "54@recipe_book_bedrock_dx.scroll_middle": { } },
+      { "55@recipe_book_bedrock_dx.scroll_middle": { } }
+    ]
+  },
+
+  "scroll_box": {
+    "type": "panel",
+    "size": [ 12, "100%" ],
+    "controls": [
+      { "scroll_upper@recipe_book_bedrock_dx.scroll_upper": { } },
+      { "scroll_middle_stack_panel@recipe_book_bedrock_dx.scroll_middle_stack_panel": { } },
+      { "scroll_scroll_bottom@recipe_book_bedrock_dx.scroll_bottom": { } }
+    ]
+  },
+
+  "scroll_box_locked@recipe_book_bedrock_dx.widgets_base": {
+    "size": [ 12, 15 ],
+    "variables": [
+      { "requires": "($recipe_widgets_resolution = '256x')", "$recipe_book_new_uv":  [ 244, 0 ], "$recipe_book_new_uv_size": [ 12,	15 ] },
+      { "requires": "($recipe_widgets_resolution = '512x')", "$recipe_book_new_uv":  [ 488, 0 ], "$recipe_book_new_uv_size": [ 24,	30 ] },
+      { "requires": "($recipe_widgets_resolution = '1024x')", "$recipe_book_new_uv": [ 976, 0 ], "$recipe_book_new_uv_size": [ 48,	60 ] },
+      { "requires": "($recipe_widgets_resolution = '2048x')", "$recipe_book_new_uv": [ 1952, 0 ], "$recipe_book_new_uv_size": [ 96, 120 ] },
+      { "requires": "($recipe_widgets_resolution = '4096x')", "$recipe_book_new_uv": [ 3904, 0 ], "$recipe_book_new_uv_size": [ 192, 240 ] },
+      { "requires": "($recipe_widgets_resolution = '8192x')", "$recipe_book_new_uv": [ 7808, 0 ], "$recipe_book_new_uv_size": [ 384, 480 ] }
+    ]
+  }
+}

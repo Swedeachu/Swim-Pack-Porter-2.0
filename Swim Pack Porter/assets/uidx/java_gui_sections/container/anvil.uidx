@@ -1,0 +1,69 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "anvil_java_dx",
+
+  "anvil_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/anvil",
+    "$anvil_uv|default": [ 0, 0 ],
+    "$anvil_uv_size|default": [ 0, 0 ],
+    "uv": "$anvil_uv",
+    "uv_size": "$anvil_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Anvil Screen */
+
+  "dialog_bg_anvil@anvil_java_dx.anvil_base": {
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($anvil_resolution = '256x')",  "$anvil_uv_size": [ 176, 166 ] },
+      { "requires": "($anvil_resolution = '512x')",  "$anvil_uv_size": [ 352, 332 ] },
+      { "requires": "($anvil_resolution = '1024x')", "$anvil_uv_size": [ 704, 664 ] },
+      { "requires": "($anvil_resolution = '2048x')", "$anvil_uv_size": [ 1408, 1328 ] },
+      { "requires": "($anvil_resolution = '4096x')", "$anvil_uv_size": [ 2816, 2656 ] },
+      { "requires": "($anvil_resolution = '8192x')", "$anvil_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /* Text Edit */
+
+  "anvil_text_edit_active_java@anvil_java_dx.anvil_base": {
+    "size": [ 110, 16 ],
+    "variables": [
+      { "requires": "($anvil_resolution = '256x')",  "$anvil_uv": [ 0, 166 ],  "$anvil_uv_size": [ 110, 16 ] },
+      { "requires": "($anvil_resolution = '512x')",  "$anvil_uv": [ 0, 332 ],  "$anvil_uv_size": [ 220, 32 ] },
+      { "requires": "($anvil_resolution = '1024x')", "$anvil_uv": [ 0, 664 ],  "$anvil_uv_size": [ 440, 64 ] },
+      { "requires": "($anvil_resolution = '2048x')", "$anvil_uv": [ 0, 1328 ], "$anvil_uv_size": [ 880, 128 ] },
+      { "requires": "($anvil_resolution = '4096x')", "$anvil_uv": [ 0, 2656 ], "$anvil_uv_size": [ 1760, 256 ] },
+      { "requires": "($anvil_resolution = '8192x')", "$anvil_uv": [ 0, 5312 ], "$anvil_uv_size": [ 3520, 512 ] }
+    ]
+  },
+
+  "anvil_text_edit_inactive_java@anvil_java_dx.anvil_text_edit_active_java": {
+    "variables": [
+      { "requires": "($anvil_resolution = '256x')",  "$anvil_uv": [ 0, 182 ],  "$anvil_uv_size": [ 110, 16 ] },
+      { "requires": "($anvil_resolution = '512x')",  "$anvil_uv": [ 0, 364 ],  "$anvil_uv_size": [ 220, 32 ] },
+      { "requires": "($anvil_resolution = '1024x')", "$anvil_uv": [ 0, 728 ],  "$anvil_uv_size": [ 440, 64 ] },
+      { "requires": "($anvil_resolution = '2048x')", "$anvil_uv": [ 0, 1456 ], "$anvil_uv_size": [ 880, 128 ] },
+      { "requires": "($anvil_resolution = '4096x')", "$anvil_uv": [ 0, 2912 ], "$anvil_uv_size": [ 1760, 256 ] },
+      { "requires": "($anvil_resolution = '8192x')", "$anvil_uv": [ 0, 5824 ], "$anvil_uv_size": [ 3520, 512 ] }
+    ]
+  },
+
+  /* Cross Out */
+
+  "cross_out_icon@anvil_java_dx.anvil_base": {
+    "size": [ 28, 21 ],
+    "variables": [
+      { "requires": "($anvil_resolution = '256x')",  "$anvil_uv": [ 176, 0 ],  "$anvil_uv_size": [ 28, 21 ] },
+      { "requires": "($anvil_resolution = '512x')",  "$anvil_uv": [ 352, 0 ],  "$anvil_uv_size": [ 56, 42 ] },
+      { "requires": "($anvil_resolution = '1024x')", "$anvil_uv": [ 704, 0 ],  "$anvil_uv_size": [ 112, 84 ] },
+      { "requires": "($anvil_resolution = '2048x')", "$anvil_uv": [ 1408, 0 ], "$anvil_uv_size": [ 224, 168 ] },
+      { "requires": "($anvil_resolution = '4096x')", "$anvil_uv": [ 2816, 0 ], "$anvil_uv_size": [ 448, 336 ] },
+      { "requires": "($anvil_resolution = '8192x')", "$anvil_uv": [ 5632, 0 ], "$anvil_uv_size": [ 896, 672 ] }
+    ]
+  }
+}

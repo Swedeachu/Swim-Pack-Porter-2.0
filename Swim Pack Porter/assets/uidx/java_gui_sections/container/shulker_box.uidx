@@ -1,0 +1,22 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "shulker_box_java_dx",
+
+  "dialog_bg_shulker_box": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/shulker_box",
+    "uv": [ 0, 0 ],
+    "uv_size": "$shulker_box_uv_size",
+    "$shulker_box_uv_size|default": [ 0, 0 ],
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($shulker_box_resolution = '256x')",  "$shulker_box_uv_size": [ 176, 166 ] },
+      { "requires": "($shulker_box_resolution = '512x')",  "$shulker_box_uv_size": [ 352, 332 ] },
+      { "requires": "($shulker_box_resolution = '1024x')", "$shulker_box_uv_size": [ 704, 664 ] },
+      { "requires": "($shulker_box_resolution = '2048x')", "$shulker_box_uv_size": [ 1408, 1328 ] },
+      { "requires": "($shulker_box_resolution = '4096x')", "$shulker_box_uv_size": [ 2816, 2656 ] },
+      { "requires": "($shulker_box_resolution = '8192x')", "$shulker_box_uv_size": [ 5632, 5312 ] }
+    ]
+  }
+}

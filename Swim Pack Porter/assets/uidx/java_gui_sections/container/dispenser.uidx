@@ -1,0 +1,22 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "dispenser_java_dx",
+
+  "dialog_bg_dispenser": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/dispenser",
+    "uv": [ 0, 0 ],
+    "uv_size": "$dispenser_uv_size",
+    "$dispenser_uv_size|default": [ 0, 0 ],
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($dispenser_resolution = '256x')",  "$dispenser_uv_size": [ 176, 166 ] },
+      { "requires": "($dispenser_resolution = '512x')",  "$dispenser_uv_size": [ 352, 332 ] },
+      { "requires": "($dispenser_resolution = '1024x')", "$dispenser_uv_size": [ 704, 664 ] },
+      { "requires": "($dispenser_resolution = '2048x')", "$dispenser_uv_size": [ 1408, 1328 ] },
+      { "requires": "($dispenser_resolution = '4096x')", "$dispenser_uv_size": [ 2816, 2656 ] },
+      { "requires": "($dispenser_resolution = '8192x')", "$dispenser_uv_size": [ 5632, 5312 ] }
+    ]
+  }
+}

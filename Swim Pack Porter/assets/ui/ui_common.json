@@ -1,0 +1,62 @@
+{
+  "container_slot_button_prototype": {
+    "consume_hover_events": false
+  },
+
+  "slot_selected": {
+    "texture": "$slot_selected_texture",
+    "$slot_selected_texture|default": "textures/ui/pocket_ui_highlight_selected_slot"
+  },
+
+  "item_lock_cell_image": {
+    "texture": "$item_lock_cell_texture",
+    "size": "$item_lock_cell_size",
+    "$item_lock_cell_size|default": [ "100%", "100%" ],
+    "$item_lock_cell_texture|default": "textures/ui/cell_image_lock"
+  },
+  
+  "container_item": {
+    "$container_item_size|default": [ 18, 18 ],
+    "size": "$container_item_size",
+    "$stack_count_control|default": "common.stack_count_label",
+    "$durability_bar_control|default": "common.durability_bar"
+  },
+
+  "container_item/item_cell": {
+    "controls": [
+      {
+        "$background_image_control_name@$background_images": {
+          "layer": 1
+        }
+      },
+      {
+        "item": {
+          "type": "panel",
+          "size": "$item_renderer_panel_size",
+          "layer": 0,
+          "controls": [
+            {
+              "stack_count_label@$stack_count_control": {
+                "layer": 9
+              }
+            },
+            {
+              "$item_renderer@$item_renderer": {
+                "size": "$item_renderer_size",
+                "offset": "$item_renderer_offset",
+                "anchor_to": "center",
+                "anchor_from": "center",
+                "layer": 7
+              }
+            }
+          ]
+        }
+      },
+      {
+        "durability_bar@$durability_bar_control": {
+          "layer": 8
+        }
+      }
+    ]
+  }
+}

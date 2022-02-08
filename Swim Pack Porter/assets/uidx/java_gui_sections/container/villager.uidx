@@ -1,0 +1,127 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "villager_java_dx",
+
+  "villager_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/villager",
+    "$villager_uv|default": [ 0, 0 ],
+    "$villager_uv_size|default": [ 0, 0 ],
+    "uv": "$villager_uv",
+    "uv_size": "$villager_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Trade screen */
+
+  "dialog_bg_trade@villager_java_dx.villager_base": {
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($villager_resolution = '256x')",  "$villager_uv_size": [ 176, 166 ] },
+      { "requires": "($villager_resolution = '512x')",  "$villager_uv_size": [ 352, 332 ] },
+      { "requires": "($villager_resolution = '1024x')", "$villager_uv_size": [ 704, 664 ] },
+      { "requires": "($villager_resolution = '2048x')", "$villager_uv_size": [ 1408, 1328 ] },
+      { "requires": "($villager_resolution = '4096x')", "$villager_uv_size": [ 2816, 2656 ] },
+      { "requires": "($villager_resolution = '8192x')", "$villager_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /* Trade cross out */
+
+  "trade_cross_out_icon@villager_java_dx.villager_base": {
+    "size": [ 28, 21 ],
+    "variables": [
+      { "requires": "($villager_resolution = '256x')",  "$villager_uv": [ 212, 0 ],  "$villager_uv_size": [ 28, 21 ] },
+      { "requires": "($villager_resolution = '512x')",  "$villager_uv": [ 424, 0 ],  "$villager_uv_size": [ 56, 42 ] },
+      { "requires": "($villager_resolution = '1024x')", "$villager_uv": [ 848, 0 ],  "$villager_uv_size": [ 112, 84 ] },
+      { "requires": "($villager_resolution = '2048x')", "$villager_uv": [ 1696, 0 ], "$villager_uv_size": [ 224, 168 ] },
+      { "requires": "($villager_resolution = '4096x')", "$villager_uv": [ 3392, 0 ], "$villager_uv_size": [ 448, 336 ] },
+      { "requires": "($villager_resolution = '8192x')", "$villager_uv": [ 6784, 0 ], "$villager_uv_size": [ 896, 672 ] }
+    ]
+  },
+
+  /* Trade item slot B cell */
+
+  "trade_item_slotB_cell_image@villager_java_dx.villager_base": {
+    "size": [ 18, 18 ],
+    "variables": [
+      { "requires": "($villager_resolution = '256x')",  "$villager_uv": [ 0, 166 ],  "$villager_uv_size": [ 18, 18 ] },
+      { "requires": "($villager_resolution = '512x')",  "$villager_uv": [ 0, 332 ],  "$villager_uv_size": [ 36, 36 ] },
+      { "requires": "($villager_resolution = '1024x')", "$villager_uv": [ 0, 664 ],  "$villager_uv_size": [ 72, 72 ] },
+      { "requires": "($villager_resolution = '2048x')", "$villager_uv": [ 0, 1328 ], "$villager_uv_size": [ 144, 144 ] },
+      { "requires": "($villager_resolution = '4096x')", "$villager_uv": [ 0, 2656 ], "$villager_uv_size": [ 288, 288 ] },
+      { "requires": "($villager_resolution = '8192x')", "$villager_uv": [ 0, 5312 ], "$villager_uv_size": [ 576, 576 ] }
+    ]
+  },
+
+  /* Buttons */
+
+  "chevron_left_default@villager_java_dx.villager_base": {
+    "size": [ 12, 19 ],
+    "variables": [
+      { "requires": "($villager_resolution = '256x')",  "$villager_uv": [ 176, 19 ],   "$villager_uv_size": [ 12, 19 ] },
+      { "requires": "($villager_resolution = '512x')",  "$villager_uv": [ 352, 38 ],   "$villager_uv_size": [ 24, 38 ] },
+      { "requires": "($villager_resolution = '1024x')", "$villager_uv": [ 704, 76 ],   "$villager_uv_size": [ 48, 76 ] },
+      { "requires": "($villager_resolution = '2048x')", "$villager_uv": [ 1408, 152 ], "$villager_uv_size": [ 96, 152 ] },
+      { "requires": "($villager_resolution = '4096x')", "$villager_uv": [ 2816, 304 ], "$villager_uv_size": [ 192, 304 ] },
+      { "requires": "($villager_resolution = '8192x')", "$villager_uv": [ 5632, 608 ], "$villager_uv_size": [ 384, 608 ] }
+    ]
+  },
+
+  "chevron_left_hover@villager_java_dx.chevron_left_default": {
+    "variables": [
+      { "requires": "($villager_resolution = '256x')",  "$villager_uv": [ 188, 19 ],   "$villager_uv_size": [ 12, 19 ] },
+      { "requires": "($villager_resolution = '512x')",  "$villager_uv": [ 376, 38 ],   "$villager_uv_size": [ 24, 38 ] },
+      { "requires": "($villager_resolution = '1024x')", "$villager_uv": [ 752, 76 ],   "$villager_uv_size": [ 48, 76 ] },
+      { "requires": "($villager_resolution = '2048x')", "$villager_uv": [ 1504, 152 ], "$villager_uv_size": [ 96, 152 ] },
+      { "requires": "($villager_resolution = '4096x')", "$villager_uv": [ 3008, 304 ], "$villager_uv_size": [ 192, 304 ] },
+      { "requires": "($villager_resolution = '8192x')", "$villager_uv": [ 6016, 608 ], "$villager_uv_size": [ 384, 608 ] }
+    ]
+  },
+
+  "chevron_left_locked@villager_java_dx.chevron_left_default": {
+    "variables": [
+      { "requires": "($villager_resolution = '256x')",  "$villager_uv": [ 200, 19 ],   "$villager_uv_size": [ 12, 19 ] },
+      { "requires": "($villager_resolution = '512x')",  "$villager_uv": [ 400, 38 ],   "$villager_uv_size": [ 24, 38 ] },
+      { "requires": "($villager_resolution = '1024x')", "$villager_uv": [ 800, 76 ],   "$villager_uv_size": [ 48, 76 ] },
+      { "requires": "($villager_resolution = '2048x')", "$villager_uv": [ 1600, 152 ], "$villager_uv_size": [ 96, 152 ] },
+      { "requires": "($villager_resolution = '4096x')", "$villager_uv": [ 3200, 304 ], "$villager_uv_size": [ 192, 304 ] },
+      { "requires": "($villager_resolution = '8192x')", "$villager_uv": [ 6400, 608 ], "$villager_uv_size": [ 384, 608 ] }
+    ]
+  },
+
+  "chevron_right_default@villager_java_dx.chevron_left_default": {
+    "variables": [
+      { "requires": "($villager_resolution = '256x')",  "$villager_uv": [ 176, 0 ],  "$villager_uv_size": [ 12, 19 ] },
+      { "requires": "($villager_resolution = '512x')",  "$villager_uv": [ 352, 0 ],  "$villager_uv_size": [ 24, 38 ] },
+      { "requires": "($villager_resolution = '1024x')", "$villager_uv": [ 704, 0 ],  "$villager_uv_size": [ 48, 76 ] },
+      { "requires": "($villager_resolution = '2048x')", "$villager_uv": [ 1408, 0 ], "$villager_uv_size": [ 96, 152 ] },
+      { "requires": "($villager_resolution = '4096x')", "$villager_uv": [ 2816, 0 ], "$villager_uv_size": [ 192, 304 ] },
+      { "requires": "($villager_resolution = '8192x')", "$villager_uv": [ 5632, 0 ], "$villager_uv_size": [ 384, 608 ] }
+    ]
+  },
+
+  "chevron_right_hover@villager_java_dx.chevron_left_default": {
+    "variables": [
+      { "requires": "($villager_resolution = '256x')",  "$villager_uv": [ 188, 0 ],  "$villager_uv_size": [ 12, 19 ] },
+      { "requires": "($villager_resolution = '512x')",  "$villager_uv": [ 376, 0 ],  "$villager_uv_size": [ 24, 38 ] },
+      { "requires": "($villager_resolution = '1024x')", "$villager_uv": [ 752, 0 ],  "$villager_uv_size": [ 48, 76 ] },
+      { "requires": "($villager_resolution = '2048x')", "$villager_uv": [ 1504, 0 ], "$villager_uv_size": [ 96, 152 ] },
+      { "requires": "($villager_resolution = '4096x')", "$villager_uv": [ 3008, 0 ], "$villager_uv_size": [ 192, 304 ] },
+      { "requires": "($villager_resolution = '8192x')", "$villager_uv": [ 6016, 0 ], "$villager_uv_size": [ 384, 608 ] }
+    ]
+  },
+
+  "chevron_right_locked@villager_java_dx.chevron_left_default": {
+    "variables": [
+      { "requires": "($villager_resolution = '256x')",  "$villager_uv": [ 200, 0 ],  "$villager_uv_size": [ 12, 19 ] },
+      { "requires": "($villager_resolution = '512x')",  "$villager_uv": [ 400, 0 ],  "$villager_uv_size": [ 24, 38 ] },
+      { "requires": "($villager_resolution = '1024x')", "$villager_uv": [ 800, 0 ],  "$villager_uv_size": [ 48, 76 ] },
+      { "requires": "($villager_resolution = '2048x')", "$villager_uv": [ 1600, 0 ], "$villager_uv_size": [ 96, 152 ] },
+      { "requires": "($villager_resolution = '4096x')", "$villager_uv": [ 3200, 0 ], "$villager_uv_size": [ 192, 304 ] },
+      { "requires": "($villager_resolution = '8192x')", "$villager_uv": [ 6400, 0 ], "$villager_uv_size": [ 384, 608 ] }
+    ]
+  }
+}

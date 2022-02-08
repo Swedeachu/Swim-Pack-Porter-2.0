@@ -1,0 +1,53 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "crafting_table_java_dx",
+
+  "crafting_table_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/crafting_table",
+    "$crafting_table_uv|default": [ 0, 0 ],
+    "$crafting_table_uv_size|default": [ 0, 0 ],
+    "uv": "$crafting_table_uv",
+    "uv_size": "$crafting_table_uv_size"
+  },
+
+  /*//// Main Panel ////*/
+
+  "dialog_bg_crafting_table@crafting_table_java_dx.crafting_table_base": {
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($crafting_table_resolution = '256x')",  "$crafting_table_uv_size": [ 176, 166 ] },
+      { "requires": "($crafting_table_resolution = '512x')",  "$crafting_table_uv_size": [ 352, 332 ] },
+      { "requires": "($crafting_table_resolution = '1024x')", "$crafting_table_uv_size": [ 704, 664 ] },
+      { "requires": "($crafting_table_resolution = '2048x')", "$crafting_table_uv_size": [ 1408, 1328 ] },
+      { "requires": "($crafting_table_resolution = '4096x')", "$crafting_table_uv_size": [ 2816, 2656 ] },
+      { "requires": "($crafting_table_resolution = '8192x')", "$crafting_table_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /*//// Recipe Toggle ////*/
+
+  "recipe_button_default@crafting_table_java_dx.crafting_table_base": {
+    "size": [ 20, 18 ],
+    "variables": [
+      { "requires": "($crafting_table_resolution = '256x')",  "$crafting_table_uv": [ 0, 168 ],  "$crafting_table_uv_size": [ 20, 18 ] },
+      { "requires": "($crafting_table_resolution = '512x')",  "$crafting_table_uv": [ 0, 336 ],  "$crafting_table_uv_size": [ 40, 36 ] },
+      { "requires": "($crafting_table_resolution = '1024x')", "$crafting_table_uv": [ 0, 672 ],  "$crafting_table_uv_size": [ 80, 72 ] },
+      { "requires": "($crafting_table_resolution = '2048x')", "$crafting_table_uv": [ 0, 1344 ], "$crafting_table_uv_size": [ 160, 144 ] },
+      { "requires": "($crafting_table_resolution = '4096x')", "$crafting_table_uv": [ 0, 2688 ], "$crafting_table_uv_size": [ 320, 288 ] },
+      { "requires": "($crafting_table_resolution = '8192x')", "$crafting_table_uv": [ 0, 5376 ], "$crafting_table_uv_size": [ 640, 576 ] }
+    ]
+  },
+
+  "recipe_button_hover@crafting_table_java_dx.recipe_button_default": {
+    "variables": [
+      { "requires": "($crafting_table_resolution = '256x')",  "$crafting_table_uv": [ 0, 187 ],  "$crafting_table_uv_size": [ 20, 18 ] },
+      { "requires": "($crafting_table_resolution = '512x')",  "$crafting_table_uv": [ 0, 374 ],  "$crafting_table_uv_size": [ 40, 36 ] },
+      { "requires": "($crafting_table_resolution = '1024x')", "$crafting_table_uv": [ 0, 748 ],  "$crafting_table_uv_size": [ 80, 72 ] },
+      { "requires": "($crafting_table_resolution = '2048x')", "$crafting_table_uv": [ 0, 1496 ], "$crafting_table_uv_size": [ 160, 144 ] },
+      { "requires": "($crafting_table_resolution = '4096x')", "$crafting_table_uv": [ 0, 2992 ], "$crafting_table_uv_size": [ 320, 288 ] },
+      { "requires": "($crafting_table_resolution = '8192x')", "$crafting_table_uv": [ 0, 5984 ], "$crafting_table_uv_size": [ 640, 576 ] }
+    ]
+  }
+}

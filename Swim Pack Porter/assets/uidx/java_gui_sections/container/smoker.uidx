@@ -1,0 +1,120 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "smoker_java_dx",
+
+  "smoker_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/smoker",
+    "$smoker_uv|default": [ 0, 0 ],
+    "$smoker_uv_size|default": [ 0, 0 ],
+    "uv": "$smoker_uv",
+    "uv_size": "$smoker_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Smoker screen */
+
+  "dialog_bg_smoker@smoker_java_dx.smoker_base": {
+    "variables": [
+      {
+        "requires": "($smoker_resolution = '256x')",
+        "$smoker_uv_size": [ 176, 166 ] },
+      {
+        "requires": "($smoker_resolution = '512x')",
+        "$smoker_uv_size": [ 352, 332 ]
+      },
+      {
+        "requires": "($smoker_resolution = '1024x')",
+        "$smoker_uv_size": [ 704, 664 ]
+      },
+      {
+        "requires": "($smoker_resolution = '2048x')",
+        "$smoker_uv_size": [ 1408, 1328 ]
+      },
+      {
+        "requires": "($smoker_resolution = '4096x')",
+        "$smoker_uv_size": [ 2816, 2656 ]
+      },
+      {
+        "requires": "($smoker_resolution = '8192x')",
+        "$smoker_uv_size": [ 5632, 5312 ]
+      }
+    ]
+  },
+
+  /* Arrow full image */
+
+  "arrow_full@smoker_java_dx.smoker_base": {
+    "variables": [
+      {
+        "requires": "($smoker_resolution = '256x')",
+        "$smoker_uv": [ 176, 14 ],
+        "$smoker_uv_size": [ 24, 17 ]
+      },
+      {
+        "requires": "($smoker_resolution = '512x')",
+        "$smoker_uv": [ 352, 28 ],
+        "$smoker_uv_size": [ 48, 34 ]
+      },
+      {
+        "requires": "($smoker_resolution = '1024x')",
+        "$smoker_uv": [ 704, 56 ],
+        "$smoker_uv_size": [ 96, 68 ]
+      },
+      {
+        "requires": "($smoker_resolution = '2048x')",
+        "$smoker_uv": [ 1408, 112 ],
+        "$smoker_uv_size": [ 192, 136 ]
+      },
+      {
+        "requires": "($smoker_resolution = '4096x')",
+        "$smoker_uv": [ 2816, 224 ],
+        "$smoker_uv_size": [ 384, 272 ]
+      },
+      {
+        "requires": "($smoker_resolution = '8192x')",
+        "$smoker_uv": [ 5632, 448 ],
+        "$smoker_uv_size": [ 768, 544 ]
+      }
+    ]
+  },
+
+  /* Flame full image */
+
+  "flame_full@smoker_java_dx.smoker_base": {
+    "variables": [
+      {
+        "requires": "($smoker_resolution = '256x')",
+        "$smoker_uv": [ 176, 0 ],
+        "$smoker_uv_size": [ 14, 14 ]
+      },
+      {
+        "requires": "($smoker_resolution = '512x')",
+        "$smoker_uv": [ 352, 0 ],
+        "$smoker_uv_size": [ 28, 28 ]
+      },
+      {
+        "requires": "($smoker_resolution = '1024x')",
+        "$smoker_uv": [ 704, 0 ],
+        "$smoker_uv_size": [ 56, 56 ]
+      },
+      {
+        "requires": "($smoker_resolution = '2048x')",
+        "$smoker_uv": [ 1408, 0 ],
+        "$smoker_uv_size": [ 112, 112 ]
+      },
+      {
+        "requires": "($smoker_resolution = '4096x')",
+        "$smoker_uv": [ 2816, 0 ],
+        "$smoker_uv_size": [ 224, 224 ]
+      },
+      {
+        "requires": "($smoker_resolution = '8192x')",
+        "$smoker_uv": [ 5632, 8 ],
+        "$smoker_uv_size": [ 448, 448 ]
+      }
+    ]
+  }
+}

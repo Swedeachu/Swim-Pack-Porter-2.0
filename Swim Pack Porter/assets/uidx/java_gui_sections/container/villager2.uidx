@@ -1,0 +1,479 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "villager2_java_dx",
+
+  "villager2_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/villager2",
+    "size": [ "100%", "100%" ],
+    "$villager2_uv|default": [ 0, 0 ],
+    "$villager2_uv_size|default": [ 0, 0 ],
+    "uv": "$villager2_uv",
+    "uv_size": "$villager2_uv_size"
+  },
+
+  "experience_bar_nub@common.empty_panel": { },
+
+  /*////// Base //////*/
+
+  /* Trade 2 screen */
+
+  "dialog_bg_trade2@villager2_java_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_resolution = '256x')",
+        "$villager2_uv_size": [ 276, 166 ]
+      },
+      {
+        "requires": "($villager2_resolution = '512x')",
+        "$villager2_uv_size": [ 552, 332 ]
+      },
+      {
+        "requires": "($villager2_resolution = '1024x')",
+        "$villager2_uv_size": [ 1104, 664 ]
+      },
+      {
+        "requires": "($villager2_resolution = '2048x')",
+        "$villager2_uv_size": [ 2208, 1328 ]
+      },
+      {
+        "requires": "($villager2_resolution = '4096x')",
+        "$villager2_uv_size": [ 4416, 2656 ]
+      },
+      {
+        "requires": "($villager2_resolution = '8192x')",
+        "$villager2_uv_size": [ 8832, 5312 ]
+      }
+    ]
+  },
+
+  /* Main cross out icon */
+
+  "main_cross_out_icon@villager2_java_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_resolution = '256x')",
+        "$villager2_uv": [ 312, 0 ],
+        "$villager2_uv_size": [ 28, 21 ]
+      },
+      {
+        "requires": "($villager2_resolution = '512x')",
+        "$villager2_uv": [ 624, 0 ],
+        "$villager2_uv_size": [ 56, 42 ]
+      },
+      {
+        "requires": "($villager2_resolution = '1024x')",
+        "$villager2_uv": [ 1248, 0 ],
+        "$villager2_uv_size": [ 112, 84 ]
+      },
+      {
+        "requires": "($villager2_resolution = '2048x')",
+        "$villager2_uv": [ 2496, 0 ],
+        "$villager2_uv_size": [ 224, 168 ]
+      },
+      {
+        "requires": "($villager2_resolution = '4096x')",
+        "$villager2_uv": [ 4492, 0 ],
+        "$villager2_uv_size": [ 448, 336 ]
+      },
+      {
+        "requires": "($villager2_resolution = '8192x')",
+        "$villager2_uv": [ 9984, 0 ],
+        "$villager2_uv_size": [ 896, 672 ]
+      }
+    ]
+  },
+
+  /* Progress bar */
+
+  "experience_bar_green_full@villager2_java_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_resolution = '256x')",
+        "$villager2_uv": [ 0, 191 ],
+        "$villager2_uv_size": [ 102, 5 ]
+      },
+      {
+        "requires": "($villager2_resolution = '512x')",
+        "$villager2_uv": [ 0, 382 ],
+        "$villager2_uv_size": [ 204, 10 ]
+      },
+      {
+        "requires": "($villager2_resolution = '1024x')",
+        "$villager2_uv": [ 0, 764 ],
+        "$villager2_uv_size": [ 408, 20 ]
+      },
+      {
+        "requires": "($villager2_resolution = '2048x')",
+        "$villager2_uv": [ 0, 1528 ],
+        "$villager2_uv_size": [ 816, 40 ]
+      },
+      {
+        "requires": "($villager2_resolution = '4096x')",
+        "$villager2_uv": [ 0, 3056 ],
+        "$villager2_uv_size": [ 1632, 80 ]
+      },
+      {
+        "requires": "($villager2_resolution = '8192x')",
+        "$villager2_uv": [ 0, 6112 ],
+        "$villager2_uv_size": [ 3264, 160 ]
+      }
+    ]
+  },
+
+  "experience_bar_white_full@villager2_java_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_resolution = '256x')",
+        "$villager2_uv": [ 0, 181 ],
+        "$villager2_uv_size": [ 102, 5 ]
+      },
+      {
+        "requires": "($villager2_resolution = '512x')",
+        "$villager2_uv": [ 0, 362 ],
+        "$villager2_uv_size": [ 204, 10 ]
+      },
+      {
+        "requires": "($villager2_resolution = '1024x')",
+        "$villager2_uv": [ 0, 724 ],
+        "$villager2_uv_size": [ 408, 20 ]
+      },
+      {
+        "requires": "($villager2_resolution = '2048x')",
+        "$villager2_uv": [ 0, 1448 ],
+        "$villager2_uv_size": [ 816, 40 ]
+      },
+      {
+        "requires": "($villager2_resolution = '4096x')",
+        "$villager2_uv": [ 0, 2896 ],
+        "$villager2_uv_size": [ 1632, 80 ]
+      },
+      {
+        "requires": "($villager2_resolution = '8192x')",
+        "$villager2_uv": [ 0, 5792 ],
+        "$villager2_uv_size": [ 3264, 160 ]
+      }
+    ]
+  },
+
+  "experience_bar_empty@villager2_java_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_resolution = '256x')",
+        "$villager2_uv": [ 0, 186 ],
+        "$villager2_uv_size": [ 102, 5 ]
+      },
+      {
+        "requires": "($villager2_resolution = '512x')",
+        "$villager2_uv": [ 0, 372 ],
+        "$villager2_uv_size": [ 204, 10 ]
+      },
+      {
+        "requires": "($villager2_resolution = '1024x')",
+        "$villager2_uv": [ 0, 744 ],
+        "$villager2_uv_size": [ 408, 20 ]
+      },
+      {
+        "requires": "($villager2_resolution = '2048x')",
+        "$villager2_uv": [ 0, 1488 ],
+        "$villager2_uv_size": [ 816, 40 ]
+      },
+      {
+        "requires": "($villager2_resolution = '4096x')",
+        "$villager2_uv": [ 0, 2976 ],
+        "$villager2_uv_size": [ 1632, 80 ]
+      },
+      {
+        "requires": "($villager2_resolution = '8192x')",
+        "$villager2_uv": [ 0, 5952 ],
+        "$villager2_uv_size": [ 3264, 160 ]
+      }
+    ]
+  },
+
+  /* Toggle content */
+
+  "slash_icon@villager2_java_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_resolution = '256x')",
+        "$villager2_uv": [ 0, 171 ],
+        "$villager2_uv_size": [ 10, 10 ]
+      },
+      {
+        "requires": "($villager2_resolution = '512x')",
+        "$villager2_uv": [ 0, 342 ],
+        "$villager2_uv_size": [ 20, 20 ]
+      },
+      {
+        "requires": "($villager2_resolution = '1024x')",
+        "$villager2_uv": [ 0, 684 ],
+        "$villager2_uv_size": [ 40, 40 ]
+      },
+      {
+        "requires": "($villager2_resolution = '2048x')",
+        "$villager2_uv": [ 0, 1368 ],
+        "$villager2_uv_size": [ 80, 80 ]
+      },
+      {
+        "requires": "($villager2_resolution = '4096x')",
+        "$villager2_uv": [ 0, 2736 ],
+        "$villager2_uv_size": [ 160, 160 ]
+      },
+      {
+        "requires": "($villager2_resolution = '8192x')",
+        "$villager2_uv": [ 0, 5472 ],
+        "$villager2_uv_size": [ 320, 320 ]
+      }
+    ]
+  },
+
+  "arrow_holder_icon@villager2_java_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_resolution = '256x')",
+        "$villager2_uv": [ 15, 171 ],
+        "$villager2_uv_size": [ 10, 10 ]
+      },
+      {
+        "requires": "($villager2_resolution = '512x')",
+        "$villager2_uv": [ 30, 342 ],
+        "$villager2_uv_size": [ 20, 20 ]
+      },
+      {
+        "requires": "($villager2_resolution = '1024x')",
+        "$villager2_uv": [ 60, 684 ],
+        "$villager2_uv_size": [ 40, 40 ]
+      },
+      {
+        "requires": "($villager2_resolution = '2048x')",
+        "$villager2_uv": [ 120, 1368 ],
+        "$villager2_uv_size": [ 80, 80 ]
+      },
+      {
+        "requires": "($villager2_resolution = '4096x')",
+        "$villager2_uv": [ 240, 2736 ],
+        "$villager2_uv_size": [ 160, 160 ]
+      },
+      {
+        "requires": "($villager2_resolution = '8192x')",
+        "$villager2_uv": [ 480, 5472 ],
+        "$villager2_uv_size": [ 320, 320 ]
+      }
+    ]
+  },
+
+  "arrow_cross_out_icon@villager2_java_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_resolution = '256x')",
+        "$villager2_uv": [ 25, 171 ],
+        "$villager2_uv_size": [ 10, 10 ]
+      },
+      {
+        "requires": "($villager2_resolution = '512x')",
+        "$villager2_uv": [ 50, 342 ],
+        "$villager2_uv_size": [ 20, 20 ]
+      },
+      {
+        "requires": "($villager2_resolution = '1024x')",
+        "$villager2_uv": [ 100, 684 ],
+        "$villager2_uv_size": [ 40, 40 ]
+      },
+      {
+        "requires": "($villager2_resolution = '2048x')",
+        "$villager2_uv": [ 200, 1368 ],
+        "$villager2_uv_size": [ 80, 80 ]
+      },
+      {
+        "requires": "($villager2_resolution = '4096x')",
+        "$villager2_uv": [ 400, 2736 ],
+        "$villager2_uv_size": [ 160, 160 ]
+      },
+      {
+        "requires": "($villager2_resolution = '8192x')",
+        "$villager2_uv": [ 800, 5472 ],
+        "$villager2_uv_size": [ 320, 320 ]
+      }
+    ]
+  },
+
+  
+  
+  /*//// Scroll Box ////*/
+  
+  "scroll_upper@villager2_java_dx.villager2_base": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 6, 6 ],
+    "variables": [
+      {
+        "requires": "($villager2_resolution = '256x')",
+        "$villager2_uv": [ 0, 199 ],
+        "$villager2_uv_size": [ 6, 6 ]
+      },
+      {
+        "requires": "($villager2_resolution = '512x')",
+        "$villager2_uv": [ 0, 398 ],
+        "$villager2_uv_size": [ 12, 12 ]
+      },
+      {
+        "requires": "($villager2_resolution = '1024x')",
+        "$villager2_uv": [ 0, 796 ],
+        "$villager2_uv_size": [ 24, 24 ]
+      },
+      {
+        "requires": "($villager2_resolution = '2048x')",
+        "$villager2_uv": [ 0, 1592 ],
+        "$villager2_uv_size": [ 48, 48 ]
+      },
+      {
+        "requires": "($villager2_resolution = '4096x')",
+        "$villager2_uv": [ 0, 3184 ],
+        "$villager2_uv_size": [ 96, 96 ]
+      },
+      {
+        "requires": "($villager2_resolution = '8192x')",
+        "$villager2_uv": [ 0, 6368 ],
+        "$villager2_uv_size": [ 192, 192 ]
+      }
+    ]
+  },
+  
+  "scroll_middle@villager2_java_dx.villager2_base": {
+    "size": [ 6, 14 ],
+    "variables": [
+      {
+        "requires": "($villager2_resolution = '256x')",
+        "$villager2_uv": [ 0, 205 ],
+        "$villager2_uv_size": [ 6, 14 ]
+      },
+      {
+        "requires": "($villager2_resolution = '512x')",
+        "$villager2_uv": [ 0, 438 ],
+        "$villager2_uv_size": [ 12, 28 ]
+      },
+      {
+        "requires": "($villager2_resolution = '1024x')",
+        "$villager2_uv": [ 0, 876 ],
+        "$villager2_uv_size": [ 24, 56 ]
+      },
+      {
+        "requires": "($villager2_resolution = '2048x')",
+        "$villager2_uv": [ 0, 1752 ],
+        "$villager2_uv_size": [ 48, 112 ]
+      },
+      {
+        "requires": "($villager2_resolution = '4096x')",
+        "$villager2_uv": [ 0, 3504 ],
+        "$villager2_uv_size": [ 96, 224 ]
+      },
+      {
+        "requires": "($villager2_resolution = '8192x')",
+        "$villager2_uv": [ 0, 7008 ],
+        "$villager2_uv_size": [ 192, 448 ]
+      }
+    ]
+  },
+  
+  "scroll_bottom@villager2_java_dx.villager2_base": {
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ 6, 7 ],
+    "variables": [
+      {
+        "requires": "($villager2_resolution = '256x')",
+        "$villager2_uv": [ 0, 219 ],
+        "$villager2_uv_size": [ 6, 7 ]
+      },
+      {
+        "requires": "($villager2_resolution = '512x')",
+        "$villager2_uv": [ 0, 438 ],
+        "$villager2_uv_size": [ 12, 14 ]
+      },
+      {
+        "requires": "($villager2_resolution = '1024x')",
+        "$villager2_uv": [ 0, 876 ],
+        "$villager2_uv_size": [ 24, 28 ]
+      },
+      {
+        "requires": "($villager2_resolution = '2048x')",
+        "$villager2_uv": [ 0, 1752 ],
+        "$villager2_uv_size": [ 48, 56 ]
+      },
+      {
+        "requires": "($villager2_resolution = '4096x')",
+        "$villager2_uv": [ 0, 3504 ],
+        "$villager2_uv_size": [ 96, 112 ]
+      },
+      {
+        "requires": "($villager2_resolution = '8192x')",
+        "$villager2_uv": [ 0, 7008 ],
+        "$villager2_uv_size": [ 192, 224 ]
+      }
+    ]
+  },
+
+  "scroll_middle_stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 6 ],
+    "size": [ 6, "100%-11px" ],
+    "clips_children": true,
+    "controls": [
+      { "00@villager2_java_dx.scroll_middle": { } },
+      { "01@villager2_java_dx.scroll_middle": { } },
+      { "02@villager2_java_dx.scroll_middle": { } },
+      { "03@villager2_java_dx.scroll_middle": { } },
+      { "04@villager2_java_dx.scroll_middle": { } },
+      { "05@villager2_java_dx.scroll_middle": { } },
+      { "06@villager2_java_dx.scroll_middle": { } },
+      { "07@villager2_java_dx.scroll_middle": { } },
+      { "08@villager2_java_dx.scroll_middle": { } },
+      { "09@villager2_java_dx.scroll_middle": { } },
+      { "10@villager2_java_dx.scroll_middle": { } },
+      { "11@villager2_java_dx.scroll_middle": { } },
+      { "12@villager2_java_dx.scroll_middle": { } },
+      { "13@villager2_java_dx.scroll_middle": { } },
+      { "14@villager2_java_dx.scroll_middle": { } },
+      { "15@villager2_java_dx.scroll_middle": { } },
+      { "16@villager2_java_dx.scroll_middle": { } },
+      { "17@villager2_java_dx.scroll_middle": { } },
+      { "18@villager2_java_dx.scroll_middle": { } },
+      { "19@villager2_java_dx.scroll_middle": { } },
+      { "20@villager2_java_dx.scroll_middle": { } },
+      { "21@villager2_java_dx.scroll_middle": { } },
+      { "22@villager2_java_dx.scroll_middle": { } },
+      { "23@villager2_java_dx.scroll_middle": { } },
+      { "24@villager2_java_dx.scroll_middle": { } },
+      { "25@villager2_java_dx.scroll_middle": { } },
+      { "26@villager2_java_dx.scroll_middle": { } },
+      { "27@villager2_java_dx.scroll_middle": { } },
+      { "28@villager2_java_dx.scroll_middle": { } },
+      { "29@villager2_java_dx.scroll_middle": { } },
+      { "30@villager2_java_dx.scroll_middle": { } },
+      { "31@villager2_java_dx.scroll_middle": { } },
+      { "32@villager2_java_dx.scroll_middle": { } },
+      { "33@villager2_java_dx.scroll_middle": { } },
+      { "34@villager2_java_dx.scroll_middle": { } },
+      { "35@villager2_java_dx.scroll_middle": { } },
+      { "36@villager2_java_dx.scroll_middle": { } },
+      { "37@villager2_java_dx.scroll_middle": { } },
+      { "38@villager2_java_dx.scroll_middle": { } },
+      { "39@villager2_java_dx.scroll_middle": { } },
+      { "40@villager2_java_dx.scroll_middle": { } }
+    ]
+  },
+
+  "scroll_box": {
+    "type": "panel",
+    "size": [ 6, "100%" ],
+    "controls": [
+      { "scroll_upper@villager2_java_dx.scroll_upper": { } },
+      { "scroll_middle_stack_panel@villager2_java_dx.scroll_middle_stack_panel": { } },
+      { "scroll_scroll_bottom@villager2_java_dx.scroll_bottom": { } }
+    ]
+  }
+}

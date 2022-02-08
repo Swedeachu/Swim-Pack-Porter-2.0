@@ -1,0 +1,210 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "bars_java_dx",
+  
+  "bars_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/bars",
+    "size": [ 182, 5 ],
+    "$bars_uv|default": [ 0, 0 ],
+    "$bars_uv_size|default": [ 0, 0 ],
+    "uv": "$bars_uv",
+    "uv_size": "$bars_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Magenta (For ender Dragon) */
+
+  "magenta_bar_empty@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  "magenta_bar_full@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 5 ], "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 10 ], "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 20 ], "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 40 ], "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 80 ], "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 160 ], "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  /* Blue */
+
+  "blue_bar_empty@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 10 ],  "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 20 ],  "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 40 ],  "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 80 ],  "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 160 ],  "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 320 ],  "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  "blue_bar_full@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 15 ], "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 30 ], "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 60 ], "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 120 ], "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 240 ], "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 480 ], "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  /* Red (For Raid) */
+
+  "red_bar_empty@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 20 ], "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 40 ], "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 80 ], "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 160 ], "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 320 ], "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 640 ], "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  "red_bar_full@bars_java_dx.bars_base": {
+    "size": [ 182, 5 ],
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 25 ], "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 50 ], "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 100 ], "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 200 ], "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 400 ], "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 800 ], "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  /* Green */
+
+  "green_bar_empty@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 30 ],  "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 60 ],  "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 120 ],  "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 240 ],  "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 480 ],  "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 960 ],  "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  "green_bar_full@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 35 ], "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 70 ], "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 140 ], "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 280 ], "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 560 ], "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 1120 ], "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  /* Yellow */
+
+  "yellow_bar_empty@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 40 ],  "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 80 ],  "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 160 ],  "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 320 ],  "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 640 ],  "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 1280 ],  "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  "yellow_bar_full@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 45 ], "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 90 ], "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 180 ], "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 360 ], "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 720 ], "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 1440 ], "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+  
+  /* Purple (For Wither) */
+
+  "purple_bar_empty@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 50 ], "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 100 ], "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 200 ], "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 400 ], "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 800 ], "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 1600 ], "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  "purple_bar_full@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 55 ], "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 110 ], "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 220 ], "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 440 ], "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 880 ], "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 1760 ], "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  /* White */
+
+  "white_bar_empty@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 60 ],  "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 120 ],  "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 240 ],  "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 480 ],  "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 960 ],  "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 1920 ],  "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  "white_bar_full@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 65 ], "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 130 ], "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 260 ], "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 520 ], "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 1040 ], "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 2080 ], "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+  
+  /* Nub Bar 10 (For Raid) */
+
+  "nub_bar_10_empty@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 90 ], "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 180 ], "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 360 ], "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 720 ], "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 1440 ], "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 2880 ], "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  },
+
+  "nub_bar_10_full@bars_java_dx.bars_base": {
+    "variables": [
+      { "requires": "($bars_resolution = '256x')", "$bars_uv": [ 0, 95 ], "$bars_uv_size": [ 182, 5 ] },
+      { "requires": "($bars_resolution = '512x')", "$bars_uv": [ 0, 190 ], "$bars_uv_size": [ 364, 10 ] },
+      { "requires": "($bars_resolution = '1024x')", "$bars_uv": [ 0, 380 ], "$bars_uv_size": [ 728, 20 ] },
+      { "requires": "($bars_resolution = '2048x')", "$bars_uv": [ 0, 760 ], "$bars_uv_size": [ 1456, 40 ] },
+      { "requires": "($bars_resolution = '4096x')", "$bars_uv": [ 0, 1520 ], "$bars_uv_size": [ 2912, 80 ] },
+      { "requires": "($bars_resolution = '8192x')", "$bars_uv": [ 0, 3040 ], "$bars_uv_size": [ 5824, 160 ] }
+    ]
+  }
+}

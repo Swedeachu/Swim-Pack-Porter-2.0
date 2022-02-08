@@ -1,0 +1,162 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "stonecutter_java_dx",
+
+  "stonecutter_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/stonecutter",
+    "$stonecutter_uv|default": [ 0, 0 ],
+    "$stonecutter_uv_size|default": [ 0, 0 ],
+    "uv": "$stonecutter_uv",
+    "uv_size": "$stonecutter_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Stonecutter screen */
+
+  "dialog_bg_stonecutter@stonecutter_java_dx.stonecutter_base": {
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($stonecutter_resolution = '256x')",  "$stonecutter_uv_size": [ 176, 166 ] },
+      { "requires": "($stonecutter_resolution = '512x')",  "$stonecutter_uv_size": [ 352, 332 ] },
+      { "requires": "($stonecutter_resolution = '1024x')", "$stonecutter_uv_size": [ 704, 664 ] },
+      { "requires": "($stonecutter_resolution = '2048x')", "$stonecutter_uv_size": [ 1408, 1328 ] },
+      { "requires": "($stonecutter_resolution = '4096x')", "$stonecutter_uv_size": [ 2816, 2656 ] },
+      { "requires": "($stonecutter_resolution = '8192x')", "$stonecutter_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /* Buttons */
+
+  "active_stone@stonecutter_java_dx.stonecutter_base": {
+    "size": [ 16, 18 ],
+    "variables": [
+      { "requires": "($stonecutter_resolution = '256x')",  "$stonecutter_uv": [ 0, 166 ],  "$stonecutter_uv_size": [ 16, 18 ] },
+      { "requires": "($stonecutter_resolution = '512x')",  "$stonecutter_uv": [ 0, 332 ],  "$stonecutter_uv_size": [ 32, 36 ] },
+      { "requires": "($stonecutter_resolution = '1024x')", "$stonecutter_uv": [ 0, 664 ],  "$stonecutter_uv_size": [ 64, 72 ] },
+      { "requires": "($stonecutter_resolution = '2048x')", "$stonecutter_uv": [ 0, 1328 ], "$stonecutter_uv_size": [ 128, 144 ] },
+      { "requires": "($stonecutter_resolution = '4096x')", "$stonecutter_uv": [ 0, 2656 ], "$stonecutter_uv_size": [ 256, 288 ] },
+      { "requires": "($stonecutter_resolution = '8192x')", "$stonecutter_uv": [ 0, 5312 ], "$stonecutter_uv_size": [ 512, 576 ] }
+    ]
+  },
+
+  "dark_stone@stonecutter_java_dx.active_stone": {
+    "variables": [
+      { "requires": "($stonecutter_resolution = '256x')",  "$stonecutter_uv": [ 0, 184 ],  "$stonecutter_uv_size": [ 16, 18 ] },
+      { "requires": "($stonecutter_resolution = '512x')",  "$stonecutter_uv": [ 0, 368 ],  "$stonecutter_uv_size": [ 32, 36 ] },
+      { "requires": "($stonecutter_resolution = '1024x')", "$stonecutter_uv": [ 0, 736 ],  "$stonecutter_uv_size": [ 64, 72 ] },
+      { "requires": "($stonecutter_resolution = '2048x')", "$stonecutter_uv": [ 0, 1472 ], "$stonecutter_uv_size": [ 128, 144 ] },
+      { "requires": "($stonecutter_resolution = '4096x')", "$stonecutter_uv": [ 0, 2944 ], "$stonecutter_uv_size": [ 256, 288 ] },
+      { "requires": "($stonecutter_resolution = '8192x')", "$stonecutter_uv": [ 0, 5888 ], "$stonecutter_uv_size": [ 512, 576 ] }
+    ]
+  },
+
+  "active_stone_hover@stonecutter_java_dx.active_stone": {
+    "variables": [
+      { "requires": "($stonecutter_resolution = '256x')",  "$stonecutter_uv": [ 0, 202 ],  "$stonecutter_uv_size": [ 16, 18 ] },
+      { "requires": "($stonecutter_resolution = '512x')",  "$stonecutter_uv": [ 0, 404 ],  "$stonecutter_uv_size": [ 32, 36 ] },
+      { "requires": "($stonecutter_resolution = '1024x')", "$stonecutter_uv": [ 0, 808 ],  "$stonecutter_uv_size": [ 64, 72 ] },
+      { "requires": "($stonecutter_resolution = '2048x')", "$stonecutter_uv": [ 0, 1616 ], "$stonecutter_uv_size": [ 128, 144 ] },
+      { "requires": "($stonecutter_resolution = '4096x')", "$stonecutter_uv": [ 0, 3232 ], "$stonecutter_uv_size": [ 256, 288 ] },
+      { "requires": "($stonecutter_resolution = '8192x')", "$stonecutter_uv": [ 0, 6464 ], "$stonecutter_uv_size": [ 512, 576 ] }
+    ]
+  },
+  
+  /*//// Scroll Box ////*/
+  
+  "scroll_upper@stonecutter_java_dx.stonecutter_base": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 12, 6 ],
+    "variables": [
+      { "requires": "($stonecutter_resolution = '256x')",  "$stonecutter_uv": [ 176, 0 ],  "$stonecutter_uv_size": [ 12, 6 ] },
+      { "requires": "($stonecutter_resolution = '512x')",  "$stonecutter_uv": [ 352, 0 ],  "$stonecutter_uv_size": [ 24, 12 ] },
+      { "requires": "($stonecutter_resolution = '1024x')", "$stonecutter_uv": [ 704, 0 ],  "$stonecutter_uv_size": [ 48, 24 ] },
+      { "requires": "($stonecutter_resolution = '2048x')", "$stonecutter_uv": [ 1408, 0 ], "$stonecutter_uv_size": [ 96, 48 ] },
+      { "requires": "($stonecutter_resolution = '4096x')", "$stonecutter_uv": [ 2816, 0 ], "$stonecutter_uv_size": [ 192, 96 ] },
+      { "requires": "($stonecutter_resolution = '8192x')", "$stonecutter_uv": [ 5632, 0 ], "$stonecutter_uv_size": [ 384, 192 ] }
+    ]
+  },
+  
+  "scroll_middle@stonecutter_java_dx.stonecutter_base": {
+    "size": [ 12, 2 ],
+    "variables": [
+      { "requires": "($stonecutter_resolution = '256x')",  "$stonecutter_uv": [ 176, 6 ],    "$stonecutter_uv_size": [ 12, 2 ] },
+      { "requires": "($stonecutter_resolution = '512x')",  "$stonecutter_uv": [ 352, 12 ],   "$stonecutter_uv_size": [ 24, 4 ] },
+      { "requires": "($stonecutter_resolution = '1024x')", "$stonecutter_uv": [ 704, 24 ],   "$stonecutter_uv_size": [ 48, 8 ] },
+      { "requires": "($stonecutter_resolution = '2048x')", "$stonecutter_uv": [ 1408, 48 ],  "$stonecutter_uv_size": [ 96, 16 ] },
+      { "requires": "($stonecutter_resolution = '4096x')", "$stonecutter_uv": [ 2816, 96 ],  "$stonecutter_uv_size": [ 192, 32 ] },
+      { "requires": "($stonecutter_resolution = '8192x')", "$stonecutter_uv": [ 5632, 192 ], "$stonecutter_uv_size": [ 384, 64 ] }
+    ]
+  },
+  
+  "scroll_bottom@stonecutter_java_dx.stonecutter_base": {
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ 12, 7 ],
+    "variables": [
+      { "requires": "($stonecutter_resolution = '256x')",  "$stonecutter_uv": [ 176, 8 ],    "$stonecutter_uv_size": [ 12, 7 ] },
+      { "requires": "($stonecutter_resolution = '512x')",  "$stonecutter_uv": [ 352, 16 ],   "$stonecutter_uv_size": [ 24, 14 ] },
+      { "requires": "($stonecutter_resolution = '1024x')", "$stonecutter_uv": [ 704, 32 ],   "$stonecutter_uv_size": [ 48, 28 ] },
+      { "requires": "($stonecutter_resolution = '2048x')", "$stonecutter_uv": [ 1408, 64 ],  "$stonecutter_uv_size": [ 96, 56 ] },
+      { "requires": "($stonecutter_resolution = '4096x')", "$stonecutter_uv": [ 2816, 128 ], "$stonecutter_uv_size": [ 192, 112 ] },
+      { "requires": "($stonecutter_resolution = '8192x')", "$stonecutter_uv": [ 5632, 256 ], "$stonecutter_uv_size": [ 384, 224 ] }
+    ]
+  },
+  
+  "locked_scroll_box@stonecutter_java_dx.stonecutter_base": {
+    "size": [ 12, 15 ],
+    "variables": [
+      { "requires": "($stonecutter_resolution = '256x')",  "$stonecutter_uv": [ 188, 0 ],  "$stonecutter_uv_size": [ 12, 15 ] },
+      { "requires": "($stonecutter_resolution = '512x')",  "$stonecutter_uv": [ 376, 0 ],  "$stonecutter_uv_size": [ 24, 30 ] },
+      { "requires": "($stonecutter_resolution = '1024x')", "$stonecutter_uv": [ 752, 0 ],  "$stonecutter_uv_size": [ 48, 60 ] },
+      { "requires": "($stonecutter_resolution = '2048x')", "$stonecutter_uv": [ 1504, 0 ], "$stonecutter_uv_size": [ 96, 120 ] },
+      { "requires": "($stonecutter_resolution = '4096x')", "$stonecutter_uv": [ 3008, 0 ], "$stonecutter_uv_size": [ 192, 240 ] },
+      { "requires": "($stonecutter_resolution = '8192x')", "$stonecutter_uv": [ 6016, 0 ], "$stonecutter_uv_size": [ 384, 480 ] }
+    ]
+  },
+
+  "scroll_middle_stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 6 ],
+    "size": [ 12, "100%-11px" ],
+    "clips_children": true,
+    "controls": [
+      { "00@stonecutter_java_dx.scroll_middle": { } },
+      { "01@stonecutter_java_dx.scroll_middle": { } },
+      { "02@stonecutter_java_dx.scroll_middle": { } },
+      { "03@stonecutter_java_dx.scroll_middle": { } },
+      { "04@stonecutter_java_dx.scroll_middle": { } },
+      { "05@stonecutter_java_dx.scroll_middle": { } },
+      { "06@stonecutter_java_dx.scroll_middle": { } },
+      { "07@stonecutter_java_dx.scroll_middle": { } },
+      { "08@stonecutter_java_dx.scroll_middle": { } },
+      { "09@stonecutter_java_dx.scroll_middle": { } },
+      { "10@stonecutter_java_dx.scroll_middle": { } },
+      { "11@stonecutter_java_dx.scroll_middle": { } },
+      { "12@stonecutter_java_dx.scroll_middle": { } },
+      { "13@stonecutter_java_dx.scroll_middle": { } },
+      { "14@stonecutter_java_dx.scroll_middle": { } },
+      { "15@stonecutter_java_dx.scroll_middle": { } },
+      { "16@stonecutter_java_dx.scroll_middle": { } },
+      { "17@stonecutter_java_dx.scroll_middle": { } },
+      { "18@stonecutter_java_dx.scroll_middle": { } },
+      { "19@stonecutter_java_dx.scroll_middle": { } },
+      { "20@stonecutter_java_dx.scroll_middle": { } }
+    ]
+  },
+
+  "scroll_box": {
+    "type": "panel",
+    "size": [ 12, "100%" ],
+    "controls": [
+      { "scroll_upper@stonecutter_java_dx.scroll_upper": { } },
+      { "scroll_middle_stack_panel@stonecutter_java_dx.scroll_middle_stack_panel": { } },
+      { "scroll_scroll_bottom@stonecutter_java_dx.scroll_bottom": { } }
+    ]
+  }
+}

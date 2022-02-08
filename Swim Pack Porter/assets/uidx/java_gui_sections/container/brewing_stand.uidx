@@ -1,0 +1,95 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "brewing_stand_java_dx",
+
+  "brewing_stand_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/brewing_stand",
+    "size": [ "100%", "100%" ],
+    "$brewing_stand_uv|default": [ 0, 0 ],
+    "$brewing_stand_uv_size|default": [ 0, 0 ],
+    "uv": "$brewing_stand_uv",
+    "uv_size": "$brewing_stand_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Brewing Stand screen */
+
+  "dialog_bg_brewing_stand@brewing_stand_java_dx.brewing_stand_base": {
+    "variables": [
+      { "requires": "($brewing_stand_resolution = '256x')", "$brewing_stand_uv_size": [ 176, 166 ] },
+      { "requires": "($brewing_stand_resolution = '512x')", "$brewing_stand_uv_size": [ 352, 332 ] },
+      { "requires": "($brewing_stand_resolution = '1024x')", "$brewing_stand_uv_size": [ 704, 664 ] },
+      { "requires": "($brewing_stand_resolution = '2048x')", "$brewing_stand_uv_size": [ 1408, 1328 ] },
+      { "requires": "($brewing_stand_resolution = '4096x')", "$brewing_stand_uv_size": [ 2816, 2656 ] },
+      { "requires": "($brewing_stand_resolution = '8192x')", "$brewing_stand_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /* Bottle */
+  
+  "bottle_empty@brewing_stand_java_dx.brewing_stand_base": {
+    "variables": [
+      { "requires": "($brewing_stand_resolution = '256x')", "$brewing_stand_uv": [ 209, 0 ], "$brewing_stand_uv_size": [ 16, 16 ] },
+      { "requires": "($brewing_stand_resolution = '512x')", "$brewing_stand_uv": [ 418, 0 ], "$brewing_stand_uv_size": [ 32, 32 ] },
+      { "requires": "($brewing_stand_resolution = '1024x')", "$brewing_stand_uv": [ 836, 0 ], "$brewing_stand_uv_size": [ 64, 64 ] },
+      { "requires": "($brewing_stand_resolution = '2048x')", "$brewing_stand_uv": [ 1672, 0 ], "$brewing_stand_uv_size": [ 128, 128 ] },
+      { "requires": "($brewing_stand_resolution = '4096x')", "$brewing_stand_uv": [ 3344, 0 ], "$brewing_stand_uv_size": [ 256, 256 ] },
+      { "requires": "($brewing_stand_resolution = '8192x')", "$brewing_stand_uv": [ 6688, 0 ], "$brewing_stand_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  /* Fuel icon */
+
+  "fuel_empty@brewing_stand_java_dx.brewing_stand_base": {
+    "variables": [
+      { "requires": "($brewing_stand_resolution = '256x')", "$brewing_stand_uv": [ 209, 16 ], "$brewing_stand_uv_size": [ 16, 16 ] },
+      { "requires": "($brewing_stand_resolution = '512x')", "$brewing_stand_uv": [ 418, 32 ], "$brewing_stand_uv_size": [ 32, 32 ] },
+      { "requires": "($brewing_stand_resolution = '1024x')", "$brewing_stand_uv": [ 836, 64 ], "$brewing_stand_uv_size": [ 64, 64 ] },
+      { "requires": "($brewing_stand_resolution = '2048x')", "$brewing_stand_uv": [ 1672, 128 ], "$brewing_stand_uv_size": [ 128, 128 ] },
+      { "requires": "($brewing_stand_resolution = '4096x')", "$brewing_stand_uv": [ 3344, 256 ], "$brewing_stand_uv_size": [ 256, 256 ] },
+      { "requires": "($brewing_stand_resolution = '8192x')", "$brewing_stand_uv": [ 6688, 512 ], "$brewing_stand_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  /* Bubbles */
+
+  "bubbles_full@brewing_stand_java_dx.brewing_stand_base": {
+    "variables": [
+      { "requires": "($brewing_stand_resolution = '256x')", "$brewing_stand_uv": [ 185, 0 ], "$brewing_stand_uv_size": [ 12, 29 ] },
+      { "requires": "($brewing_stand_resolution = '512x')", "$brewing_stand_uv": [ 370, 0 ], "$brewing_stand_uv_size": [ 24, 58 ] },
+      { "requires": "($brewing_stand_resolution = '1024x')", "$brewing_stand_uv": [ 740, 0 ], "$brewing_stand_uv_size": [ 48, 116 ] },
+      { "requires": "($brewing_stand_resolution = '2048x')", "$brewing_stand_uv": [ 1480, 0 ], "$brewing_stand_uv_size": [ 96, 232 ] },
+      { "requires": "($brewing_stand_resolution = '4096x')", "$brewing_stand_uv": [ 2960, 0 ], "$brewing_stand_uv_size": [ 192, 464 ] },
+      { "requires": "($brewing_stand_resolution = '8192x')", "$brewing_stand_uv": [ 5920, 0 ], "$brewing_stand_uv_size": [ 384, 928 ] }
+    ]
+  },
+
+  /* Arrow */
+
+  "brewing_arrow_full@brewing_stand_java_dx.brewing_stand_base": {
+    "variables": [
+      { "requires": "($brewing_stand_resolution = '256x')", "$brewing_stand_uv": [ 176, 0 ], "$brewing_stand_uv_size": [ 9, 28 ] },
+      { "requires": "($brewing_stand_resolution = '512x')", "$brewing_stand_uv": [ 352, 0 ], "$brewing_stand_uv_size": [ 18, 56 ] },
+      { "requires": "($brewing_stand_resolution = '1024x')", "$brewing_stand_uv": [ 704, 0 ], "$brewing_stand_uv_size": [ 36, 112 ] },
+      { "requires": "($brewing_stand_resolution = '2048x')", "$brewing_stand_uv": [ 1408, 0 ], "$brewing_stand_uv_size": [ 72, 224 ] },
+      { "requires": "($brewing_stand_resolution = '4096x')", "$brewing_stand_uv": [ 2816, 0 ], "$brewing_stand_uv_size": [ 144, 448 ] },
+      { "requires": "($brewing_stand_resolution = '8192x')", "$brewing_stand_uv": [ 5632, 0 ], "$brewing_stand_uv_size": [ 288, 896 ] }
+    ]
+  },
+
+  /* Fuel Bar */
+
+  "brewing_fuel_bar_full@brewing_stand_java_dx.brewing_stand_base": {
+    "variables": [
+      { "requires": "($brewing_stand_resolution = '256x')", "$brewing_stand_uv": [ 176, 29 ], "$brewing_stand_uv_size": [ 18, 4 ] },
+      { "requires": "($brewing_stand_resolution = '512x')", "$brewing_stand_uv": [ 352, 58 ], "$brewing_stand_uv_size": [ 36, 8 ] },
+      { "requires": "($brewing_stand_resolution = '1024x')", "$brewing_stand_uv": [ 704, 116 ], "$brewing_stand_uv_size": [ 72, 16 ] },
+      { "requires": "($brewing_stand_resolution = '2048x')", "$brewing_stand_uv": [ 1408, 232 ], "$brewing_stand_uv_size": [ 144, 32 ] },
+      { "requires": "($brewing_stand_resolution = '4096x')", "$brewing_stand_uv": [ 2816, 464 ], "$brewing_stand_uv_size": [ 288, 64 ] },
+      { "requires": "($brewing_stand_resolution = '8192x')", "$brewing_stand_uv": [ 5632, 928 ], "$brewing_stand_uv_size": [ 576, 128 ] }
+    ]
+  }
+}

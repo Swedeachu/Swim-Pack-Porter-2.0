@@ -1,0 +1,22 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "hopper_java_dx",
+
+  "dialog_bg_hopper": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/hopper",
+    "uv": [ 0, 0 ],
+    "uv_size": "$hopper_uv_size",
+    "$hopper_uv_size|default": [ 0, 0 ],
+    "size": [ 176, 133 ],
+    "variables": [
+      { "requires": "($hopper_resolution = '256x')",  "$hopper_uv_size": [ 176, 133 ] },
+      { "requires": "($hopper_resolution = '512x')",  "$hopper_uv_size": [ 352, 266 ] },
+      { "requires": "($hopper_resolution = '1024x')", "$hopper_uv_size": [ 704, 532 ] },
+      { "requires": "($hopper_resolution = '2048x')", "$hopper_uv_size": [ 1408, 1064 ] },
+      { "requires": "($hopper_resolution = '4096x')", "$hopper_uv_size": [ 2816, 2128 ] },
+      { "requires": "($hopper_resolution = '8192x')", "$hopper_uv_size": [ 5632, 4256 ] }
+    ]
+  }
+}

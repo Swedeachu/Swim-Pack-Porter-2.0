@@ -1,0 +1,55 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "blast_furnace_java_dx",
+
+  "blast_furnace_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/blast_furnace",
+    "$blast_furnace_uv|default": [ 0, 0 ],
+    "$blast_furnace_uv_size|default": [ 0, 0 ],
+    "uv": "$blast_furnace_uv",
+    "uv_size": "$blast_furnace_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Blast Furnace screen */
+
+  "dialog_bg_blast_furnace@blast_furnace_java_dx.blast_furnace_base": {
+    "variables": [
+      { "requires": "($blast_furnace_resolution = '256x')", "$blast_furnace_uv_size": [ 176, 166 ] },
+      { "requires": "($blast_furnace_resolution = '512x')", "$blast_furnace_uv_size": [ 352, 332 ] },
+      { "requires": "($blast_furnace_resolution = '1024x')", "$blast_furnace_uv_size": [ 704, 664 ] },
+      { "requires": "($blast_furnace_resolution = '2048x')", "$blast_furnace_uv_size": [ 1408, 1328 ] },
+      { "requires": "($blast_furnace_resolution = '4096x')", "$blast_furnace_uv_size": [ 2816, 2656 ] },
+      { "requires": "($blast_furnace_resolution = '8192x')", "$blast_furnace_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /* Arrow full image */
+
+  "arrow_full@blast_furnace_java_dx.blast_furnace_base": {
+    "variables": [
+      { "requires": "($blast_furnace_resolution = '256x')", "$blast_furnace_uv": [ 176, 14 ], "$blast_furnace_uv_size": [ 24, 17 ] },
+      { "requires": "($blast_furnace_resolution = '512x')", "$blast_furnace_uv": [ 352, 28 ], "$blast_furnace_uv_size": [ 48, 34 ] },
+      { "requires": "($blast_furnace_resolution = '1024x')", "$blast_furnace_uv": [ 704, 56 ], "$blast_furnace_uv_size": [ 96, 68 ] },
+      { "requires": "($blast_furnace_resolution = '2048x')", "$blast_furnace_uv": [ 1408, 112 ], "$blast_furnace_uv_size": [ 192, 136 ] },
+      { "requires": "($blast_furnace_resolution = '4096x')", "$blast_furnace_uv": [ 2816, 224 ], "$blast_furnace_uv_size": [ 384, 272 ] },
+      { "requires": "($blast_furnace_resolution = '8192x')", "$blast_furnace_uv": [ 5632, 448 ], "$blast_furnace_uv_size": [ 768, 544 ] }
+    ]
+  },
+
+  /* Flame full image */
+
+  "flame_full@blast_furnace_java_dx.blast_furnace_base": {
+    "variables": [
+      { "requires": "($blast_furnace_resolution = '256x')", "$blast_furnace_uv": [ 176, 0 ], "$blast_furnace_uv_size": [ 14, 14 ] },
+      { "requires": "($blast_furnace_resolution = '512x')", "$blast_furnace_uv": [ 352, 0 ], "$blast_furnace_uv_size": [ 28, 28 ] },
+      { "requires": "($blast_furnace_resolution = '1024x')", "$blast_furnace_uv": [ 704, 0 ], "$blast_furnace_uv_size": [ 56, 56 ] },
+      { "requires": "($blast_furnace_resolution = '2048x')", "$blast_furnace_uv": [ 1408, 0 ], "$blast_furnace_uv_size": [ 112, 112 ] },
+      { "requires": "($blast_furnace_resolution = '4096x')", "$blast_furnace_uv": [ 2816, 0 ], "$blast_furnace_uv_size": [ 224, 224 ] },
+      { "requires": "($blast_furnace_resolution = '8192x')", "$blast_furnace_uv": [ 5632, 8 ], "$blast_furnace_uv_size": [ 448, 448 ] }
+    ]
+  }
+}

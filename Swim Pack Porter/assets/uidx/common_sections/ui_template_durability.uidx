@@ -1,0 +1,88 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "common_durability_dx",
+
+  /* Durability textures */
+
+  "durability_bindings": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "bindings": [
+      {
+        "ignored": "$is_grabbed",
+        "binding_name": "$total_amount",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "ignored": "$is_grabbed",
+        "binding_name": "$current_amount",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "ignored": "(not $is_grabbed)",
+        "binding_name": "$total_amount"
+      },
+      {
+        "ignored": "(not $is_grabbed)",
+        "binding_name": "$current_amount"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((($current_amount / $total_amount) > $min_amount) and (($current_amount / $total_amount) < $max_amount) or (($current_amount / $total_amount) = $min_amount))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "durability_bar_00@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/00" },
+  "durability_bar_01@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/01" },
+  "durability_bar_02@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/02" },
+  "durability_bar_03@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/03" },
+  "durability_bar_04@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/04" },
+  "durability_bar_05@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/05" },
+  "durability_bar_06@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/06" },
+  "durability_bar_07@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/07" },
+  "durability_bar_08@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/08" },
+  "durability_bar_09@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/09" },
+  "durability_bar_10@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/10" },
+  "durability_bar_11@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/11" },
+  "durability_bar_12@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/12" },
+  "durability_bar_13@common_durability_dx.durability_bindings": { "texture": "textures/uidx/durability_bar/13" },
+
+  /* Durability Bar */
+
+  "durability_bar": {
+    "type": "panel",
+    "size": "$item_renderer_size",
+    "$total_amount": "#item_durability_total_amount",
+    "$current_amount": "#item_durability_current_amount",
+    "$is_grabbed": false,
+    "bindings": [
+      {
+        "binding_name": "(not ($total_amount = 0))",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      }
+    ],
+    "controls": [
+      { "durability_bar_00@common_durability_dx.durability_bar_00": { "$min_amount": 0.0000, "$max_amount": 0.0714 } },
+      { "durability_bar_01@common_durability_dx.durability_bar_01": { "$min_amount": 0.0714, "$max_amount": 0.1428 } },
+      { "durability_bar_02@common_durability_dx.durability_bar_02": { "$min_amount": 0.1428, "$max_amount": 0.2142 } },
+      { "durability_bar_03@common_durability_dx.durability_bar_03": { "$min_amount": 0.2142, "$max_amount": 0.2856 } },
+      { "durability_bar_04@common_durability_dx.durability_bar_04": { "$min_amount": 0.2856, "$max_amount": 0.3570 } },
+      { "durability_bar_05@common_durability_dx.durability_bar_05": { "$min_amount": 0.3570, "$max_amount": 0.4284 } },
+      { "durability_bar_06@common_durability_dx.durability_bar_06": { "$min_amount": 0.4284, "$max_amount": 0.4998 } },
+      { "durability_bar_07@common_durability_dx.durability_bar_07": { "$min_amount": 0.4998, "$max_amount": 0.5712 } },
+      { "durability_bar_08@common_durability_dx.durability_bar_08": { "$min_amount": 0.5712, "$max_amount": 0.6426 } },
+      { "durability_bar_09@common_durability_dx.durability_bar_09": { "$min_amount": 0.6426, "$max_amount": 0.7140 } },
+      { "durability_bar_10@common_durability_dx.durability_bar_10": { "$min_amount": 0.7140, "$max_amount": 0.7854 } },
+      { "durability_bar_11@common_durability_dx.durability_bar_11": { "$min_amount": 0.7854, "$max_amount": 0.8568 } },
+      { "durability_bar_12@common_durability_dx.durability_bar_12": { "$min_amount": 0.8568, "$max_amount": 0.9282 } },
+      { "durability_bar_13@common_durability_dx.durability_bar_13": { "$min_amount": 0.9282, "$max_amount": 1.0000 } }
+    ]
+  }
+}

@@ -1,0 +1,384 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "beacon_dx",
+
+  "effect_hover_text_label@common_dx.hover_text_label": {
+    "text": "#button_hover",
+    "bindings": [
+      {
+        "binding_name": "#button_hover",
+        "binding_type": "collection",
+        "binding_collection_name": "$button_name"
+      }
+    ]
+  },
+
+  "button_with_hover_text": {
+    "type": "panel",
+    "$is_effect_buttons|default": false,
+    "controls": [
+      {
+        "effect_hover_text_panels": {
+          "type": "panel",
+          "ignored": "(not $is_effect_buttons)",
+          "controls": [
+            { "hover_text@beacon.hover_text": { "ignored": "$hover_text_shadow" } },
+            {
+              "effect_hover_text@common_dx.hover_text_panel": {
+                "ignored": "(not $hover_text_shadow)",
+                "$hover_text_label_control": "beacon_dx.effect_hover_text_label",
+                "bindings": [
+                  {
+                    "binding_name": "(not (#button_hover = ''))",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$button_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "hover_text_panel@common_dx.hover_text_panel": { "ignored": "$is_effect_buttons" } },
+      { "texture@$button_hover_texture": { "anchor_from": "top_left", "anchor_to": "top_left" } }
+    ]
+  },
+  
+  "button_unchecked_hover@beacon_dx.button_with_hover_text": {
+    "$button_hover_texture": "beacon_java_dx.button_unchecked_hover"
+  },
+
+  "button_checked_hover@beacon_dx.button_with_hover_text": {
+    "$button_hover_texture": "beacon_java_dx.button_checked"
+  },
+  "button_locked_hover@beacon_dx.button_with_hover_text": {
+    "$button_hover_texture": "beacon_java_dx.button_locked"
+  },
+  
+  "toggle_button@beacon.toggle_button": {
+    "size": [ 22, 22 ],
+    "$unchecked_control": "beacon_java_dx.button_unchecked_default",
+    "$unchecked_hover_control": "beacon_dx.button_unchecked_hover",
+    "$checked_control": "beacon_java_dx.button_checked",
+    "$checked_hover_control": "beacon_dx.button_checked_hover",
+    "$unchecked_locked_control": "beacon_java_dx.button_locked",
+    "$checked_locked_control": "beacon_java_dx.button_locked",
+    "$unchecked_locked_hover_control": "beacon_dx.button_locked_hover",
+    "$checked_locked_hover_control": "beacon_dx.button_locked_hover"
+  },
+
+  "button_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 22, 22 ],
+    "controls": [
+      { "toggle_button@beacon_dx.toggle_button": { "layer": 3 } },
+      { "image_control@$image_control": { "layer": 4 } }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#active",
+        "binding_collection_name": "$button_name",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  /*//// Innver Panel ////*/
+  
+  "effect_buttons": {
+    "type": "panel",
+    "$is_effect_buttons": true,
+    "controls": [
+      {
+        "speed_panel@beacon_dx.button_panel": {
+          "offset": [ 46, 18 ],
+          "$button_name": "speed",
+          "$image_control": "mob_effect_java_dx.speed_icon"
+        }
+      },
+      {
+        "haste_panel@beacon_dx.button_panel": {
+          "offset": [ 70, 18 ],
+          "$button_name": "haste",
+          "$image_control": "mob_effect_java_dx.haste_icon"
+        }
+      },
+      {
+        "resist_panel@beacon_dx.button_panel": {
+          "offset": [ 46, 43 ],
+          "$button_name": "resist",
+          "$image_control": "mob_effect_java_dx.resistance_icon"
+        }
+      },
+      {
+        "jump_panel@beacon_dx.button_panel": {
+          "offset": [ 70, 43 ],
+          "$button_name": "jump",
+          "$image_control": "mob_effect_java_dx.jump_boost_icon"
+        }
+      },
+      {
+        "strength_panel@beacon_dx.button_panel": {
+          "offset": [ 58, 68 ],
+          "$button_name": "strength",
+          "$image_control": "mob_effect_java_dx.strength_icon"
+        }
+      },
+      {
+        "regen_panel@beacon_dx.button_panel": {
+          "offset": [ -57, 43 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$button_name": "regen",
+          "$image_control": "mob_effect_java_dx.regeneration_icon"
+        }
+      },
+      {
+        "extra_panel@beacon_dx.button_panel": {
+          "offset": [ -33, 43 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$button_name": "extra",
+          "$image_control": "beacon_dx.extra_icon"
+        }
+      }
+    ]
+  },
+
+  "extra_icon": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "speed_secondary@beacon_dx.secondary_effect_base": {
+          "$effect_name": "speed",
+          "$effect_icon": "mob_effect_java_dx.speed_icon"
+        }
+      },
+      {
+        "haste_secondary@beacon_dx.secondary_effect_base": {
+          "$effect_name": "haste",
+          "$effect_icon": "mob_effect_java_dx.haste_icon"
+        }
+      },
+      {
+        "resist_secondary@beacon_dx.secondary_effect_base": {
+          "$effect_name": "resist",
+          "$effect_icon": "mob_effect_java_dx.resistance_icon"
+        }
+      },
+      {
+        "jump_secondary@beacon_dx.secondary_effect_base": {
+          "$effect_name": "jump",
+          "$effect_icon": "mob_effect_java_dx.jump_boost_icon"
+        }
+      },
+      {
+        "strength_secondary@beacon_dx.secondary_effect_base": {
+          "$effect_name": "strength",
+          "$effect_icon": "mob_effect_java_dx.strength_icon"
+        }
+      }
+    ]
+  },
+  
+  "secondary_effect_base": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_name": "#extra_image_selection",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "$effect_name",
+        "binding_type": "collection"
+      }
+    ],
+    "controls": [
+      { "effect_icon@$effect_icon": { } }
+    ]
+  },
+
+  "inner_panel": {
+    "type": "panel",
+    "size": [ 216, 97 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 7, 4 ],
+    "layer": 5,
+    "controls": [
+      { "effect_buttons@beacon_dx.effect_buttons": {} },
+      {
+        "primary_power_label@beacon.beacon_label": {
+          "text": "tile.beacon.primary",
+          "offset": [ -52, 5 ]
+        }
+      },
+      {
+        "secondary_power_label@beacon.beacon_label": {
+          "text": "tile.beacon.secondary",
+          "offset": [ 54, 5 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Payment Panel ////*/
+
+  "usable_items_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 16 ],
+    "controls": [
+      {
+        "netherite@beacon.item_renderer": {
+          "property_bag": { "#item_id_aux": 48627712 }
+        }
+      },
+      {
+        "separator_0": {
+          "type": "panel",
+          "size": [ 6, "100%" ]
+        }
+      },
+      {
+        "emerald@beacon.item_renderer": {
+          "property_bag": { "#item_id_aux": 25427968 }
+        }
+      },
+      {
+        "separator_1": {
+          "type": "panel",
+          "size": [ 6, "100%" ]
+        }
+      },
+      {
+        "diamond@beacon.item_renderer": {
+          "property_bag": { "#item_id_aux": 17301504 }
+        }
+      },
+      {
+        "separator_2": {
+          "type": "panel",
+          "size": [ 6, "100%" ]
+        }
+      },
+      {
+        "gold@beacon.item_renderer": {
+          "property_bag": { "#item_id_aux": 17432576 }
+        }
+      },
+      {
+        "separator_3": {
+          "type": "panel",
+          "size": [ 6, "100%" ]
+        }
+      },
+      {
+        "iron@beacon.item_renderer": {
+          "property_bag": { "#item_id_aux": 17367040 }
+        }
+      }
+    ]
+  },
+
+  "payment_panel": {
+    "type": "panel",
+    "size": [ 192, 22 ],
+    "offset": [ 20, 107 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 4,
+    "controls": [
+      {
+        "confirm_panel@beacon_dx.button_panel": {
+          "offset": [ -26, 0 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$button_name": "confirm",
+          "$hover_panel_text": "controller.buttonTip.confirmSearch",
+          "$image_control": "beacon_java_dx.confirm_icon"
+        }
+      },
+      {
+        "cancel_panel@beacon_dx.button_panel": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$button_name": "cancel",
+          "$hover_panel_text": "controllerLayoutScreen.cancel",
+          "$image_control": "beacon_java_dx.cancel_icon"
+        }
+      },
+      {
+        "ingredient_item@common.container_item": {
+          "$background_images": "java_gui_common.cell_image",
+          "$highlight_control": "common_dx.highlight_slot_panel",
+          "$item_collection_name": "beacon_payment_items",
+          "offset": [ -59, 2 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+        }
+      },
+      {
+        "usable_items_panel@beacon_dx.usable_items_panel": {
+          "offset": [ 0, 2 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      }
+    ]
+  },
+
+  /*//// Main ////*/
+
+  "beacon_panel@common_dx.root_panel": {
+    "size": [ 230, 219 ],
+    "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
+      { "dialog_bg_beacon@beacon_java_dx.dialog_bg_beacon": { "layer": 1 } },
+      { "inner_panel@beacon_dx.inner_panel": { } },
+      { "payment_panel@beacon_dx.payment_panel": { } },
+      {
+        "inventory_panel_bottom_half@common_dx.inventory_panel_bottom_half": {
+          "layer": 2,
+          "offset": [ 35, -7 ],
+          "$with_label": false,
+          "$button_ref": "beacon.inventory_slot_button"
+        }
+      }
+    ]
+  },
+
+  "main_screen_content": {
+    "type": "panel",
+    "$slot_selected_texture": "",
+    "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
+    "controls": [
+      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+      { "beacon_panel@beacon_dx.beacon_panel": { } }
+    ]
+  },
+    
+  /*//// Screen ////*/
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
+      { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@beacon_dx.main_screen_content": { } },
+      { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
+    ]
+  }
+}

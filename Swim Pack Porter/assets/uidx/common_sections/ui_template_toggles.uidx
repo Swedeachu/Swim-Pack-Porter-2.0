@@ -1,0 +1,76 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "common_toggles_dx",
+
+  "toggle_panel": {
+    "type": "panel",
+    "$tab_size|default": [ "100%", "100%" ],
+    "$sound_name|default": "random.click",
+    "size": [ "100%", "100%" ],
+    "$radio_toggle_group": true,
+    "$toggle_focus_enabled": true,
+    "$is_back_button|default": false,
+    "$has_double_click_function|default": false,
+    "$binding_type": "global",
+    "$binding_condition": "once",
+
+    "$is_custom_button|default": false,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+
+    "$unchecked_control": "common.empty_panel",
+    "$checked_control": "common.empty_panel",
+    "$unchecked_hover_control": "common.empty_panel",
+    "$checked_hover_control": "common.empty_panel",
+
+    "$unchecked_locked_control": "common.empty_panel",
+    "$unchecked_locked_hover_control": "common.empty_panel",
+    "$checked_locked_control": "common.empty_panel",
+    "$checked_locked_hover_control": "common.empty_panel",
+    "controls": [
+      {
+        "$tab_view_binding_name@common.toggle": {
+          "sound_name": "$sound_name",
+          "size": "$tab_size",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "focused"
+            },
+            {
+              "ignored": "(not $is_back_button)",
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "global"
+            },
+            {
+              "ignored": "(not $is_custom_button)",
+              "from_button_id": "$custom_from_button_id",
+              "to_button_id": "$custom_to_button_id",
+              "mapping_type": "$custom_mapping_type",
+              "scope": "$custom_scope"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*////// MAIN MENU BUTTON TOGGLE //////*/
+
+  "main_button_toggle@common_toggles_dx.toggle_panel": {
+    "$toggle_tts_name": "",
+    "$toggle_tts_header": "",
+    "$toggle_tts_toggle_on_text": "accessibility.button.tts.title",
+    "$toggle_tts_toggle_off_text": "accessibility.button.tts.title"
+  }
+}

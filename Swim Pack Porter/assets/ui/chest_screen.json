@@ -1,0 +1,54 @@
+/*File modified by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "small_chest_screen": {
+    "$chest_panel_size": [ 176, 167 ],
+    "$chest_dialog_bg": "generic_54_java_dx.dialog_bg_chest_small",
+    "$chest_panel_top_half": "chest_dx.small_chest_panel_top_half",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest_dx.center_screen",
+        "$screen_bg_content": "chest_dx.full_screen"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "pocket_containers.small_chest_panel"
+      }
+    ]
+  },
+
+  "large_chest_screen": {
+    "$chest_panel_size": [ 176, 222 ],
+    "$chest_dialog_bg": "generic_54_java_dx.dialog_bg_chest_large",
+    "$chest_panel_top_half": "chest_dx.large_chest_panel_top_half",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest_dx.center_screen",
+        "$screen_bg_content": "chest_dx.full_screen"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "pocket_containers.large_chest_panel"
+      }
+    ]
+  },
+
+  "ender_chest_screen": {
+    "$chest_panel_size": [ 176, 167 ],
+    "$chest_dialog_bg": "ender_chest_java_dx.dialog_bg_ender_chest",
+    "$chest_panel_top_half": "chest_dx.small_chest_panel_top_half",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest_dx.center_screen",
+        "$screen_bg_content": "chest_dx.full_screen"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "pocket_containers.ender_chest_panel"
+      }
+    ]
+  }
+}

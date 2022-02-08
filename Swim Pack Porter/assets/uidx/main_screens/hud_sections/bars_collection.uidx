@@ -1,0 +1,255 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "CrisXolt_bars_dx",
+
+  /*//// Boss Health Panel ////*/
+  
+  "boss_health_main_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "boss_hud_padding": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "visible": "#boss_hud_padding", //Make this visible to move the boss hud panel down
+          "bindings": [
+            {
+              "binding_name": "#boss_hud_padding",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "boss_hud_panel": {
+          "type": "panel",
+          "controls": [
+            {
+              "boss_health_grid@hud.boss_health_grid": {
+                "size": [ 182, "100%" ],
+                "grid_item_template": "CrisXolt_bars_dx.bar_panel",
+                "offset": [ 0, 0 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Boss Collection ////*/
+
+  "bar_name": {
+    "type": "label",
+    "color": "$boss_name_text_color",
+    "text": "#bossName",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 2 ],
+    "shadow": true,
+    "bindings": [
+      {
+        "binding_name": "#bossName",
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_name"
+      }
+    ]
+  },
+
+  "bar_panel": {
+    "type": "panel",
+    "size": [ 182, 18 ],
+    "$bar_name_control": "bar_name",
+    "$main_bar_control": "main",
+    "$collection_name": "boss_bars",
+    "$progress_bar_collection": "boss_bars",
+    "$raid_bar_panel_control": "CrisXolt_bars_dx.raid_bar_panel",
+    "$default_bar_panel_control": "CrisXolt_bars_dx.default_bar_panel",
+    "controls": [
+      { "$bar_name_control@CrisXolt_bars_dx.bar_name": { "size": [ 0, 0 ] } },
+      {
+        "ender_dragon_bar@CrisXolt_bars_bindings_dx.ender_dragon_dindings": {
+          "controls": [
+            { "bar_name@CrisXolt_bars_dx.bar_name": { } },
+            { "ender_dragon_bar_panel@CrisXolt_bars_dx.ender_dragon_bar_panel": { } }
+          ]
+        }
+      },
+      {
+        "wither_bar@CrisXolt_bars_bindings_dx.wither_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_bars_dx.bar_name": { } },
+            { "wither_bar_panel@CrisXolt_bars_dx.wither_bar_panel": { } }
+          ]
+        }
+      },
+      { 
+        "raid_bar@CrisXolt_bars_bindings_dx.raid_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_bars_dx.bar_name": { "text": "bar.event.raid.name" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
+      { 
+        "raid_remaining_2_bar@CrisXolt_bars_bindings_dx.raid_remaining_2_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_bars_dx.bar_name": { "text": "bar.event.raid.remaining.2" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
+      { 
+        "raid_remaining_1_bar@CrisXolt_bars_bindings_dx.raid_remaining_1_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_bars_dx.bar_name": { "text": "bar.event.raid.remaining.1" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
+      { 
+        "raid_remaining_0_bar@CrisXolt_bars_bindings_dx.raid_remaining_0_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_bars_dx.bar_name": { "text": "bar.event.raid.remaining.0" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
+      { "default_bar_control@CrisXolt_default_bar_dx.001": { } }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#bar_visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "ender_dragon_bar_panel@common.progress_bar_for_collections": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 12 ],
+    "size": [ 182, 5 ],
+    "controls": [
+      { "magenta_bar_empty@bars_java_dx.magenta_bar_empty": { "layer": 1, "size": [ 182, 5 ] } },
+      { 
+        "magenta_bar_full@bars_java_dx.magenta_bar_full": {
+          "layer": 2,
+          "size": [ 182, 5 ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "wither_bar_panel@common.progress_bar_for_collections": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 12 ],
+    "size": [ 182, 5 ],
+    "controls": [
+      { "purple_bar_empty@bars_java_dx.purple_bar_empty": { "layer": 1, "size": [ 182, 5 ] } },
+      { 
+        "purple_bar_full@bars_java_dx.purple_bar_full": {
+          "layer": 2,
+          "size": [ 182, 5 ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "raid_bar_panel@common.progress_bar_for_collections": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 12 ],
+    "size": [ 182, 5 ],
+    "layer": 10,
+    "controls": [
+      { "red_bar_empty@bars_java_dx.red_bar_empty": { "layer": 1, "size": [ 182, 5 ] } },
+      { 
+        "red_bar_full@bars_java_dx.red_bar_full": {
+          "layer": 3,
+          "size": [ 182, 5 ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      },
+      { "nub_bar_10_empty@bars_java_dx.nub_bar_10_empty": { "layer": 2, "size": [ 182, 5 ] } },
+      { 
+        "nub_bar_10_full@bars_java_dx.nub_bar_10_full": {
+          "layer": 4,
+          "size": [ 182, 5 ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "default_bar_panel@common.progress_bar_for_collections": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 12 ],
+    "size": [ 182, 5 ],
+    "layer": 10,
+    "controls": [
+      { "blue_bar_empty@bars_java_dx.blue_bar_empty": { "layer": 1, "size": [ 182, 5 ] } },
+      { 
+        "blue_bar_full@bars_java_dx.blue_bar_full": {
+          "layer": 3,
+          "size": [ 182, 5 ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

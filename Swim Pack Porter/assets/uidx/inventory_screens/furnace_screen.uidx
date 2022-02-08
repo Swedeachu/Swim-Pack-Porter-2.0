@@ -1,0 +1,140 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "furnace_dx",
+
+  /*//// Grid ////*/
+  
+  "furnace_ingredient_item@common.container_item": {
+    "$background_images": "java_gui_common.cell_image",
+    "size": [ 18, 18 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 55, 16 ],
+    "$item_collection_name": "furnace_ingredient_items",
+    "$focus_id": "furnace_ingredient_item",
+    "$focus_override_left": "FOCUS_OVERRIDE_STOP",
+    "$focus_override_left_binding_type": "none",
+    "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+    "$focus_override_up_binding_type": "none"
+  },
+
+  "furnace_fuel_item@common.container_item": {
+    "$background_images": "java_gui_common.cell_image",
+    "size": [ 18, 18 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 55, 52 ],
+    "$item_collection_name": "furnace_fuel_items",
+    "$focus_id": "furnace_fuel_item",
+    "$focus_override_right": "furnace_output_item",
+    "$focus_override_right_binding_type": "none",
+    "$focus_override_left": "FOCUS_OVERRIDE_STOP",
+    "$focus_override_left_binding_type": "none"
+  },
+  
+  "furnace_output_item@common.container_item": {
+    "$background_images": "java_gui_common.cell_image_output",
+    "$highlight_slot_image": "java_gui_common.highlight_slot_output",
+    "size": [ 26, 26 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -39, 30 ],
+    "$item_collection_name": "furnace_output_items",
+    "$focus_id": "furnace_output_item",
+    "$focus_override_right_binding_type": "none",
+    "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+    "$focus_override_left_binding_type": "none",
+    "$focus_override_left": "furnace_fuel_item"
+  },
+
+  "furnace_panel_top_half": {
+    "type": "panel",
+    "layer": 8,
+    "$highlight_control": "common_dx.highlight_slot_panel",
+    "controls": [
+      { "furnace_label@furnace.furnace_label": { "offset": [ 0, 5 ], "color": "$vdx_container_title_text_color" } },
+      { 
+        "arrow@$arrow_texture": {
+          "size": [ 24, 17 ],
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "offset": [ 79, 34 ],
+          "clip_direction": "left",
+          "bindings": [
+            {
+              "binding_name": "#furnace_arrow_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      { 
+        "flame@$flame_texture": {
+          "size": [ 14, 14 ],
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "offset": [ 56, 36 ],
+          "clip_direction": "down",
+          "bindings": [
+            {
+              "binding_name": "#furnace_flame_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      { "ingredient@furnace_dx.furnace_ingredient_item": {} },
+      { "fuel@furnace_dx.furnace_fuel_item": {} },
+      { "output@furnace_dx.furnace_output_item": {} }
+    ]
+  },
+
+  "furnace_panel@common_dx.root_panel": {
+    "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
+      { "dialog_bg_furnace@$furnace_dialog_bg": { "layer": 1 } },
+      { "furnace_panel_top_half@furnace_dx.furnace_panel_top_half": { } },
+      {
+        "inventory_panel_bottom_half@common_dx.inventory_panel_bottom_half": {
+          "layer": 2,
+          "$with_label": true
+        }
+      }
+    ]
+  },
+
+  /*//// Main ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "$slot_selected_texture": "",
+    "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
+    "controls": [
+      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+      { "furnace_panel@furnace_dx.furnace_panel": { } }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
+      { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@furnace_dx.main_screen_content": { } },
+      { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+/*File modified by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "furnace_screen": {
+    "$furnace_dialog_bg": "furnace_java_dx.dialog_bg_furnace",
+    "$arrow_texture": "furnace_java_dx.arrow_full",
+    "$flame_texture": "furnace_java_dx.flame_full",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$recipe_book_content": "furnace_recipe_book_dx.recipe_book_panel",
+        "$screen_content": "furnace_dx.center_screen",
+        "$screen_bg_content": "furnace_dx.full_screen",
+        "$gamepad_cursor": true
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "furnace_pocket.furnace_panel",
+        "$gamepad_cursor": false
+      }
+    ]
+  }
+}

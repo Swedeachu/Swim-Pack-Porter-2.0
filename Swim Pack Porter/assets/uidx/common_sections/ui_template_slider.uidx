@@ -1,0 +1,106 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "common_slider_dx",
+
+  /*//// Modified Slider option!! ////*/
+  
+  "slider@common.slider": {
+    "$locked_texture|default": "",
+    "$slider_content|default": "common_slider_dx.slider_content",
+    "controls": [
+      { "slider_box@common_slider_dx.slider_box": { } },
+      { "slider_content@$slider_content": { } },
+      { 
+        "slider_bg@$locked_texture": {
+          "$button_content": "common.empty_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ -4, 0 ],
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "slider_content": {
+    "type": "panel",
+    "controls": [
+      { "slider_bar_default@common_slider_dx.slider_bar_default": {} },
+      { "slider_bar_hover@common_slider_dx.slider_bar_hover": {} },
+      {
+        "locked_panel": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "(not $option_enabled_binding_name)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "option_label_locked@common_buttons_dx.button_label": {
+                "layer": 4,
+                "text": "$option_label",
+                "color": "$main_menu_button_locked_color",
+                "bindings": "$label_bindings"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "slider_box@common.slider_box": {
+    "size": [ 8, 20 ],
+    "layer": 2,
+    "$hover_content": "common.empty_panel",
+    "controls": [
+      { "default@common_buttons_dx.8_default": { "size": [ 8, 20 ] } },
+      { "hover@common_buttons_dx.8_hover": { "size": [ 8, 20 ] } },
+      { "indent@common_buttons_dx.8_pressed": { "size": [ 8, 20 ] } },
+      { "locked@common_buttons_dx.8_locked": { "size": [ 8, 20 ] } }
+    ]
+  },
+
+  /* Slider */
+
+  "slider_bar_default": {
+    "type": "panel",
+    "size": [ "100%+8px", 20 ],
+    "$button_content": "",
+    "$text_color": "$main_menu_button_default_color",
+    "$hover_content|default": "common.empty_panel",
+    "$is_hover": false,
+    "controls": [
+      {
+        "default_panel": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "$option_enabled_binding_name",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "option_label_default@common_buttons_dx.button_label": {
+                "layer": 5,
+                "text": "$option_label",
+                "bindings": "$label_bindings"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "hover_content@$hover_content": {
+          "ignored": "(not $is_hover)"
+        }
+      }
+    ]
+  },
+
+  "slider_bar_hover@common_slider_dx.slider_bar_default": { "$text_color": "$main_menu_button_hover_color", "$is_hover": true  }
+}

@@ -1,0 +1,101 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "hud_resources_dx",
+
+  /*//// XP Bar and Level Number. Created By @CrisXolt since fall 2016 ////*/
+
+  "xp_number_label": {
+    "type": "label",
+    "shadow": false,
+    "text": "#level_number",
+    "color": "$experience_text_color",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#level_number",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#level_number_visible",
+        "binding_type": "global",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "border_xp_number_label@hud_resources_dx.xp_number_label": {
+    "layer": 1,
+    "color": "$experience_outline_text_color"
+  },
+
+  "xp_number_panel":{
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 182, 8 ],
+    "offset": [ 0, -10 ],
+    "controls": [
+      { "xp_number_label@hud_resources_dx.xp_number_label":{ "offset": [ 0, 0 ] } },
+      /* 4 directions about borders */
+      { "border_left@hud_resources_dx.border_xp_number_label":{ "offset": [ -1, 0 ] } },
+      { "border_up@hud_resources_dx.border_xp_number_label":{ "offset": [ 0, -1 ] } },
+      { "border_down@hud_resources_dx.border_xp_number_label":{ "offset": [ 0, 1 ] } },
+      { "border_right@hud_resources_dx.border_xp_number_label":{ "offset": [ 1, 0 ] } }
+    ]
+  },
+  
+  "experience_bar_full@icons_java_dx.experience_bar_full": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clip_direction": "left",
+    "clip_pixelperfect": true,
+    "layer": 3,
+    "bindings": [
+      {
+        "binding_name": "#exp_progress",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "global"
+      }
+    ]
+  },
+  
+  "experience_bar_empty@icons_java_dx.experience_bar_empty": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 2
+  },
+  
+  /*//// Auto Save Icon ////*/
+
+  "auto_save": {
+    "type": "image",
+    "layer": 31,
+    "texture": "textures/ui/auto_save",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -15, 15 ],
+    "size": [ 18, 30 ],
+    "uv_size": [ 18, 30 ],
+    "uv": "@hud_resources_dx.auto_save_animation",
+    "disable_anim_fast_forward": true,
+    "bindings": [
+      {
+        "binding_name": "#auto_save_animation_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "auto_save_animation": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 9,
+    "frame_step": 18,
+    "fps": 10,
+    "reversible": true,
+    "easing": "linear"
+  }
+}

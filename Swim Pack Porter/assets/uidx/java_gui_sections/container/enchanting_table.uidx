@@ -1,0 +1,149 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "enchanting_table_java_dx",
+
+  "enchanting_table_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/enchanting_table",
+    "$enchanting_table_uv|default": [ 0, 0 ],
+    "$enchanting_table_uv_size|default": [ 0, 0 ],
+    "uv": "$enchanting_table_uv",
+    "uv_size": "$enchanting_table_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Enchanting screen */
+
+  "dialog_bg_enchanting@enchanting_table_java_dx.enchanting_table_base": {
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($enchanting_table_resolution = '256x')",  "$enchanting_table_uv_size": [ 176, 166 ] },
+      { "requires": "($enchanting_table_resolution = '512x')",  "$enchanting_table_uv_size": [ 352, 332 ] },
+      { "requires": "($enchanting_table_resolution = '1024x')", "$enchanting_table_uv_size": [ 704, 664 ] },
+      { "requires": "($enchanting_table_resolution = '2048x')", "$enchanting_table_uv_size": [ 1408, 1328 ] },
+      { "requires": "($enchanting_table_resolution = '4096x')", "$enchanting_table_uv_size": [ 2816, 2656 ] },
+      { "requires": "($enchanting_table_resolution = '8192x')", "$enchanting_table_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /* Lapis image */
+
+  "lapis_image@enchanting_table_java_dx.enchanting_table_base": {
+    "size": [ 16, 16 ],
+    "variables": [
+      { "requires": "($enchanting_table_resolution = '256x')",  "$enchanting_table_uv": [ 176, 0 ],  "$enchanting_table_uv_size": [ 16, 16 ] },
+      { "requires": "($enchanting_table_resolution = '512x')",  "$enchanting_table_uv": [ 352, 0 ],  "$enchanting_table_uv_size": [ 32, 32 ] },
+      { "requires": "($enchanting_table_resolution = '1024x')", "$enchanting_table_uv": [ 704, 0 ],  "$enchanting_table_uv_size": [ 64, 64 ] },
+      { "requires": "($enchanting_table_resolution = '2048x')", "$enchanting_table_uv": [ 1408, 0 ], "$enchanting_table_uv_size": [ 128, 128 ] },
+      { "requires": "($enchanting_table_resolution = '4096x')", "$enchanting_table_uv": [ 2816, 0 ], "$enchanting_table_uv_size": [ 256, 256 ] },
+      { "requires": "($enchanting_table_resolution = '8192x')", "$enchanting_table_uv": [ 5632, 0 ], "$enchanting_table_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  /* Dust */
+
+  "dust_selectable_1@enchanting_table_java_dx.enchanting_table_base": {
+    "size": [ 16, 16 ],
+    "variables": [
+      { "requires": "($enchanting_table_resolution = '256x')",  "$enchanting_table_uv": [ 1, 223 ],   "$enchanting_table_uv_size": [ 16, 16 ] },
+      { "requires": "($enchanting_table_resolution = '512x')",  "$enchanting_table_uv": [ 2, 446 ],   "$enchanting_table_uv_size": [ 32, 32 ] },
+      { "requires": "($enchanting_table_resolution = '1024x')", "$enchanting_table_uv": [ 4, 892 ],   "$enchanting_table_uv_size": [ 64, 64 ] },
+      { "requires": "($enchanting_table_resolution = '2048x')", "$enchanting_table_uv": [ 8, 1784 ],  "$enchanting_table_uv_size": [ 128, 128 ] },
+      { "requires": "($enchanting_table_resolution = '4096x')", "$enchanting_table_uv": [ 16, 3568 ], "$enchanting_table_uv_size": [ 256, 256 ] },
+      { "requires": "($enchanting_table_resolution = '8192x')", "$enchanting_table_uv": [ 32, 7136 ], "$enchanting_table_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  "dust_unselectable_1@enchanting_table_java_dx.dust_selectable_1": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = '256x')",  "$enchanting_table_uv": [ 1, 239 ],   "$enchanting_table_uv_size": [ 16, 16 ] },
+      { "requires": "($enchanting_table_resolution = '512x')",  "$enchanting_table_uv": [ 2, 478 ],   "$enchanting_table_uv_size": [ 32, 32 ] },
+      { "requires": "($enchanting_table_resolution = '1024x')", "$enchanting_table_uv": [ 4, 956 ],   "$enchanting_table_uv_size": [ 64, 64 ] },
+      { "requires": "($enchanting_table_resolution = '2048x')", "$enchanting_table_uv": [ 8, 1912 ],  "$enchanting_table_uv_size": [ 128, 128 ] },
+      { "requires": "($enchanting_table_resolution = '4096x')", "$enchanting_table_uv": [ 16, 3824 ], "$enchanting_table_uv_size": [ 256, 256 ] },
+      { "requires": "($enchanting_table_resolution = '8192x')", "$enchanting_table_uv": [ 32, 7648 ], "$enchanting_table_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  "dust_selectable_2@enchanting_table_java_dx.dust_selectable_1": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = '256x')",  "$enchanting_table_uv": [ 17, 223 ],   "$enchanting_table_uv_size": [ 16, 16 ] },
+      { "requires": "($enchanting_table_resolution = '512x')",  "$enchanting_table_uv": [ 34, 446 ],   "$enchanting_table_uv_size": [ 32, 32 ] },
+      { "requires": "($enchanting_table_resolution = '1024x')", "$enchanting_table_uv": [ 68, 892 ],   "$enchanting_table_uv_size": [ 64, 64 ] },
+      { "requires": "($enchanting_table_resolution = '2048x')", "$enchanting_table_uv": [ 136, 1784 ], "$enchanting_table_uv_size": [ 128, 128 ] },
+      { "requires": "($enchanting_table_resolution = '4096x')", "$enchanting_table_uv": [ 272, 3568 ], "$enchanting_table_uv_size": [ 256, 256 ] },
+      { "requires": "($enchanting_table_resolution = '8192x')", "$enchanting_table_uv": [ 544, 7136 ], "$enchanting_table_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  "dust_unselectable_2@enchanting_table_java_dx.dust_selectable_1": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = '256x')",  "$enchanting_table_uv": [ 17, 239 ],   "$enchanting_table_uv_size": [ 16, 16 ] },
+      { "requires": "($enchanting_table_resolution = '512x')",  "$enchanting_table_uv": [ 34, 478 ],   "$enchanting_table_uv_size": [ 32, 32 ] },
+      { "requires": "($enchanting_table_resolution = '1024x')", "$enchanting_table_uv": [ 68, 956 ],   "$enchanting_table_uv_size": [ 64, 64 ] },
+      { "requires": "($enchanting_table_resolution = '2048x')", "$enchanting_table_uv": [ 136, 1912 ], "$enchanting_table_uv_size": [ 128, 128 ] },
+      { "requires": "($enchanting_table_resolution = '4096x')", "$enchanting_table_uv": [ 272, 3824 ], "$enchanting_table_uv_size": [ 256, 256 ] },
+      { "requires": "($enchanting_table_resolution = '8192x')", "$enchanting_table_uv": [ 544, 7648 ], "$enchanting_table_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  "dust_selectable_3@enchanting_table_java_dx.dust_selectable_1": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = '256x')",  "$enchanting_table_uv": [ 33, 223 ],    "$enchanting_table_uv_size": [ 16, 16 ] },
+      { "requires": "($enchanting_table_resolution = '512x')",  "$enchanting_table_uv": [ 66, 446 ],    "$enchanting_table_uv_size": [ 32, 32 ] },
+      { "requires": "($enchanting_table_resolution = '1024x')", "$enchanting_table_uv": [ 132, 892 ],   "$enchanting_table_uv_size": [ 64, 64 ] },
+      { "requires": "($enchanting_table_resolution = '2048x')", "$enchanting_table_uv": [ 264, 1784 ],  "$enchanting_table_uv_size": [ 128, 128 ] },
+      { "requires": "($enchanting_table_resolution = '4096x')", "$enchanting_table_uv": [ 528, 3568 ],  "$enchanting_table_uv_size": [ 256, 256 ] },
+      { "requires": "($enchanting_table_resolution = '8192x')", "$enchanting_table_uv": [ 1056, 7136 ], "$enchanting_table_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  "dust_unselectable_3@enchanting_table_java_dx.dust_selectable_1": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = '256x')",  "$enchanting_table_uv": [ 33, 239 ],    "$enchanting_table_uv_size": [ 16, 16 ] },
+      { "requires": "($enchanting_table_resolution = '512x')",  "$enchanting_table_uv": [ 66, 478 ],    "$enchanting_table_uv_size": [ 32, 32 ] },
+      { "requires": "($enchanting_table_resolution = '1024x')", "$enchanting_table_uv": [ 132, 956 ],   "$enchanting_table_uv_size": [ 64, 64 ] },
+      { "requires": "($enchanting_table_resolution = '2048x')", "$enchanting_table_uv": [ 264, 1912 ],  "$enchanting_table_uv_size": [ 128, 128 ] },
+      { "requires": "($enchanting_table_resolution = '4096x')", "$enchanting_table_uv": [ 528, 3824 ],  "$enchanting_table_uv_size": [ 256, 256 ] },
+      { "requires": "($enchanting_table_resolution = '8192x')", "$enchanting_table_uv": [ 1056, 7648 ], "$enchanting_table_uv_size": [ 512, 512 ] }
+    ]
+  },
+
+  /* Buttons */
+
+  "active_background@enchanting_table_java_dx.enchanting_table_base": {
+    "size": [ 108, 19 ],
+    "variables": [
+      { "requires": "($enchanting_table_resolution = '256x')",  "$enchanting_table_uv": [ 0, 166 ],  "$enchanting_table_uv_size": [ 108, 19 ] },
+      { "requires": "($enchanting_table_resolution = '512x')",  "$enchanting_table_uv": [ 0, 332 ],  "$enchanting_table_uv_size": [ 216, 38 ] },
+      { "requires": "($enchanting_table_resolution = '1024x')", "$enchanting_table_uv": [ 0, 664 ],  "$enchanting_table_uv_size": [ 432, 76 ] },
+      { "requires": "($enchanting_table_resolution = '2048x')", "$enchanting_table_uv": [ 0, 1328 ], "$enchanting_table_uv_size": [ 864, 152 ] },
+      { "requires": "($enchanting_table_resolution = '4096x')", "$enchanting_table_uv": [ 0, 2656 ], "$enchanting_table_uv_size": [ 1728, 304 ] },
+      { "requires": "($enchanting_table_resolution = '8192x')", "$enchanting_table_uv": [ 0, 5312 ], "$enchanting_table_uv_size": [ 3456, 608 ] }
+    ]
+  },
+
+  "dark_background@enchanting_table_java_dx.active_background": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = '256x')",  "$enchanting_table_uv": [ 0, 185 ],  "$enchanting_table_uv_size": [ 108, 19 ] },
+      { "requires": "($enchanting_table_resolution = '512x')",  "$enchanting_table_uv": [ 0, 370 ],  "$enchanting_table_uv_size": [ 216, 38 ] },
+      { "requires": "($enchanting_table_resolution = '1024x')", "$enchanting_table_uv": [ 0, 740 ],  "$enchanting_table_uv_size": [ 432, 76 ] },
+      { "requires": "($enchanting_table_resolution = '2048x')", "$enchanting_table_uv": [ 0, 1480 ], "$enchanting_table_uv_size": [ 864, 152 ] },
+      { "requires": "($enchanting_table_resolution = '4096x')", "$enchanting_table_uv": [ 0, 2960 ], "$enchanting_table_uv_size": [ 1728, 304 ] },
+      { "requires": "($enchanting_table_resolution = '8192x')", "$enchanting_table_uv": [ 0, 5920 ], "$enchanting_table_uv_size": [ 3456, 608 ] }
+    ]
+  },
+
+  "active_background_hover@enchanting_table_java_dx.active_background": {
+    "variables": [
+      { "requires": "($enchanting_table_resolution = '256x')",  "$enchanting_table_uv": [ 0, 204 ],  "$enchanting_table_uv_size": [ 108, 19 ] },
+      { "requires": "($enchanting_table_resolution = '512x')",  "$enchanting_table_uv": [ 0, 408 ],  "$enchanting_table_uv_size": [ 216, 38 ] },
+      { "requires": "($enchanting_table_resolution = '1024x')", "$enchanting_table_uv": [ 0, 816 ],  "$enchanting_table_uv_size": [ 432, 76 ] },
+      { "requires": "($enchanting_table_resolution = '2048x')", "$enchanting_table_uv": [ 0, 1632 ], "$enchanting_table_uv_size": [ 864, 152 ] },
+      { "requires": "($enchanting_table_resolution = '4096x')", "$enchanting_table_uv": [ 0, 3264 ], "$enchanting_table_uv_size": [ 1728, 304 ] },
+      { "requires": "($enchanting_table_resolution = '8192x')", "$enchanting_table_uv": [ 0, 6528 ], "$enchanting_table_uv_size": [ 3456, 608 ] }
+    ]
+  }
+}

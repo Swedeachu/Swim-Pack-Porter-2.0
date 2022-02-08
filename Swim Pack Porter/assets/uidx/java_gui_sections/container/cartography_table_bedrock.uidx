@@ -1,0 +1,113 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "cartography_table_bedrock_dx",
+
+  "cartography_new_base": {
+    "type": "image",
+    "texture": "assets/uidx/textures/gui/container/cartography_table",
+    "size": [ 142, 166 ],
+    "$cartography_table_new_uv|default": [ 0, 0 ],
+    "$cartography_table_new_uv_size|default": [ 0, 0 ],
+    "uv": "$cartography_table_new_uv",
+    "uv_size": "$cartography_table_new_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Cartography Screen */
+
+  "dialog_bg_cartography@cartography_table_bedrock_dx.cartography_new_base": {
+    "size": [ 176, 224 ],
+    "variables": [
+      { "requires": "($cartography_table_new_resolution = '256x')",  "$cartography_table_new_uv_size": [ 176, 224 ] },
+      { "requires": "($cartography_table_new_resolution = '512x')",  "$cartography_table_new_uv_size": [ 352, 448 ] },
+      { "requires": "($cartography_table_new_resolution = '1024x')", "$cartography_table_new_uv_size": [ 704, 896 ] },
+      { "requires": "($cartography_table_new_resolution = '2048x')", "$cartography_table_new_uv_size": [ 1408, 1792 ] },
+      { "requires": "($cartography_table_new_resolution = '4096x')", "$cartography_table_new_uv_size": [ 2816, 3584 ] },
+      { "requires": "($cartography_table_new_resolution = '8192x')", "$cartography_table_new_uv_size": [ 5632, 7168 ] }
+    ]
+  },
+  
+  /* Map */
+  
+  "normal_map@cartography_table_bedrock_dx.cartography_new_base": {
+    "size": [ 66, 66 ],
+    "variables": [
+      { "requires": "($cartography_table_new_resolution = '256x')",  "$cartography_table_new_uv": [ 176, 0 ],  "$cartography_table_new_uv_size": [ 66, 66 ] },
+      { "requires": "($cartography_table_new_resolution = '512x')",  "$cartography_table_new_uv": [ 352, 0 ],  "$cartography_table_new_uv_size": [ 132, 132 ] },
+      { "requires": "($cartography_table_new_resolution = '1024x')", "$cartography_table_new_uv": [ 704, 0 ],  "$cartography_table_new_uv_size": [ 264, 264 ] },
+      { "requires": "($cartography_table_new_resolution = '2048x')", "$cartography_table_new_uv": [ 1408, 0 ], "$cartography_table_new_uv_size": [ 528, 528 ] },
+      { "requires": "($cartography_table_new_resolution = '4096x')", "$cartography_table_new_uv": [ 2816, 0 ], "$cartography_table_new_uv_size": [ 1056, 1056 ] },
+      { "requires": "($cartography_table_new_resolution = '8192x')", "$cartography_table_new_uv": [ 5632, 0 ], "$cartography_table_new_uv_size": [ 2112, 2112 ] }
+    ]
+  },
+
+  /* Empty Map */
+
+  "empty_map": { "type": "panel" },
+
+  /* Zoom */
+
+  "zoom_map@cartography_table_bedrock_dx.normal_map": {
+    "variables": [
+      { "requires": "($cartography_table_new_resolution = '256x')",  "$cartography_table_new_uv": [ 242, 0 ],  "$cartography_table_new_uv_size": [ 66, 66 ] },
+      { "requires": "($cartography_table_new_resolution = '512x')",  "$cartography_table_new_uv": [ 484, 0 ],  "$cartography_table_new_uv_size": [ 132, 132 ] },
+      { "requires": "($cartography_table_new_resolution = '1024x')", "$cartography_table_new_uv": [ 968, 0 ],  "$cartography_table_new_uv_size": [ 264, 264 ] },
+      { "requires": "($cartography_table_new_resolution = '2048x')", "$cartography_table_new_uv": [ 1936, 0 ], "$cartography_table_new_uv_size": [ 528, 528 ] },
+      { "requires": "($cartography_table_new_resolution = '4096x')", "$cartography_table_new_uv": [ 3872, 0 ], "$cartography_table_new_uv_size": [ 1056, 1056 ] },
+      { "requires": "($cartography_table_new_resolution = '8192x')", "$cartography_table_new_uv": [ 7744, 0 ], "$cartography_table_new_uv_size": [ 2112, 2112 ] }
+    ]
+  },
+
+  /* Copy */
+
+  "copy_map@cartography_table_bedrock_dx.normal_map": {
+    "variables": [
+      { "requires": "($cartography_table_new_resolution = '256x')",  "$cartography_table_new_uv": [ 308, 0 ],  "$cartography_table_new_uv_size": [ 66, 66 ] },
+      { "requires": "($cartography_table_new_resolution = '512x')",  "$cartography_table_new_uv": [ 616, 0 ],  "$cartography_table_new_uv_size": [ 132, 132 ] },
+      { "requires": "($cartography_table_new_resolution = '1024x')", "$cartography_table_new_uv": [ 1232, 0 ], "$cartography_table_new_uv_size": [ 264, 264 ] },
+      { "requires": "($cartography_table_new_resolution = '2048x')", "$cartography_table_new_uv": [ 2464, 0 ], "$cartography_table_new_uv_size": [ 528, 528 ] },
+      { "requires": "($cartography_table_new_resolution = '4096x')", "$cartography_table_new_uv": [ 4928, 0 ], "$cartography_table_new_uv_size": [ 1056, 1056 ] },
+      { "requires": "($cartography_table_new_resolution = '8192x')", "$cartography_table_new_uv": [ 9856, 0 ], "$cartography_table_new_uv_size": [ 2112, 2112 ] }
+    ]
+  },
+
+  /* Lock */
+
+  "lock_map@cartography_table_bedrock_dx.normal_map": {
+    "variables": [
+      { "requires": "($cartography_table_new_resolution = '256x')",  "$cartography_table_new_uv": [ 374, 0 ],   "$cartography_table_new_uv_size": [ 66, 66 ] },
+      { "requires": "($cartography_table_new_resolution = '512x')",  "$cartography_table_new_uv": [ 748, 0 ],   "$cartography_table_new_uv_size": [ 132, 132 ] },
+      { "requires": "($cartography_table_new_resolution = '1024x')", "$cartography_table_new_uv": [ 1496, 0 ],  "$cartography_table_new_uv_size": [ 264, 264 ] },
+      { "requires": "($cartography_table_new_resolution = '2048x')", "$cartography_table_new_uv": [ 2992, 0 ],  "$cartography_table_new_uv_size": [ 528, 528 ] },
+      { "requires": "($cartography_table_new_resolution = '4096x')", "$cartography_table_new_uv": [ 5984, 0 ],  "$cartography_table_new_uv_size": [ 1056, 1056 ] },
+      { "requires": "($cartography_table_new_resolution = '8192x')", "$cartography_table_new_uv": [ 11968, 0 ], "$cartography_table_new_uv_size": [ 2112, 2112 ] }
+    ]
+  },
+
+  /* Text Edit */
+
+  "cartography_text_edit_active_java@cartography_table_bedrock_dx.cartography_new_base": {
+    "size": [ 110, 16 ],
+    "variables": [
+      { "requires": "($cartography_table_new_resolution = '256x')",  "$cartography_table_new_uv": [ 0, 224 ],  "$cartography_table_new_uv_size": [ 110, 16 ] },
+      { "requires": "($cartography_table_new_resolution = '512x')",  "$cartography_table_new_uv": [ 0, 448 ],  "$cartography_table_new_uv_size": [ 220, 32 ] },
+      { "requires": "($cartography_table_new_resolution = '1024x')", "$cartography_table_new_uv": [ 0, 896 ],  "$cartography_table_new_uv_size": [ 440, 64 ] },
+      { "requires": "($cartography_table_new_resolution = '2048x')", "$cartography_table_new_uv": [ 0, 1792 ], "$cartography_table_new_uv_size": [ 880, 128 ] },
+      { "requires": "($cartography_table_new_resolution = '4096x')", "$cartography_table_new_uv": [ 0, 3584 ], "$cartography_table_new_uv_size": [ 1760, 256 ] },
+      { "requires": "($cartography_table_new_resolution = '8192x')", "$cartography_table_new_uv": [ 0, 7168 ], "$cartography_table_new_uv_size": [ 3520, 512 ] }
+    ]
+  },
+
+  "cartography_text_edit_inactive_java@cartography_table_bedrock_dx.cartography_text_edit_active_java": {
+    "variables": [
+      { "requires": "($cartography_table_new_resolution = '256x')",  "$cartography_table_new_uv": [ 0, 240 ],  "$cartography_table_new_uv_size": [ 110, 16 ] },
+      { "requires": "($cartography_table_new_resolution = '512x')",  "$cartography_table_new_uv": [ 0, 480 ],  "$cartography_table_new_uv_size": [ 220, 32 ] },
+      { "requires": "($cartography_table_new_resolution = '1024x')", "$cartography_table_new_uv": [ 0, 960 ],  "$cartography_table_new_uv_size": [ 440, 64 ] },
+      { "requires": "($cartography_table_new_resolution = '2048x')", "$cartography_table_new_uv": [ 0, 1920 ], "$cartography_table_new_uv_size": [ 880, 128 ] },
+      { "requires": "($cartography_table_new_resolution = '4096x')", "$cartography_table_new_uv": [ 0, 3840 ], "$cartography_table_new_uv_size": [ 1760, 256 ] },
+      { "requires": "($cartography_table_new_resolution = '8192x')", "$cartography_table_new_uv": [ 0, 7680 ], "$cartography_table_new_uv_size": [ 3520, 512 ] }
+    ]
+  }
+}

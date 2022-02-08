@@ -1,0 +1,636 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "crisxolt_tab_pages",
+
+  /*//// Pages ////*/
+
+  "page_1@recipe_book_dx.recipe_book_panel_cotent": {
+    "$ignore_prev_button": true,
+    "$number_left": "1",
+    "$next_button_view_binding_name": "($tab_page + '_page_2_button_toggle')",
+    "$next_toggle_name": "($tab_page + '_page_1_2_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_2_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_2@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "2",
+    "$panel_content_offset": [ 0, -100 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_1_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_3_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_1_2_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_2_3_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_3_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_3@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "3",
+    "$panel_content_offset": [ 0, -200 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_2_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_4_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_2_3_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_3_4_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_4_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_4@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "4",
+    "$panel_content_offset": [ 0, -300 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_3_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_5_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_3_4_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_4_5_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_5_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_5@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "5",
+    "$panel_content_offset": [ 0, -400 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_4_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_6_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_4_5_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_5_6_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_6_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_6@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "6",
+    "$panel_content_offset": [ 0, -500 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_5_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_7_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_5_6_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_6_7_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_7_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_7@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "7",
+    "$panel_content_offset": [ 0, -600 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_6_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_8_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_6_7_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_7_8_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_8_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_8@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "8",
+    "$panel_content_offset": [ 0, -700 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_7_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_9_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_7_8_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_8_9_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_9_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_9@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "9",
+    "$panel_content_offset": [ 0, -800 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_8_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_10_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_8_9_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_9_10_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_10_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_10@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "10",
+    "$panel_content_offset": [ 0, -900 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_9_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_11_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_9_10_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_10_11_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_11_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_11@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "11",
+    "$panel_content_offset": [ 0, -1000 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_10_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_12_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_10_11_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_11_12_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_12_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_12@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "12",
+    "$panel_content_offset": [ 0, -1100 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_11_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_13_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_11_12_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_12_13_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_13_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_13@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "13",
+    "$panel_content_offset": [ 0, -1200 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_12_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_14_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_12_13_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_13_14_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_14_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_14@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "14",
+    "$panel_content_offset": [ 0, -1300 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_13_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_15_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_13_14_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_14_15_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_15_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_15@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "15",
+    "$panel_content_offset": [ 0, -1400 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_14_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_16_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_14_15_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_15_16_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_16_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_16@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "16",
+    "$panel_content_offset": [ 0, -1500 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_15_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_17_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_15_16_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_16_17_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_17_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_17@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "17",
+    "$panel_content_offset": [ 0, -1600 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_16_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_18_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_16_17_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_17_18_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_18_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_18@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "18",
+    "$panel_content_offset": [ 0, -1700 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_17_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_19_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_17_18_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_18_19_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_19_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_19@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "19",
+    "$panel_content_offset": [ 0, -1800 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_18_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_20_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_18_19_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_19_20_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_20_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_20@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "20",
+    "$panel_content_offset": [ 0, -1900 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_19_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_21_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_19_20_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_20_21_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_21_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_21@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "21",
+    "$panel_content_offset": [ 0, -2000 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_20_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_22_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_20_21_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_21_22_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_22_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_22@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "22",
+    "$panel_content_offset": [ 0, -2100 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_21_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_23_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_21_22_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_22_23_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_23_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_23@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "23",
+    "$panel_content_offset": [ 0, -2200 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_22_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_24_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_22_23_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_23_24_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_24_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_24@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "24",
+    "$panel_content_offset": [ 0, -2300 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_23_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_25_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_23_24_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_24_25_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_25_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_25@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "25",
+    "$panel_content_offset": [ 0, -2400 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_24_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_26_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_24_25_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_25_26_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_26_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_26@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "26",
+    "$panel_content_offset": [ 0, -2500 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_25_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_27_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_25_26_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_26_27_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_27_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_27@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "27",
+    "$panel_content_offset": [ 0, -2600 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_26_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_28_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_26_27_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_27_28_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_28_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_28@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "28",
+    "$panel_content_offset": [ 0, -2700 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_27_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_29_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_27_28_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_28_29_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_29_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_29@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "29",
+    "$panel_content_offset": [ 0, -2800 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_28_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_30_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_28_29_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_29_30_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_30_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_30@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "30",
+    "$panel_content_offset": [ 0, -2900 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_29_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_31_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_29_30_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_30_31_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_31_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_31@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "31",
+    "$panel_content_offset": [ 0, -3000 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_30_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_32_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_30_31_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_31_32_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_32_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_32@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "32",
+    "$panel_content_offset": [ 0, -3100 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_31_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_33_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_31_32_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_32_33_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_33_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_33@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "33",
+    "$panel_content_offset": [ 0, -3200 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_32_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_34_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_32_33_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_33_34_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_34_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_34@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "34",
+    "$panel_content_offset": [ 0, -3300 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_33_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_35_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_33_34_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_34_35_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_35_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_35@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "35",
+    "$panel_content_offset": [ 0, -3400 ],
+    "$prev_button_view_binding_name": "($tab_page + '_page_34_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_36_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_34_35_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_35_36_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_36_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  /*//// Custom Pages ////*/
+
+  "custom_page_2@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "2",
+    "$panel_content": "$panel_content_2",
+    "$prev_button_view_binding_name": "($tab_page + '_page_1_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_3_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_1_2_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_2_3_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_3_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "custom_page_3@recipe_book_dx.recipe_book_panel_cotent": {
+    "$number_left": "3",
+    "$panel_content": "$panel_content_3",
+    "$prev_button_view_binding_name": "($tab_page + '_page_2_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_4_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_2_3_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_3_4_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_4_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

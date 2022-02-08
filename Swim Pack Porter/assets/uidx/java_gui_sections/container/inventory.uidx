@@ -1,0 +1,67 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "inventory_java_dx",
+
+  "inventory_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/inventory",
+    "$inventory_uv|default": [ 0, 0 ],
+    "$inventory_uv_size|default": [ 0, 0 ],
+    "uv": "$inventory_uv",
+    "uv_size": "$inventory_uv_size"
+  },
+
+  /*//// Main Panel ////*/
+
+  "dialog_bg_inventory@inventory_java_dx.inventory_base": {
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($inventory_resolution = '256x')",  "$inventory_uv_size": [ 176, 166 ] },
+      { "requires": "($inventory_resolution = '512x')",  "$inventory_uv_size": [ 352, 332 ] },
+      { "requires": "($inventory_resolution = '1024x')", "$inventory_uv_size": [ 704, 664 ] },
+      { "requires": "($inventory_resolution = '2048x')", "$inventory_uv_size": [ 1408, 1328 ] },
+      { "requires": "($inventory_resolution = '4096x')", "$inventory_uv_size": [ 2816, 2656 ] },
+      { "requires": "($inventory_resolution = '8192x')", "$inventory_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /*//// Recipe Toggle ////*/
+
+  "recipe_button_default@inventory_java_dx.inventory_base": {
+    "size": [ 20, 18 ],
+    "variables": [
+      { "requires": "($inventory_resolution = '256x')",  "$inventory_uv": [ 178, 0 ],  "$inventory_uv_size": [ 20, 18 ] },
+      { "requires": "($inventory_resolution = '512x')",  "$inventory_uv": [ 356, 0 ],  "$inventory_uv_size": [ 40, 36 ] },
+      { "requires": "($inventory_resolution = '1024x')", "$inventory_uv": [ 712, 0 ],  "$inventory_uv_size": [ 80, 72 ] },
+      { "requires": "($inventory_resolution = '2048x')", "$inventory_uv": [ 1424, 0 ], "$inventory_uv_size": [ 160, 144 ] },
+      { "requires": "($inventory_resolution = '4096x')", "$inventory_uv": [ 2848, 0 ], "$inventory_uv_size": [ 320, 288 ] },
+      { "requires": "($inventory_resolution = '8192x')", "$inventory_uv": [ 5696, 0 ], "$inventory_uv_size": [ 640, 576 ] }
+    ]
+  },
+
+  "recipe_button_hover@inventory_java_dx.recipe_button_default": {
+    "variables": [
+      { "requires": "($inventory_resolution = '256x')",  "$inventory_uv": [ 178, 19 ],   "$inventory_uv_size": [ 20, 18 ] },
+      { "requires": "($inventory_resolution = '512x')",  "$inventory_uv": [ 356, 38 ],   "$inventory_uv_size": [ 40, 36 ] },
+      { "requires": "($inventory_resolution = '1024x')", "$inventory_uv": [ 712, 76 ],   "$inventory_uv_size": [ 80, 72 ] },
+      { "requires": "($inventory_resolution = '2048x')", "$inventory_uv": [ 1424, 152 ], "$inventory_uv_size": [ 160, 144 ] },
+      { "requires": "($inventory_resolution = '4096x')", "$inventory_uv": [ 2848, 304 ], "$inventory_uv_size": [ 320, 288 ] },
+      { "requires": "($inventory_resolution = '8192x')", "$inventory_uv": [ 5696, 608 ], "$inventory_uv_size": [ 640, 576 ] }
+    ]
+  },
+
+  /*//// Mob Effect Background ////*/
+
+  "mob_effect_bg@inventory_java_dx.inventory_base": {
+    "$uv_size": [ 120, 32 ],
+    "variables": [
+      { "requires": "($inventory_resolution = '256x')",  "$inventory_uv": [ 0, 166 ],  "$inventory_uv_size": [ 120, 32 ] },
+      { "requires": "($inventory_resolution = '512x')",  "$inventory_uv": [ 0, 332 ],  "$inventory_uv_size": [ 240, 64 ] },
+      { "requires": "($inventory_resolution = '1024x')", "$inventory_uv": [ 0, 664 ],  "$inventory_uv_size": [ 480, 128 ] },
+      { "requires": "($inventory_resolution = '2048x')", "$inventory_uv": [ 0, 1328 ], "$inventory_uv_size": [ 960, 256 ] },
+      { "requires": "($inventory_resolution = '4096x')", "$inventory_uv": [ 0, 2656 ], "$inventory_uv_size": [ 1920, 512 ] },
+      { "requires": "($inventory_resolution = '8192x')", "$inventory_uv": [ 0, 5312 ], "$inventory_uv_size": [ 3840, 1024 ] }
+    ]
+  }
+}
