@@ -1,3 +1,4 @@
+# This project is old and going to get a complete overhaul in the coming months
 # Swim Pack Porter 2.0
 Ports Minecraft Texture Packs Across Bedrock and Java Edition <br />
 Lead Programmer: Swimfan72 <br />
